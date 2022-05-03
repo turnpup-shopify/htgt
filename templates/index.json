@@ -37,9 +37,9 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/DSCF5702.jpg",
         "image_overlay_opacity": 50,
-        "image_height": "small",
+        "image_height": "medium",
         "adapt_height_first_image": false,
-        "desktop_content_position": "bottom-center",
+        "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "background-1",
