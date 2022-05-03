@@ -48,6 +48,50 @@
         "show_text_below": false
       }
     },
+    "16516195897b496f4a": {
+      "type": "flwr-one-long-sentence",
+      "blocks": {
+        "1651619589fa9e48ce-0": {
+          "type": "text",
+          "settings": {
+            "block_text": "Transitional, contemporary and coastal, quality furniture, art and accents at best value pricing.  Local family owned and operated, one-of-a-kind furniture store situated within renovated warehouse\/hanger in Costa Mesa.  Visit our Promotions page to sign up for newsletters and special offers. If you have a special request or hard to find item, let us know via the Contact Us page.",
+            "block_font_size": "16px",
+            "mobile_block_font_size": "1rem",
+            "block_font_color": "#121212",
+            "font_family_text": "Helvetica Neue",
+            "font_weight_text": "400",
+            "line_height_text": "1",
+            "letter_spacing": "3px",
+            "text_width": "100%",
+            "mobile_text_width": "90%",
+            "text_padding_left": "0px",
+            "text_padding_bottom": "0px",
+            "is_own_line": true,
+            "text_has_wavy_animation": true,
+            "wavy_animation_color": "#F6B700"
+          }
+        }
+      },
+      "block_order": [
+        "1651619589fa9e48ce-0"
+      ],
+      "settings": {
+        "subtitle": "ABOUT OUR STORE",
+        "subtitle_font_size": "22px",
+        "subtitle_font_weight": "500",
+        "subtitle_font_family": "Helvetica Neue",
+        "subtitle_font_color": "#555555",
+        "background_color": "#ffffff",
+        "background_opacity": "0.2",
+        "max_width": 70,
+        "mobile_max_width": 90,
+        "margintop": 100,
+        "marginbottom": 100,
+        "alignment": "center",
+        "turnpup_bottom_border_color": "#F4B237",
+        "mobile_font_size": "12px"
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -210,6 +254,7 @@
   },
   "order": [
     "image_banner",
+    "16516195897b496f4a",
     "rich_text",
     "featured_collection",
     "collage",
