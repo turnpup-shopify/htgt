@@ -1,7 +1,8 @@
 .collage {
     left: -100%;
+    position: relative;
 }
-.collage.show {
+.collage.flwr_show {
     left: 0%;
     transition: left 0.4s linear;
 }
