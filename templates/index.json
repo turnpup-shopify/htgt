@@ -68,7 +68,7 @@
             "text_padding_bottom": "0px",
             "is_own_line": true,
             "text_has_wavy_animation": true,
-            "wavy_animation_color": "#F6B700"
+            "wavy_animation_color": "#f6b700"
           }
         }
       },
@@ -88,7 +88,7 @@
         "margintop": 100,
         "marginbottom": 100,
         "alignment": "center",
-        "turnpup_bottom_border_color": "#F4B237",
+        "turnpup_bottom_border_color": "#f4b237",
         "mobile_font_size": "12px"
       }
     },
@@ -98,27 +98,26 @@
         "collection-0": {
           "type": "collection",
           "settings": {
-            "collection": "furniture"
+            "collection": "accessories"
           }
         },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "horse-art",
-            "second_image": false
-          }
-        },
-        "collection-1": {
+        "86de7a59-66c4-4000-98da-8c03a5606994": {
           "type": "collection",
           "settings": {
-            "collection": "accessories"
+            "collection": "art"
+          }
+        },
+        "a9356391-9636-43f1-ada7-2a1ac2d33844": {
+          "type": "collection",
+          "settings": {
+            "collection": "furniture"
           }
         }
       },
       "block_order": [
         "collection-0",
-        "product",
-        "collection-1"
+        "86de7a59-66c4-4000-98da-8c03a5606994",
+        "a9356391-9636-43f1-ada7-2a1ac2d33844"
       ],
       "settings": {
         "heading": "EXPLORE OUR PRODUCTS",
