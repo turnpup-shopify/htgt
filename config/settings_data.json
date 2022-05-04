@@ -193,10 +193,26 @@
               "flwr_footer_block_header": "Address",
               "flwr_footer_block_description": "1644 Superior Ave, Newport Beach, CA"
             }
+          },
+          "dc56bd29-c304-4747-ab22-d076b9706e20": {
+            "type": "text",
+            "settings": {
+              "flwr_footer_block_header": "Telephone",
+              "flwr_footer_block_description": "T: (949) 515-9484"
+            }
+          },
+          "5909b695-48ce-426b-a2de-c057415c8bc6": {
+            "type": "text",
+            "settings": {
+              "flwr_footer_block_header": "Hours",
+              "flwr_footer_block_description": "Mon – Fri 10:30 – 4:00,  Call 949 279-5791"
+            }
           }
         },
         "block_order": [
-          "a03e4c80-c9c8-48c1-892a-3be3014f7e53"
+          "a03e4c80-c9c8-48c1-892a-3be3014f7e53",
+          "dc56bd29-c304-4747-ab22-d076b9706e20",
+          "5909b695-48ce-426b-a2de-c057415c8bc6"
         ],
         "settings": {
           "flwr_footer_header": "FOOTER"
