@@ -1,0 +1,337 @@
+{% comment %}
+
+self contained section
+
+{% endcomment %}
+
+{% schema %}
+  {
+    "name": "Social Proof: Clean",
+    "class": "social-proof-clean-section",
+    "settings": [
+		{
+      "type": "header",
+      "content": "Colors",
+      "info": "_"
+    },
+    {
+			"type": "color",
+			"id": "module_background_color",
+			"label": "Module Background Color",
+			"default": "#0c2a4a"
+		},
+		{
+			"type": "color",
+			"id": "module_accent_color",
+			"label": "Module Accent Color",
+			"default": "#B4ECFF"
+		},
+    {
+      "type": "color",
+      "id": "quote_color",
+      "label": "Quote Text Color",
+      "default": "#FFFFFF"
+    },
+		{
+			"type": "color",
+			"id": "turnpup_bottom_border_color",
+			"label": "Bottom Border Color",
+			"default": "#F4B237"
+		},
+    {
+      "type": "header",
+      "content": "Fonts",
+      "info": "_"
+    },
+    {
+      "type": "font_picker",
+      "id": "quote_font_family",
+      "label": "Quote Font Family",
+      "default": "assistant_n4"
+    },
+    {
+      "type": "range",
+      "id": "font_quote_size",
+      "min": 10,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "label": "Font Quote Size",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "logo_height",
+      "min": 10,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Logo Height",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "quote_width",
+      "min": 10,
+      "max": 100,
+      "step": 10,
+      "unit": "%",
+      "label": "Quote Container Width (%)",
+      "default": 70
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "min": 10,
+      "max": 100,
+      "step": 10,
+      "unit": "%",
+      "label": "Logo Container Width (%)",
+      "default": 70
+    },
+    {
+      "type": "range",
+      "id": "module_padding_top",
+      "min": 10,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Module Padding Top (px)",
+      "default": 70
+    },
+    {
+      "type": "range",
+      "id": "module_padding_bottom",
+      "min": 10,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Module Padding Bottom (px)",
+      "default": 70
+    },
+    {
+      "type": "range",
+      "id": "space_between_quote_and_logos",
+      "min": 10,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Space Between Quote and Logos",
+      "default": 70
+    }
+	],
+	"blocks": [
+		{
+			"name": "Social Proof: TIMELESS",
+			"type": "space",
+			"settings": [
+				{
+					"type": "header",
+					"content": "Quote",
+					"info": "_"
+				},
+				{
+					"type": "text",
+					"id": "quote_text",
+					"label": "Quote",
+					"default": "The best product I've ever used."
+				},
+				{
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"       
+        }
+			]
+		}
+    ],
+    "presets": [
+      {
+        "name": "Social Proof: TIMELESS",
+        "category": "Advanced layout",
+        "blocks": [
+
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+<script>
+  let maxHeightQuote = 0;
+  window.addEventListener('DOMContentLoaded', (event) => {
+    maxHeightQuote = document.querySelector(".quote-container .quote").offsetHeight;
+    document.querySelector(".quote-container").style.height = maxHeightQuote+"px";
+    document.querySelectorAll(".logo").forEach( (el) => {
+      el.addEventListener("click", () => {
+        tempID = el.dataset.id;
+        tempID = "#quote-" + tempID;
+        
+        if (el.classList.contains("selected-logo")){
+
+        } else {
+          document.querySelectorAll(".logo").forEach((z) => {z.classList.remove("selected-logo");});
+          el.classList.add("selected-logo");
+        }
+
+        var tempEL = document.querySelector(tempID);
+        if (tempEL.classList.contains("visible-quote")){
+
+        } else {
+          document.querySelectorAll(".quote").forEach((z) => {z.classList.remove("visible-quote");z.classList.add("invisible-quote");});
+          tempEL.classList.add("visible-quote");
+          document.querySelector(".quote-container").style.height = tempEL.offsetHeight+"px";
+        }
+      })
+    })
+  });
+</script>
+
+
+<div class="social-proof-timeless" data-section-id="{{ section.id }}" data-section-type="social-proof-timeless-section">
+  <div class="custom-quotes-timeless">
+    <div class="quote-container"> 
+	    {% for block in section.blocks %}  
+          {% if forloop.index == 1 %} 
+            <div class="quote visible-quote" id="quote-{{forloop.index}}" data-id="{{forloop.index}}"> {{ block.settings.quote_text }} </div>
+          {% else %}
+            <div class="quote invisible-quote" id="quote-{{forloop.index}}" data-id="{{forloop.index}}"> {{ block.settings.quote_text }} </div>
+          {% endif %}
+	    {% endfor %}
+      </div>
+      <div class="logo-container">
+        {% for block in section.blocks %}   
+            {% if block.settings.logo != blank %} 
+              <a class="logo {% if forloop.index == 1 %}selected-logo" {% endif %} 
+                id="logo-{{forloop.index}}" data-id="{{forloop.index}}">
+                <img src="{{ block.settings.logo | img_url: '600x600'}}">
+              </a>
+            {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  {{ section.settings.quote_font_family | font_face: font_display: 'swap' }}
+</style>
+<style>
+  .social-proof-clean {
+    padding-top: {{ section.settings.module_padding_top }}px;
+    padding-bottom: {{ section.settings.module_padding_bottom }}px;
+    background-color: {{ section.settings.module_background_color }};
+  }
+  .social-proof-timeless.container {
+    padding-top: {{ section.settings.module_padding_top }}px;
+    padding-bottom: {{ section.settings.module_padding_bottom }}px;
+    background-color: {{ section.settings.module_background_color }};
+  }
+  .custom-quotes-timeless {
+    padding-top: 6rem;
+    padding-bottom: 6rem;  
+  }
+  .logo-container {
+    margin: {{ section.settings.space_between_quote_and_logos }}px auto 30px;
+    display: flex;
+    justify-content: space-between;
+    width:  {{ section.settings.logo_width }}%;
+  }
+  .quote-container {
+    position: relative;
+    overflow: hidden;
+    height: fit-content;
+  }
+  .invisible-quote {
+    transform: translate(-50%, 50%);
+    transition: all 0.2s linear 0s;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+  }
+  .visible-quote.invisible-quote, .visible-quote {
+    transform: translate(-50%, 0%);
+    opacity: 1;
+    transition: all 0.4s linear 0.3s;
+    visibility: visible;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+  }
+
+  .actual-quote {
+    max-width: 64rem;
+    margin: 0 auto 2rem;
+    text-align: center;
+  }
+  .custom-quotes-timeless .quote {
+    font-size: {{section.settings.font_quote_size}}px;
+    text-align: center;
+    margin: 0 auto;
+    width:  {{ section.settings.quote_width }}%;
+    font-family: {{ section.settings.quote_font_family.family }}, 'Helvetica';
+    font-style: {{ section.settings.quote_font_family.style }};
+    font-weight: {{ section.settings.quote_font_family.weight }};
+    line-height:  1.1;
+    color:  {{ section.settings.quote_color }};
+  }
+  .logo:after {
+    content: "";
+    position: absolute;
+    left:  50%;
+    transform: translateX(-50%);
+    height:  4px;
+    width:  0%;
+    background-color: {{ section.settings.module_accent_color }};
+    top: {{section.settings.logo_height | plus: 10}}px;
+    transition: width 0.3s linear;
+  }
+  .logo.selected-logo:after {
+    content: "";
+    position: absolute;
+    height:  4px;
+    transform: translateX(-50%);
+    width:  100%;
+    left: 50%;
+    background-color: {{ section.settings.module_accent_color }};
+    top: {{section.settings.logo_height | plus: 10}}px;
+    transition: width 0.3s linear;
+  }
+  .logo {
+    height: {{section.settings.logo_height}}px;
+    position: relative;
+  }
+  .logo img {
+    height: {{section.settings.logo_height}}px;
+  }
+   
+  @media screen and (max-width: 700px) {                       
+    .logo-container {
+      display: block;
+      margin: 40px auto;
+    }
+    .custom-quotes-timeless .quote {
+      width:  90%;
+    }
+    .logo {
+      height: 20px;
+      margin: 0px auto 30px;  
+      display: flex;
+      align-items: center;
+      width: fit-content;
+    }
+    .logo img {
+      height:  20px;
+      margin: 30px auto 30px;  
+    }
+    .selected-logo:after {
+      content: "";
+      position: absolute;
+      height:  4px;
+      width:  100%;
+      left: 0px;
+      background-color: {{ section.settings.module_accent_color }};
+      top: 24px;      
+    }
+  }
+</style>
