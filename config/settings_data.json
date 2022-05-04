@@ -183,6 +183,24 @@
         "settings": {
           "color_scheme": "background-1"
         }
+      },
+      "flwr-simple-footer": {
+        "type": "flwr-simple-footer",
+        "blocks": {
+          "a03e4c80-c9c8-48c1-892a-3be3014f7e53": {
+            "type": "text",
+            "settings": {
+              "flwr_footer_block_header": "Address",
+              "flwr_footer_block_description": "1644 Superior Ave, Newport Beach, CA"
+            }
+          }
+        },
+        "block_order": [
+          "a03e4c80-c9c8-48c1-892a-3be3014f7e53"
+        ],
+        "settings": {
+          "flwr_footer_header": "FOOTER"
+        }
       }
     },
     "content_for_index": [
