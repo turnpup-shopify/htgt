@@ -1,4 +1,4 @@
-<div class="flwr_outer_footer">
+<div class="flwr_outer_footer page-width">
     <div class="flwr_inner_footer">
         {% for block in section.blocks %}
             <div class="flwr_footer_block">
@@ -12,6 +12,20 @@
         {% endfor %}
     </div>
 </div>
+<style>
+  .flwr_inner_footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  
+    justify-content: space-between;
+  }
+  .flwr_inner_footer .flwr_footer_block {
+    flex: 1 0; 
+    width: 32vW;
+  }
+  margin: 
+</style>
+</style>
 {% schema %}
 {
   "name": "Custom Footer",
