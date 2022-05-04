@@ -193,7 +193,7 @@
             "type": "text",
             "settings": {
               "flwr_footer_block_header": "Hours",
-              "flwr_footer_block_description": "Mon – Fri 10:30 – 4:00,  Call 949 279-5791"
+              "flwr_footer_block_description": "Mon – Fri: 10:30am – 4:00pm"
             }
           }
         },
