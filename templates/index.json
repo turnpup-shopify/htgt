@@ -173,10 +173,18 @@
             "quote_text": "In my experience of visiting the store the owners have been very helpful and I love the inventory! Never had a bad experience here, will be back soon!”",
             "who_said_it": "Nick G."
           }
+        },
+        "aa45cb34-932d-4a1d-8dc0-9ee021342284": {
+          "type": "space",
+          "settings": {
+            "quote_text": "“I have always found both owners to be helpful with any questions I have or advice on a concept for my home. I like to shop there when I have time on my hands because they have so many items to look at! Great place!”",
+            "who_said_it": "Miranda D."
+          }
         }
       },
       "block_order": [
-        "9ff6d142-20d8-4247-9d78-103a6ae65154"
+        "9ff6d142-20d8-4247-9d78-103a6ae65154",
+        "aa45cb34-932d-4a1d-8dc0-9ee021342284"
       ],
       "settings": {
         "module_background_color": "#0c2a4a",
