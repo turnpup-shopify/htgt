@@ -55,13 +55,13 @@
           "type": "text",
           "settings": {
             "block_text": "Transitional, contemporary and coastal, quality furniture, art and accents at best value pricing.  Local family owned and operated, one-of-a-kind furniture store situated within renovated warehouse\/hanger in Costa Mesa.  Visit our Promotions page to sign up for newsletters and special offers. If you have a special request or hard to find item, let us know via the Contact Us page.",
-            "block_font_size": "16px",
-            "mobile_block_font_size": "1rem",
-            "block_font_color": "#121212",
-            "font_family_text": "Alegreya Sans",
-            "font_weight_text": "400",
-            "line_height_text": "1",
-            "letter_spacing": "3px",
+            "block_font_size": "30px",
+            "mobile_block_font_size": "20px",
+            "block_font_color": "#404040",
+            "font_family_text": "\"Alegreya Sans\"",
+            "font_weight_text": "300",
+            "line_height_text": "1.2",
+            "letter_spacing": "normal",
             "text_width": "100%",
             "mobile_text_width": "90%",
             "text_padding_left": "0px",
@@ -80,7 +80,7 @@
         "subtitle_font_size": "22px",
         "subtitle_font_weight": "500",
         "subtitle_font_family": "Alegreya",
-        "subtitle_font_color": "#555555",
+        "subtitle_font_color": "#000000",
         "background_color": "#ffffff",
         "background_opacity": "0.2",
         "max_width": 70,
@@ -128,11 +128,47 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "165162882932982481": {
+      "type": "apps",
+      "blocks": {
+        "a6e315d7-1116-4df1-b736-116e352da46d": {
+          "type": "shopify:\/\/apps\/section-feed\/blocks\/app-block\/43cd482b-515a-4e82-b170-05d391763cd2",
+          "settings": {
+            "title": "JOIN OUR COMMUNITY",
+            "subheading": "",
+            "button_text": "Follow us on instagram",
+            "button_link": "https:\/\/www.instagram.com\/htgthome\/",
+            "layout": "grid",
+            "image_size": "small",
+            "add_spacing": false,
+            "rows_count": 2,
+            "show_author": false,
+            "show_caption": true,
+            "show_date": true,
+            "click_action": "open_instagram",
+            "heading_color": "#000000",
+            "subheading_color": "#000000",
+            "button_background": "#ffa000",
+            "button_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_text_color": "#ffffff",
+            "overlay_opacity": 65
+          }
+        }
+      },
+      "block_order": [
+        "a6e315d7-1116-4df1-b736-116e352da46d"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "image_banner",
     "16516195897b496f4a",
-    "collage"
+    "collage",
+    "165162882932982481"
   ]
 }

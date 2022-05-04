@@ -179,21 +179,21 @@
             "type": "text",
             "settings": {
               "flwr_footer_block_header": "Address",
-              "flwr_footer_block_description": "1644 Superior Ave, Newport Beach, CA"
+              "flwr_footer_block_description": "1644 Superior Ave <br> Costa Mesa, CA, 92627"
             }
           },
           "dc56bd29-c304-4747-ab22-d076b9706e20": {
             "type": "text",
             "settings": {
               "flwr_footer_block_header": "Telephone",
-              "flwr_footer_block_description": "T: (949) 515-9484"
+              "flwr_footer_block_description": "T: (949) 515-9484 <br> Mail:  info@htgtfurniture.com"
             }
           },
           "5909b695-48ce-426b-a2de-c057415c8bc6": {
             "type": "text",
             "settings": {
               "flwr_footer_block_header": "Hours",
-              "flwr_footer_block_description": "Mon – Fri 10:30 – 4:00,  Call 949 279-5791"
+              "flwr_footer_block_description": "Mon – Fri: 10:30am – 4:00pm"
             }
           }
         },
