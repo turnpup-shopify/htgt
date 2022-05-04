@@ -128,11 +128,47 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "165162882932982481": {
+      "type": "apps",
+      "blocks": {
+        "a6e315d7-1116-4df1-b736-116e352da46d": {
+          "type": "shopify:\/\/apps\/section-feed\/blocks\/app-block\/43cd482b-515a-4e82-b170-05d391763cd2",
+          "settings": {
+            "title": "JOIN OUR COMMUNITY",
+            "subheading": "",
+            "button_text": "Follow us on instagram",
+            "button_link": "https:\/\/www.instagram.com\/htgthome\/",
+            "layout": "grid",
+            "image_size": "small",
+            "add_spacing": false,
+            "rows_count": 2,
+            "show_author": false,
+            "show_caption": true,
+            "show_date": true,
+            "click_action": "open_instagram",
+            "heading_color": "#000000",
+            "subheading_color": "#000000",
+            "button_background": "#ffbc3e",
+            "button_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_text_color": "#ffffff",
+            "overlay_opacity": 65
+          }
+        }
+      },
+      "block_order": [
+        "a6e315d7-1116-4df1-b736-116e352da46d"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "image_banner",
     "16516195897b496f4a",
-    "collage"
+    "collage",
+    "165162882932982481"
   ]
 }
