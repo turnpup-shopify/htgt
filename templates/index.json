@@ -129,6 +129,38 @@
         "padding_bottom": 36
       }
     },
+    "16516309549d3262b5": {
+      "type": "flwr-social-proof-clean",
+      "blocks": {
+        "9ff6d142-20d8-4247-9d78-103a6ae65154": {
+          "type": "space",
+          "settings": {
+            "quote_text": "In my experience of visiting the store the owners have been very helpful and I love the inventory! Never had a bad experience here, will be back soon!”",
+            "who_said_it": "Nick G."
+          }
+        },
+        "aa45cb34-932d-4a1d-8dc0-9ee021342284": {
+          "type": "space",
+          "settings": {
+            "quote_text": "“I have always found both owners to be helpful with any questions I have or advice on a concept for my home. I like to shop there when I have time on my hands because they have so many items to look at! Great place!”",
+            "who_said_it": "Miranda D."
+          }
+        }
+      },
+      "block_order": [
+        "9ff6d142-20d8-4247-9d78-103a6ae65154",
+        "aa45cb34-932d-4a1d-8dc0-9ee021342284"
+      ],
+      "settings": {
+        "module_background_color": "#0c2a4a",
+        "module_accent_color": "#b4ecff",
+        "quote_color": "#ffffff",
+        "dots_unselected_color": "#ffffff",
+        "turnpup_bottom_border_color": "#f4b237",
+        "quote_font_family": "assistant_n4",
+        "who_said_it_font_family": "assistant_n4"
+      }
+    },
     "165162882932982481": {
       "type": "apps",
       "blocks": {
@@ -163,45 +195,13 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "16516309549d3262b5": {
-      "type": "flwr-social-proof-clean",
-      "blocks": {
-        "9ff6d142-20d8-4247-9d78-103a6ae65154": {
-          "type": "space",
-          "settings": {
-            "quote_text": "In my experience of visiting the store the owners have been very helpful and I love the inventory! Never had a bad experience here, will be back soon!”",
-            "who_said_it": "Nick G."
-          }
-        },
-        "aa45cb34-932d-4a1d-8dc0-9ee021342284": {
-          "type": "space",
-          "settings": {
-            "quote_text": "“I have always found both owners to be helpful with any questions I have or advice on a concept for my home. I like to shop there when I have time on my hands because they have so many items to look at! Great place!”",
-            "who_said_it": "Miranda D."
-          }
-        }
-      },
-      "block_order": [
-        "9ff6d142-20d8-4247-9d78-103a6ae65154",
-        "aa45cb34-932d-4a1d-8dc0-9ee021342284"
-      ],
-      "settings": {
-        "module_background_color": "#0c2a4a",
-        "module_accent_color": "#B4ECFF",
-        "quote_color": "#FFFFFF",
-        "dots_unselected_color": "#FFFFFF",
-        "turnpup_bottom_border_color": "#F4B237",
-        "quote_font_family": "assistant_n4",
-        "who_said_it_font_family": "assistant_n4"
-      }
     }
   },
   "order": [
     "image_banner",
     "16516195897b496f4a",
     "collage",
-    "165162882932982481",
-    "16516309549d3262b5"
+    "16516309549d3262b5",
+    "165162882932982481"
   ]
 }
