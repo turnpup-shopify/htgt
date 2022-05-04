@@ -179,7 +179,7 @@
             "type": "text",
             "settings": {
               "flwr_footer_block_header": "Address",
-              "flwr_footer_block_description": "1644 Superior Ave, Newport Beach, CA"
+              "flwr_footer_block_description": "1644 Superior Ave <br> Costa Mesa, CA, 92625"
             }
           },
           "dc56bd29-c304-4747-ab22-d076b9706e20": {
