@@ -1,13 +1,24 @@
 {% comment %}
 
-self contained section
+Should include all information about how to install this when someone buys it. 
+- Docs: https://kenwheeler.github.io/slick/
+- Requires: Jquery 1.7+
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+in theme.liquid head
+	<!-- Add the slick-theme.css if you want default styling -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"/>
+	<!-- Add the slick-theme.css if you want default styling -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css"/>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
 
 {% endcomment %}
 
 {% schema %}
   {
-    "name": "Social Proof: Clean",
-    "class": "social-proof-clean-section",
+    "name": "Social Proof",
+    "class": "social-proof-section",
     "settings": [
 		{
       "type": "header",
@@ -32,6 +43,12 @@ self contained section
       "label": "Quote Text Color",
       "default": "#FFFFFF"
     },
+    {
+      "type": "color",
+      "id": "dots_unselected_color",
+      "label": "Dots Unselected Color",
+      "default": "#FFFFFF"
+    },
 		{
 			"type": "color",
 			"id": "turnpup_bottom_border_color",
@@ -50,79 +67,15 @@ self contained section
       "default": "assistant_n4"
     },
     {
-      "type": "range",
-      "id": "font_quote_size",
-      "min": 10,
-      "max": 72,
-      "step": 2,
-      "unit": "px",
-      "label": "Font Quote Size",
-      "default": 50
-    },
-    {
-      "type": "range",
-      "id": "logo_height",
-      "min": 10,
-      "max": 200,
-      "step": 10,
-      "unit": "px",
-      "label": "Logo Height",
-      "default": 50
-    },
-    {
-      "type": "range",
-      "id": "quote_width",
-      "min": 10,
-      "max": 100,
-      "step": 10,
-      "unit": "%",
-      "label": "Quote Container Width (%)",
-      "default": 70
-    },
-    {
-      "type": "range",
-      "id": "logo_width",
-      "min": 10,
-      "max": 100,
-      "step": 10,
-      "unit": "%",
-      "label": "Logo Container Width (%)",
-      "default": 70
-    },
-    {
-      "type": "range",
-      "id": "module_padding_top",
-      "min": 10,
-      "max": 200,
-      "step": 10,
-      "unit": "px",
-      "label": "Module Padding Top (px)",
-      "default": 70
-    },
-    {
-      "type": "range",
-      "id": "module_padding_bottom",
-      "min": 10,
-      "max": 200,
-      "step": 10,
-      "unit": "px",
-      "label": "Module Padding Bottom (px)",
-      "default": 70
-    },
-    {
-      "type": "range",
-      "id": "space_between_quote_and_logos",
-      "min": 10,
-      "max": 200,
-      "step": 10,
-      "unit": "px",
-      "label": "Space Between Quote and Logos",
-      "default": 70
+      "type": "font_picker",
+      "id": "who_said_it_font_family",
+      "label": "Who Said it Font Family",
+      "default": "assistant_n4"
     }
 	],
 	"blocks": [
 		{
-			"name": "Social Proof: TIMELESS",
+			"name": "Social Proof",
 			"type": "space",
 			"settings": [
 				{
@@ -137,16 +90,17 @@ self contained section
 					"default": "The best product I've ever used."
 				},
 				{
-          "type": "image_picker",
-          "id": "logo",
-          "label": "Logo"       
-        }
+					"type": "text",
+					"id": "who_said_it",
+					"label": "Who Said It?",
+					"default": "Vanity Fair"
+				}
 			]
 		}
     ],
     "presets": [
       {
-        "name": "Social Proof: TIMELESS",
+        "name": "Social Proof",
         "category": "Advanced layout",
         "blocks": [
 
@@ -156,182 +110,122 @@ self contained section
   }
 {% endschema %}
 
-<script>
-  let maxHeightQuote = 0;
-  window.addEventListener('DOMContentLoaded', (event) => {
-    maxHeightQuote = document.querySelector(".quote-container .quote").offsetHeight;
-    document.querySelector(".quote-container").style.height = maxHeightQuote+"px";
-    document.querySelectorAll(".logo").forEach( (el) => {
-      el.addEventListener("click", () => {
-        tempID = el.dataset.id;
-        tempID = "#quote-" + tempID;
-        
-        if (el.classList.contains("selected-logo")){
 
-        } else {
-          document.querySelectorAll(".logo").forEach((z) => {z.classList.remove("selected-logo");});
-          el.classList.add("selected-logo");
-        }
 
-        var tempEL = document.querySelector(tempID);
-        if (tempEL.classList.contains("visible-quote")){
+<script type="text/javascript">
+  $(document).ready(function(){
+    const slickOptions = {
+      slidesToShow: 1,
+      arrows: false,
+      focusOnSelect: true,
+      adaptiveHeight: true,
+      dots: true,
+      infinite: true
+    }
+    $('.social-slick').slick(slickOptions)
 
-        } else {
-          document.querySelectorAll(".quote").forEach((z) => {z.classList.remove("visible-quote");z.classList.add("invisible-quote");});
-          tempEL.classList.add("visible-quote");
-          document.querySelector(".quote-container").style.height = tempEL.offsetHeight+"px";
-        }
-      })
-    })
-  });
+    window.addEventListener("resize", function(){
+      $('.js-publications').not('.slick-initialized').slick(slickOptions);
+    });
+  })
 </script>
 
-
-<div class="social-proof-timeless" data-section-id="{{ section.id }}" data-section-type="social-proof-timeless-section">
-  <div class="custom-quotes-timeless">
-    <div class="quote-container"> 
-	    {% for block in section.blocks %}  
-          {% if forloop.index == 1 %} 
-            <div class="quote visible-quote" id="quote-{{forloop.index}}" data-id="{{forloop.index}}"> {{ block.settings.quote_text }} </div>
-          {% else %}
-            <div class="quote invisible-quote" id="quote-{{forloop.index}}" data-id="{{forloop.index}}"> {{ block.settings.quote_text }} </div>
+<div class="social-proof" data-section-id="{{ section.id }}" data-section-type="social-proof-section">
+  <div class="quote-slider">
+    <div class="actual-quote">
+      <svg width="33" height="27" viewBox="0 0 33 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0.820312 21.4437C0.820312 25.6437 1.22032 26.0437 5.12032 26.0437H10.4203C14.0203 26.0437 14.5203 25.5437 14.5203 22.0437V15.8437C14.5203 12.5437 14.1203 12.1437 11.4203 11.9437C9.92032 11.9437 9.42032 11.2437 9.42032 9.44368C9.42032 7.04368 10.5203 5.54368 13.2203 4.44368C14.2203 4.04367 14.5203 3.54367 14.5203 2.54368C14.5203 1.04368 13.6203 0.143677 12.1203 0.143677C8.92031 0.143677 6.22032 1.34367 4.12032 3.64367C1.92032 6.04368 0.820312 9.74368 0.820312 14.9437V21.4437ZM18.8203 21.4437C18.8203 25.6437 19.2203 26.0437 23.1203 26.0437H28.4203C32.0203 26.0437 32.5203 25.5437 32.5203 22.0437V15.8437C32.5203 12.5437 32.1203 12.1437 29.4203 11.9437C27.9203 11.9437 27.4203 11.2437 27.4203 9.44368C27.4203 7.04368 28.5203 5.54368 31.2203 4.44368C32.2203 4.04367 32.5203 3.54367 32.5203 2.54368C32.5203 1.04368 31.6203 0.143677 30.1203 0.143677C26.9203 0.143677 24.2203 1.34367 22.1203 3.64367C19.9203 6.04368 18.8203 9.74368 18.8203 14.9437V21.4437Z" fill="{{ section.settings.module_accent_color }}"></path>
+      </svg> 
+    </div>
+    <div class="social-slick"> 
+	    {% for block in section.blocks %}   
+		    <div class="container"> 
+          <div class="quote"> {{ block.settings.quote_text }} </div>
+  		    {% if block.settings.who_said_it != blank %} 
+            <div class="who_said_it"> {{ block.settings.who_said_it }} </div> 
           {% endif %}
+        </div>
 	    {% endfor %}
-      </div>
-      <div class="logo-container">
-        {% for block in section.blocks %}   
-            {% if block.settings.logo != blank %} 
-              <a class="logo {% if forloop.index == 1 %}selected-logo" {% endif %} 
-                id="logo-{{forloop.index}}" data-id="{{forloop.index}}">
-                <img src="{{ block.settings.logo | img_url: '600x600'}}">
-              </a>
-            {% endif %}
-        {% endfor %}
-      </div>
     </div>
   </div>
 </div>
-<style>
-  {{ section.settings.quote_font_family | font_face: font_display: 'swap' }}
-</style>
-<style>
-  .social-proof-clean {
-    padding-top: {{ section.settings.module_padding_top }}px;
-    padding-bottom: {{ section.settings.module_padding_bottom }}px;
-    background-color: {{ section.settings.module_background_color }};
-  }
-  .social-proof-timeless.container {
-    padding-top: {{ section.settings.module_padding_top }}px;
-    padding-bottom: {{ section.settings.module_padding_bottom }}px;
-    background-color: {{ section.settings.module_background_color }};
-  }
-  .custom-quotes-timeless {
-    padding-top: 6rem;
-    padding-bottom: 6rem;  
-  }
-  .logo-container {
-    margin: {{ section.settings.space_between_quote_and_logos }}px auto 30px;
-    display: flex;
-    justify-content: space-between;
-    width:  {{ section.settings.logo_width }}%;
-  }
-  .quote-container {
-    position: relative;
-    overflow: hidden;
-    height: fit-content;
-  }
-  .invisible-quote {
-    transform: translate(-50%, 50%);
-    transition: all 0.2s linear 0s;
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    top: 0px;
-    left: 50%;
-  }
-  .visible-quote.invisible-quote, .visible-quote {
-    transform: translate(-50%, 0%);
-    opacity: 1;
-    transition: all 0.4s linear 0.3s;
-    visibility: visible;
-    position: absolute;
-    top: 0px;
-    left: 50%;
-  }
 
+<style>
+  .quote-slider {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: {{ section.settings.module_background_color }};
+  }
   .actual-quote {
     max-width: 64rem;
     margin: 0 auto 2rem;
     text-align: center;
   }
-  .custom-quotes-timeless .quote {
-    font-size: {{section.settings.font_quote_size}}px;
+  .social-slick .quote {
+    font-size: 48px;
     text-align: center;
     margin: 0 auto;
-    width:  {{ section.settings.quote_width }}%;
-    font-family: {{ section.settings.quote_font_family.family }}, 'Helvetica';
-    font-style: {{ section.settings.quote_font_family.style }};
-    font-weight: {{ section.settings.quote_font_family.weight }};
+    font-family: {{ section.settings.quote_font_family }};
+    font-weight: 800;
     line-height:  1.1;
     color:  {{ section.settings.quote_color }};
+    margin-bottom: 20px;
   }
-  .logo:after {
-    content: "";
-    position: absolute;
-    left:  50%;
-    transform: translateX(-50%);
-    height:  4px;
-    width:  0%;
-    background-color: {{ section.settings.module_accent_color }};
-    top: {{section.settings.logo_height | plus: 10}}px;
-    transition: width 0.3s linear;
+  .social-slick .who_said_it {
+    font-size: 24px;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'p22-mackinac-pro', serif;
+    font-weight: 400;
+    font-family: {{ section.settings.who_said_it_font_family }};
+;
+
   }
-  .logo.selected-logo:after {
-    content: "";
-    position: absolute;
-    height:  4px;
-    transform: translateX(-50%);
-    width:  100%;
-    left: 50%;
-    background-color: {{ section.settings.module_accent_color }};
-    top: {{section.settings.logo_height | plus: 10}}px;
-    transition: width 0.3s linear;
-  }
-  .logo {
-    height: {{section.settings.logo_height}}px;
+  .social-slick .slick-dots {
+    margin-top: 2rem;
     position: relative;
+    top: 0px;
   }
-  .logo img {
-    height: {{section.settings.logo_height}}px;
+  .slick-dotted.slick-slider {
+    margin-bottom: 0px;
   }
-   
+  .slick-dots li button {
+    margin-right: 0.5rem;
+    height: 0.5rem;
+    width: 1rem;
+    cursor: pointer;
+    border-radius: 1.5rem;
+    background-color: {{ section.settings.dots_unselected_color }};
+  }
+  .slick-dots li.slick-active button:before {
+    opacity: 0;
+  }
+  .slick-dots li button:before {
+    opacity: 0;
+  }
+  .slick-dots li button:hover:before, .slick-dots li button:focus:before {
+    opacity: 0;
+  }
+  .social-slick .slick-dots li.slick-active button {
+    background-color: {{ section.settings.module_accent_color }};
+  }
+  
   @media screen and (max-width: 700px) {                       
-    .logo-container {
-      display: block;
-      margin: 40px auto;
+    .social-slick .quote {
+      font-size: 24px;
     }
-    .custom-quotes-timeless .quote {
-      width:  90%;
+    .social-slick .who_said_it {
+      font-size: 12px;
     }
-    .logo {
-      height: 20px;
-      margin: 0px auto 30px;  
-      display: flex;
-      align-items: center;
-      width: fit-content;
+    .quote-slider {
+      padding: 3rem 2rem 3rem;
     }
-    .logo img {
-      height:  20px;
-      margin: 30px auto 30px;  
-    }
-    .selected-logo:after {
-      content: "";
-      position: absolute;
-      height:  4px;
-      width:  100%;
-      left: 0px;
-      background-color: {{ section.settings.module_accent_color }};
-      top: 24px;      
+    .actual-quote {
+      max-width: 90%;
+      margin: 0 auto 2rem;
+      text-align: center;
     }
   }
 </style>
