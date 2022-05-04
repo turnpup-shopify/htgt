@@ -1,0 +1,7 @@
+.collage {
+    left: -100%;
+}
+.collage.show {
+    left: 0%;
+    transition: left 0.4s linear;
+}
