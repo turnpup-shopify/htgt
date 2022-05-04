@@ -1,8 +1,10 @@
 .collage {
-    left: -150%;
+    opacity: 0;
     position: relative;
+    bottom: -200px;
 }
 .collage.flwr_show {
-    left: 0%;
-    transition: left 0.4s linear 0.4s;
+    opacity: 1;
+    bottom: 0px;
+    transition: all 0.8s linear 0.4s;
 }
