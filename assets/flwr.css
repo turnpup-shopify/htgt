@@ -4,5 +4,5 @@
 }
 .collage.flwr_show {
     left: 0%;
-    transition: left 0.4s linear;
+    transition: left 0.4s linear 0.4s;
 }
