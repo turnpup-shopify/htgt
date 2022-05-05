@@ -49,43 +49,6 @@
         "show_text_below": false
       }
     },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": "accessories"
-          }
-        },
-        "86de7a59-66c4-4000-98da-8c03a5606994": {
-          "type": "collection",
-          "settings": {
-            "collection": "art"
-          }
-        },
-        "a9356391-9636-43f1-ada7-2a1ac2d33844": {
-          "type": "collection",
-          "settings": {
-            "collection": "furniture"
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "86de7a59-66c4-4000-98da-8c03a5606994",
-        "a9356391-9636-43f1-ada7-2a1ac2d33844"
-      ],
-      "settings": {
-        "heading": "EXPLORE OUR PRODUCTS",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "16516195897b496f4a": {
       "type": "flwr-one-long-sentence",
       "blocks": {
@@ -128,6 +91,43 @@
         "alignment": "center",
         "turnpup_bottom_border_color": "#f4b237",
         "mobile_font_size": "12px"
+      }
+    },
+    "collage": {
+      "type": "collage",
+      "blocks": {
+        "collection-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "accessories"
+          }
+        },
+        "86de7a59-66c4-4000-98da-8c03a5606994": {
+          "type": "collection",
+          "settings": {
+            "collection": "art"
+          }
+        },
+        "a9356391-9636-43f1-ada7-2a1ac2d33844": {
+          "type": "collection",
+          "settings": {
+            "collection": "furniture"
+          }
+        }
+      },
+      "block_order": [
+        "collection-0",
+        "86de7a59-66c4-4000-98da-8c03a5606994",
+        "a9356391-9636-43f1-ada7-2a1ac2d33844"
+      ],
+      "settings": {
+        "heading": "EXPLORE OUR PRODUCTS",
+        "heading_size": "h2",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "16516309549d3262b5": {
@@ -200,8 +200,8 @@
   },
   "order": [
     "image_banner",
-    "collage",
     "16516195897b496f4a",
+    "collage",
     "16516309549d3262b5",
     "165162882932982481"
   ]
