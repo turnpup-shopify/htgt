@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+#cart-icon-bubble {
+    display: none;
+}
+
 @media screen and (min-width: 750px) {
   .customer:not(.account):not(.order) {
     max-width: 47.8rem;
