@@ -12,6 +12,7 @@
         },
         "text": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "Transitional, contemporary and coastal, quality furniture, art and accents at best value pricing.  Local family owned and operated, one-of-a-kind furniture store situated within renovated warehouse\/hanger in Costa Mesa.  Visit our Promotions page to sign up for newsletters and special offers. If you have a special request or hard to find item, let us know via the Contact Us page.",
             "text_style": "body"
@@ -46,6 +47,43 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
+      }
+    },
+    "collage": {
+      "type": "collage",
+      "blocks": {
+        "collection-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "accessories"
+          }
+        },
+        "86de7a59-66c4-4000-98da-8c03a5606994": {
+          "type": "collection",
+          "settings": {
+            "collection": "art"
+          }
+        },
+        "a9356391-9636-43f1-ada7-2a1ac2d33844": {
+          "type": "collection",
+          "settings": {
+            "collection": "furniture"
+          }
+        }
+      },
+      "block_order": [
+        "collection-0",
+        "86de7a59-66c4-4000-98da-8c03a5606994",
+        "a9356391-9636-43f1-ada7-2a1ac2d33844"
+      ],
+      "settings": {
+        "heading": "EXPLORE OUR PRODUCTS",
+        "heading_size": "h2",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "16516195897b496f4a": {
@@ -92,43 +130,6 @@
         "mobile_font_size": "12px"
       }
     },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": "accessories"
-          }
-        },
-        "86de7a59-66c4-4000-98da-8c03a5606994": {
-          "type": "collection",
-          "settings": {
-            "collection": "art"
-          }
-        },
-        "a9356391-9636-43f1-ada7-2a1ac2d33844": {
-          "type": "collection",
-          "settings": {
-            "collection": "furniture"
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "86de7a59-66c4-4000-98da-8c03a5606994",
-        "a9356391-9636-43f1-ada7-2a1ac2d33844"
-      ],
-      "settings": {
-        "heading": "EXPLORE OUR PRODUCTS",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "16516309549d3262b5": {
       "type": "flwr-social-proof-clean",
       "blocks": {
@@ -167,7 +168,7 @@
         "a6e315d7-1116-4df1-b736-116e352da46d": {
           "type": "shopify:\/\/apps\/section-feed\/blocks\/app-block\/43cd482b-515a-4e82-b170-05d391763cd2",
           "settings": {
-            "title": "JOIN OUR COMMUNITY",
+            "title": "SEE OUR LATEST RECENT ARRIVALS",
             "subheading": "",
             "button_text": "Follow us on instagram",
             "button_link": "https:\/\/www.instagram.com\/htgthome\/",
@@ -199,8 +200,8 @@
   },
   "order": [
     "image_banner",
-    "16516195897b496f4a",
     "collage",
+    "16516195897b496f4a",
     "16516309549d3262b5",
     "165162882932982481"
   ]
