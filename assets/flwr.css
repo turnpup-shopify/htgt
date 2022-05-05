@@ -12,6 +12,21 @@
     transition: all 0.8s linear 0.4s;
 }
 .floating_phone {
+    position: fixed;
+    bottom: 10vH;
+    right: 5vW;
+    width: 60px;
+    height: 60px;
+    background-color: #fa6e12;
+    border-radius: 100%;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 40px;
+    line-height: 40px;
+}
+.floating_phone {
       position: fixed;
     bottom: 10vH;
     right: 10vW;
@@ -23,7 +38,6 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    font-size: 20px;
-    line-height: 20px;
-    margin: 20px;  
+    font-size: 40px;
+    line-height: 40px;
 }
