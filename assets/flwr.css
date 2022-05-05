@@ -11,3 +11,10 @@
     bottom: 0px;
     transition: all 0.8s linear 0.4s;
 }
+.floating_phone {
+  position: fixed;
+  bottom: 10vH;
+  right: 10vW;
+  width: 40px;
+  height: 40px;
+}
