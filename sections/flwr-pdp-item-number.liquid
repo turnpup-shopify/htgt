@@ -1,9 +1,40 @@
 {% schema %}
-  {
-    "name": "Item Number",
-    "settings": []
-  }
+{
+  "name": "PDP Item Number",
+  "class": "section-flwr-pdp_item_number",
+  "settings": [
+    {
+        "type": "text",
+        "id": "flwr_footer_header",
+        "label": "Footer Header"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Footer Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "flwr_footer_block_header",
+          "label": "Footer Block Header",
+          "default": "Header"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "PDP Item Number",
+      "category": "CUSTOM",
+      "blocks": [
+        
+      ]
+    }
+  ]
+}
 {% endschema %}
+
 
 
 
@@ -12,3 +43,4 @@
 
 {% javascript %}
 {% endjavascript %}
+
