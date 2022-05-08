@@ -22,6 +22,16 @@
             "text_style": "subtitle"
           }
         },
+        "4ba3d4c2-7659-490c-acfe-cce0cf05f1d7": {
+          "type": "custom_item_number",
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
         "price": {
           "type": "price",
           "disabled": true,
@@ -46,11 +56,6 @@
           "disabled": true,
           "settings": {
             "show_dynamic_checkout": true
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
           }
         },
         "collapsible-row-0": {
@@ -105,11 +110,12 @@
         "vendor",
         "title",
         "caption",
+        "4ba3d4c2-7659-490c-acfe-cce0cf05f1d7",
+        "description",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
