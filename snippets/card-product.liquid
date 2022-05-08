@@ -250,7 +250,9 @@
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
               <div class="caption-with-letter-spacing light">{{ 'products.product.vendor' | t }}</div>
             {%- endif -%}
-            {% render 'price' %}
+            {% comment %}
+              {% render 'price' %}
+            {% endcomment %}
           </div>
         </div>
       </div>
