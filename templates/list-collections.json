@@ -1,15 +1,24 @@
 {
   "sections": {
+    "1652051644df26dda7": {
+      "type": "flwr-collections-all",
+      "settings": {
+        "menu": "main-menu"
+      }
+    },
     "main": {
       "type": "main-list-collections",
       "settings": {
         "title": "Collections",
         "sort": "alphabetical",
-        "image_ratio": "square"
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "columns_mobile": "2"
       }
     }
   },
   "order": [
+    "1652051644df26dda7",
     "main"
   ]
 }
