@@ -127,12 +127,6 @@
         "padding_bottom": 12
       }
     },
-    "16520501210f12fb9f": {
-      "type": "flwr-pdp-item-number",
-      "settings": {
-        "flwr_footer_header": ""
-      }
-    },
     "image-with-text": {
       "type": "image-with-text",
       "disabled": true,
@@ -233,7 +227,6 @@
   },
   "order": [
     "main",
-    "16520501210f12fb9f",
     "image-with-text",
     "multicolumn",
     "product-recommendations"
