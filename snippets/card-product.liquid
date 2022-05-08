@@ -137,7 +137,9 @@
               </p>
             {%- endif -%}
 
-            {% render 'price', product: card_product, price_class: '' %}
+            {% comment %}
+              {% render 'price', product: card_product, price_class: '' %}
+            {% endcomment %}
           </div>
         </div>
         {%- if show_quick_add -%}
