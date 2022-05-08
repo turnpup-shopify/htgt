@@ -403,10 +403,10 @@
                 </div>
               </div>
             </noscript>
-          {%- when 'item_number' -%}
+          {%- when 'custom_item_number' -%}
             {%- if product.metafields['pdp']['item_number'] != blank -%}
               <div class="flwr_item_number">
-                <p> {{ product.metafields['pdp']['item_number'] }} </p>
+                <p> Item Number: {{ product.metafields['pdp']['item_number'] }} </p>
               </div>
             {%- endif -%}
           {%- when 'buy_buttons' -%}
