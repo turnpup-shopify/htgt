@@ -35,6 +35,11 @@
 }
 {% endschema %}
 
+{% if product.metafields['pdp']['item_number'] != blank %}
+  <div class="flwr_item_number">
+    <p> {{ product.metafields['pdp']['item_number'] }} </p>
+  </div>
+{% endif %}
 
 
 
