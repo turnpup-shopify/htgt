@@ -45,9 +45,7 @@
           </div>
           <div id="link-{{ link.title | escape }}">
             <div class="flwr-submenu">
-              <div>
                 {%- for childlink in link.links -%}
-                  <div>
                     {%- if childlink.links == blank -%}
                       <div class="flwr_second_level">
                         <a href="{{ childlink.url }}">
@@ -80,9 +78,7 @@
                             </div>
                           {%- endfor -%}
                         </div>
-                      </div>
                     {%- endif -%}
-                  </div>
                 {%- endfor -%}
               </div>
             </div>
