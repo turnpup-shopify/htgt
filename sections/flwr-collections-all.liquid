@@ -194,17 +194,17 @@
             el.addEventListener("click", () => {
                 var dataid = el.dataset.id;
                 var closeid = "close-"+dataid;
-                var openid = ".flwr_second_level#"+dataid;              
+                var buttonid = ".flwr_second_level#"+dataid;              
                 var containerid = "#close-"+dataid;              
                 console.log("click!!" + closeid);
                 console.log("clicked button " + dataid);  
-                if (document.querySelector(".flwr_second_level_container").classList.contains("sho")) {
+                if (document.querySelector(containerid).classList.contains("sho")) {
                   closeAll();
                 } else {
                   closeAll();
-                  console.log(openid);
+                  console.log(buttonid);
                   document.querySelector(containerid).classList.add("sho");
-                  document.querySelector(openid).classList.add("selected");
+                  document.querySelector(buttonid).classList.add("selected");
                 }
             })
         })
