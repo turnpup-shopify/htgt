@@ -90,7 +90,7 @@
                                             
                       {%- else -%}
                           {% assign child_link_handle = childlink.title | handle %}
-                          <div class="flwr_second_level_container" data-id="close-{{child_link_handle}}">                          
+                          <div class="flwr_second_level_container" data-id="close-{{child_link_handle}}" id="close-{{child_link_handle}}">                          
                             {%- for grandchildlink in childlink.links -%}
                               <div class="flwr_third_level">
                                 {% assign link_handle = grandchildlink.title | handle %}
