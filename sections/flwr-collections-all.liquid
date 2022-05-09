@@ -38,7 +38,7 @@
 <div class="flwr-collections-all-section">
   {%- for link in section.settings.menu.links -%}
     <div>
-      {%- if link.links != blank and link.title != "Home" -%}
+      {%- if link.links != blank and link.title != 'Home' -%}
         <div id="flwr-collection-all-{{ forloop.index }}">
           <div class="flwr-summary">
             {{ link.title | escape }}
