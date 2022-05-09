@@ -58,10 +58,10 @@
                         </div>
                         <div class="flwr_second_level_container">                          
                           {%- for grandchildlink in childlink.links -%}
-                            <div>
+                            <div class="flwr_third_level">
                               {% assign link_handle = grandchildlink.title | handle %}
                               <img src="{{ collections[link_handle].image.src | image_url }}">
-                              <a class="flwr_third_level" href="{{ grandchildlink.url }}">
+                              <a  href="{{ grandchildlink.url }}">
                                 {{ grandchildlink.title | escape }}                                
                               </a>
                             </div>
