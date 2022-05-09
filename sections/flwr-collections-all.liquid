@@ -40,7 +40,7 @@
     <div>
       {%- if link.links != blank and link.title != 'Home' -%}
         <div id="flwr-collection-all-{{ forloop.index }}">
-          <div class="flwr_first_level">
+          <div style="display:none" class="flwr_first_level">
             {{ link.title | escape }}
           </div>
           <div id="link-{{ link.title | escape }}">
