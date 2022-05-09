@@ -195,7 +195,7 @@
   window.addEventListener('DOMContentLoaded', (event) => {
         document.querySelectorAll('.flwr_second_level').forEach(function(el) {
             el.addEventListener("click", () => {
-                var dataid = el.dataset.columns;
+                var dataid = el.dataset.id;
                 console.log("click!!");
                 console.log("clicked button" + dataid);  
                 if (el.parentNode.querySelector(".flwr_second_level_container").classList.contains("sho")) {
