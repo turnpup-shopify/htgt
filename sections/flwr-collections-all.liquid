@@ -198,6 +198,7 @@
                 var dataid = el.dataset.id;
                 var closeid = "close-"+dataid;
                 var openid = ".flwr_second_level_container#"+dataid;              
+                var containerid = "#close-"+dataid;              
                 console.log("click!!" + closeid);
                 console.log("clicked button " + dataid);  
                 if (document.querySelector(".flwr_second_level_container").classList.contains("sho")) {
@@ -205,7 +206,7 @@
                 } else {
                   closeAll();
                   console.log(closeid);
-                  document.querySelector(closeid).classList.add("sho");
+                  document.querySelector(containerid).classList.add("sho");
                   document.querySelector(openid).classList.add("selected");
                 }
             })
