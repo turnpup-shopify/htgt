@@ -86,16 +86,13 @@
                   {%- for childlink in link.links -%}
                     <div>
                       {%- if childlink.links == blank -%}
-                        <div class="flwr_second_level">
-                          <a href="{{ childlink.url }}">
-                            {{ childlink.title | escape }}
-                          </a>
-                        </div>                     
+                                            
                       {%- else -%}
-                          <div class="flwr_second_level">
+                          {% assign child_link_handle = childlink.title | handle %}
+                          <div class="flwr_second_level" data-id="{{child_link_handle}}">
                             {{ childlink.title | escape }}
                           </div>
-                          <div class="flwr_second_level_container">                          
+                          <div class="flwr_second_level_container" data-id="{{child_link_handle}}>                          
                             {%- for grandchildlink in childlink.links -%}
                               <div class="flwr_third_level">
                                 {% assign link_handle = grandchildlink.title | handle %}
