@@ -40,7 +40,7 @@
     <div>
       {%- if link.links != blank and link.title != 'Home' -%}
         <div id="flwr-collection-all-{{ forloop.index }}">
-          <div  class="flwr_first_level">
+          <div class="flwr_first_level">
             {{ link.title | escape }}
           </div>
           <div id="link-{{ link.title | escape }}">
@@ -61,7 +61,7 @@
                           <div>
                             {%- for grandchildlink in childlink.links -%}
                               <div>
-                                <a href="{{ grandchildlink.url }}">
+                                <a class="flwr_third_level" href="{{ grandchildlink.url }}">
                                   {{ grandchildlink.title | escape }}
                                 </a>
                               </div>
