@@ -144,8 +144,12 @@
   window.addEventListener('DOMContentLoaded', (event) => {
         document.querySelectorAll('.flwr_second_level').forEach(function(el) {
             el.addEventListener("click", () => {
-                console.log("clicked button" + el);               
-                el.parentNode.querySelector(".flwr_second_level_container").classList.add("sho");
+                console.log("clicked button" + el);
+                if (el.parentNode.querySelector(".flwr_second_level_container").classList.contains("sho")) {
+                  el.parentNode.querySelector(".flwr_second_level_container").classList.remove("sho");
+                } else {
+                  el.parentNode.querySelector(".flwr_second_level_container").classList.add("sho");
+                }
             })
         })
     });
