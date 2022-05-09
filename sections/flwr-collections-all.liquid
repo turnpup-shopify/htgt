@@ -145,7 +145,7 @@
         document.querySelectorAll('.flwr_second_level').forEach(function(el) {
             el.addEventListener("click", () => {
                 console.log("clicked button" + el);               
-                el.querySelector(".flwr_second_level_container").classList.add("sho");
+                el.parentNode.querySelector(".flwr_second_level_container").classList.add("sho");
             })
         })
     });
