@@ -39,12 +39,12 @@
   {%- for link in section.settings.menu.links -%}
     <li>
       {%- if link.links != blank -%}
-        <details id="flwr-collection-all-{{ forloop.index }}">
+        <div id="flwr-collection-all-{{ forloop.index }}">
           <summary class="flwr-summary">
             {{ link.title | escape }}
             {% render 'icon-arrow' %}
             {% render 'icon-caret' %}
-          </summary>
+          </div>
           <div id="link-{{ link.title | escape }}">
             <div class="flwr-submenu">
               <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
