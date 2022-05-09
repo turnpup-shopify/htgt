@@ -93,7 +93,7 @@
 </style>
 
 <script>
-  {% assign alex = collections["coffee-tables"] %}
+  {% assign alex = collections["coffee-tables"] | json %}
   var alex = {{ alex }};
   var debug = {{ collections["coffee-tables"] | json }};   
   console.log(debug);
