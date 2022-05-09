@@ -62,7 +62,7 @@
                           {%- for grandchildlink in childlink.links -%}
                             <div class="flwr_third_level">
                               {% assign link_handle = grandchildlink.title | handle %}
-                              <div>
+                              <div class="img_container">
                                 {% if collections[link_handle].image.src != blank %}
                                   <img src="{{ collections[link_handle].image.src | image_url }}">
                                 {% else %}
