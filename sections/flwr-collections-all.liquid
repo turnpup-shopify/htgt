@@ -64,6 +64,7 @@
                                 <a class="flwr_third_level" href="{{ grandchildlink.url }}">
                                   <img src="">
                                   {{ grandchildlink.title | escape }}
+                                  {{ grandchildlink.title | handle }}
                                 </a>
                               </div>
                             {%- endfor -%}
