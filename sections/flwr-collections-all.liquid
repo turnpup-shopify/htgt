@@ -37,64 +37,98 @@
 {% endschema %}
 <div class="flwr-collections-all-section">
   <div class="flwr-collections-all-left">
-  {%- for link in section.settings.menu.links -%}
-    <div>
-      {%- if link.links != blank and link.title != 'Home' -%}
-        <div id="flwr-collection-all-{{ forloop.index }}">
-          <div style="display:none" class="flwr_first_level">
-            {{ link.title | escape }}
-          </div>
-          <div id="link-{{ link.title | escape }}">
-            <div class="flwr-submenu">
-              <div>
-                {%- for childlink in link.links -%}
-                  <div>
-                    {%- if childlink.links == blank -%}
-                      <div class="flwr_second_level">
-                        <a href="{{ childlink.url }}">
-                          {{ childlink.title | escape }}
-                        </a>
-                      </div>                     
-                    {%- else -%}
+    {%- for link in section.settings.menu.links -%}
+      <div>
+        {%- if link.links != blank and link.title != 'Home' -%}
+          <div id="flwr-collection-all-{{ forloop.index }}">
+            <div style="display:none" class="flwr_first_level">
+              {{ link.title | escape }}
+            </div>
+            <div id="link-{{ link.title | escape }}">
+              <div class="flwr-submenu">
+                <div>
+                  {%- for childlink in link.links -%}
+                    <div>
+                      {%- if childlink.links == blank -%}
                         <div class="flwr_second_level">
-                          {{ childlink.title | escape }}
+                          <a href="{{ childlink.url }}">
+                            {{ childlink.title | escape }}
+                          </a>
+                        </div>                     
+                      {%- else -%}
+                          <div class="flwr_second_level">
+                            {{ childlink.title | escape }}
+                          </div>                          
                         </div>
-                        <div class="flwr_second_level_container">                          
-                          {%- for grandchildlink in childlink.links -%}
-                            <div class="flwr_third_level">
-                              {% assign link_handle = grandchildlink.title | handle %}
-                              <div class="img_container">
-                                {% if collections[link_handle].image.src != blank %}
-                                  <img src="{{ collections[link_handle].image.src | image_url }}">
-                                {% else %}
-                                  <img src="https://cdn.shopify.com/s/files/1/0507/4452/5007/files/htgt_gradient.jpg?v=1652066074">
-                                {% endif %}
-                              </div>
-                              <div>
-                                <a href="{{ grandchildlink.url }}">
-                                  {{ grandchildlink.title | escape }}
-                                  <svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
-                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
-                                </path></svg>
-                                </a>
-                              </div>
-                            </div>
-                          {%- endfor -%}
-                        </div>
-                      </div>
-                    {%- endif -%}
-                  </div>
-                {%- endfor -%}
+                      {%- endif -%}
+                    </div>
+                  {%- endfor -%}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      {%- else -%}
-        <!-- HOME falls into this cateogry - purposefully skip -->
-      {%- endif -%}
-  {%- endfor -%}
+        {%- else -%}
+          <!-- HOME falls into this cateogry - purposefully skip -->
+        {%- endif -%}
+    {%- endfor -%}
+  </div>
   <div class="flwr-collections-all-right">
-
+    {%- for link in section.settings.menu.links -%}
+      <div>
+        {%- if link.links != blank and link.title != 'Home' -%}
+          <div id="flwr-collection-all-{{ forloop.index }}">
+            <div style="display:none" class="flwr_first_level">
+              {{ link.title | escape }}
+            </div>
+            <div id="link-{{ link.title | escape }}">
+              <div class="flwr-submenu">
+                <div>
+                  {%- for childlink in link.links -%}
+                    <div>
+                      {%- if childlink.links == blank -%}
+                        <div class="flwr_second_level">
+                          <a href="{{ childlink.url }}">
+                            {{ childlink.title | escape }}
+                          </a>
+                        </div>                     
+                      {%- else -%}
+                          <div class="flwr_second_level">
+                            {{ childlink.title | escape }}
+                          </div>
+                          <div class="flwr_second_level_container">                          
+                            {%- for grandchildlink in childlink.links -%}
+                              <div class="flwr_third_level">
+                                {% assign link_handle = grandchildlink.title | handle %}
+                                <div class="img_container">
+                                  {% if collections[link_handle].image.src != blank %}
+                                    <img src="{{ collections[link_handle].image.src | image_url }}">
+                                  {% else %}
+                                    <img src="https://cdn.shopify.com/s/files/1/0507/4452/5007/files/htgt_gradient.jpg?v=1652066074">
+                                  {% endif %}
+                                </div>
+                                <div>
+                                  <a href="{{ grandchildlink.url }}">
+                                    {{ grandchildlink.title | escape }}
+                                    <svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
+                                  </path></svg>
+                                  </a>
+                                </div>
+                              </div>
+                            {%- endfor -%}
+                          </div>
+                        </div>
+                      {%- endif -%}
+                    </div>
+                  {%- endfor -%}
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- else -%}
+          <!-- HOME falls into this cateogry - purposefully skip -->
+        {%- endif -%}
+    {%- endfor -%}
   </div>
 </div>
 
