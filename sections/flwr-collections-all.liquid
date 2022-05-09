@@ -40,7 +40,7 @@
     <li>
       {%- if link.links != blank -%}
         <div id="flwr-collection-all-{{ forloop.index }}">
-          <summary class="flwr-summary">
+          <div class="flwr-summary">
             {{ link.title | escape }}
             {% render 'icon-arrow' %}
             {% render 'icon-caret' %}
@@ -87,7 +87,7 @@
               </ul>
             </div>
           </div>
-        </details>
+        </div>
       {%- else -%}
         <a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
           {{ link.title | escape }}
