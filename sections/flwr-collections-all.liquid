@@ -48,10 +48,9 @@
               <div class="flwr-submenu">
                 <div>
                   {%- for childlink in link.links -%}
-                    <div>
                       {% assign child_link_handle = childlink.title | handle %}
                       {%- if childlink.links == blank -%}
-                      <div class="flwr_second_level" id="{{child_link_handle}}" data-id="{{child_link_handle}}">
+                        <div class="flwr_second_level" id="{{child_link_handle}}" data-id="{{child_link_handle}}">
                           <a href="{{ childlink.url }}">
                             {{ childlink.title | escape }}
                           </a>
@@ -60,7 +59,6 @@
                           <div class="flwr_second_level" id="{{child_link_handle}}" data-id="{{child_link_handle}}">
                             {{ childlink.title | escape }}
                           </div>                          
-                        </div>
                       {%- endif -%}
                     </div>
                   {%- endfor -%}
