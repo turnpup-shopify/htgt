@@ -40,7 +40,7 @@
     <div>
       {%- if link.links != blank and link.title != 'Home' -%}
         <div id="flwr-collection-all-{{ forloop.index }}">
-          <div class="flwr-summary">
+          <div  class="flwr_first_level">
             {{ link.title | escape }}
           </div>
           <div id="link-{{ link.title | escape }}">
@@ -54,7 +54,7 @@
                       </a>
                     {%- else -%}
                       <div>
-                        <div class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
+                        <div class="flwr_second_level">
                           {{ childlink.title | escape }}
                         </div>
                         <div>                          
