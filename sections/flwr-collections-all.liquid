@@ -49,9 +49,11 @@
                 {%- for childlink in link.links -%}
                   <div>
                     {%- if childlink.links == blank -%}
-                      <a href="{{ childlink.url }}">
-                        {{ childlink.title | escape }}
-                      </a>
+                      <div class="flwr_second_level">
+                        <a href="{{ childlink.url }}">
+                          {{ childlink.title | escape }}
+                        </a>
+                      </div>                     
                     {%- else -%}>
                         <div class="flwr_second_level">
                           {{ childlink.title | escape }}
