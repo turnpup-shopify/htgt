@@ -151,6 +151,7 @@
         document.querySelectorAll('.flwr_second_level').forEach(function(el) {
             el.addEventListener("click", () => {
                 console.log("clicked button" + el);
+                closeAll();
                 if (el.parentNode.querySelector(".flwr_second_level_container").classList.contains("sho")) {
                   el.parentNode.querySelector(".flwr_second_level_container").classList.remove("sho");
                 } else {
@@ -159,5 +160,10 @@
             })
         })
     });
+  function closeAll(){
+   document.querySelectorAll('.flwr_second_level_container').forEach(function(el) {
+     el.classList.remove("sho");
+   })
+  }
 </script>
 
