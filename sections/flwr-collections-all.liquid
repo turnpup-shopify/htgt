@@ -45,9 +45,6 @@
           </div>
           <div id="link-{{ link.title | escape }}">
             <div class="flwr-submenu">
-              <button>
-                {{ link.title | escape }}
-              </button>
               <div>
                 {%- for childlink in link.links -%}
                   <div>
