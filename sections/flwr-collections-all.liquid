@@ -140,5 +140,14 @@
   var alex = {{ alex }};
   var debug = {{ collections["coffee-tables"] | json }};   
   console.log(debug);
+  
+  window.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('.flwr_second_level').forEach(function(el) {
+            el.addEventListener("click", () => {
+                console.log("clicked button" + el);               
+                el.querySelector(".flwr_second_level_container").classList.add("sho");
+            })
+        })
+    });
 </script>
 
