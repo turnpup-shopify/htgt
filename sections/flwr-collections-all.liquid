@@ -192,10 +192,16 @@
   var debug = {{ collections["coffee-tables"] | json }};   
   console.log(debug);
   
+  const article = document.querySelector('#electric-cars');
+  // The following would also work:
+  // const article = document.getElementById("electric-cars")
+  article.dataset.columns
+  
   window.addEventListener('DOMContentLoaded', (event) => {
         document.querySelectorAll('.flwr_second_level').forEach(function(el) {
             el.addEventListener("click", () => {
-                console.log("clicked button" + el);         
+                var dataid = el.dataset.columns;
+                console.log("clicked button" + dataid);         
                 if (el.parentNode.querySelector(".flwr_second_level_container").classList.contains("sho")) {
                   closeAll();
                 } else {
