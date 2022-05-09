@@ -196,7 +196,8 @@
         document.querySelectorAll('.flwr_second_level').forEach(function(el) {
             el.addEventListener("click", () => {
                 var dataid = el.dataset.id;
-                console.log("click!!");
+                var closeid = "close-"+dataid;
+                console.log("click!!" + closeid);
                 console.log("clicked button" + dataid);  
                 if (document.querySelector(".flwr_second_level_container").classList.contains("sho")) {
                   closeAll();
