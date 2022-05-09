@@ -163,18 +163,13 @@
   window.addEventListener('DOMContentLoaded', (event) => {
         document.querySelectorAll('.flwr_second_level').forEach(function(el) {
             el.addEventListener("click", () => {
-                console.log("clicked button" + el);
-                if (el.classList.contains("selected")) {
-                  el.classList.remove("selected");
-                } else {
-                  el.classList.add("selected");
-                }
-          
+                console.log("clicked button" + el);         
                 if (el.parentNode.querySelector(".flwr_second_level_container").classList.contains("sho")) {
                   closeAll();
                 } else {
                   closeAll();
                   el.parentNode.querySelector(".flwr_second_level_container").classList.add("sho");
+                  el.classList.add("selected");
                 }
             })
         })
@@ -182,6 +177,9 @@
   function closeAll(){
    document.querySelectorAll('.flwr_second_level_container').forEach(function(el) {
      el.classList.remove("sho");
+   })
+   document.querySelectorAll('.flwr_second_level').forEach(function(el) {
+     el.classList.remove("selected");
    })
   }
 </script>
