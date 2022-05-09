@@ -1,0 +1,186 @@
+{% schema %}
+{
+  "name": "flwr collections all",
+  "class": "section-flwr-collections-all",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "t:sections.header.settings.menu.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Footer Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "flwr_footer_block_header",
+          "label": "Footer Block Header",
+          "default": "Header"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "flwr collections all",
+      "category": "CUSTOM",
+      "blocks": [
+        
+      ]
+    }
+  ]
+}
+{% endschema %}
+<div class="flwr-collections-all-section">
+  {%- for link in section.settings.menu.links -%}
+    <div>
+      {%- if link.links != blank and link.title != 'Home' -%}
+        <div id="flwr-collection-all-{{ forloop.index }}">
+          <div style="display:none" class="flwr_first_level">
+            {{ link.title | escape }}
+          </div>
+          <div id="link-{{ link.title | escape }}">
+            <div class="flwr-submenu">
+              <div>
+                {%- for childlink in link.links -%}
+                  <div>
+                    {%- if childlink.links == blank -%}
+                      <div class="flwr_second_level">
+                        <a href="{{ childlink.url }}">
+                          {{ childlink.title | escape }}
+                        </a>
+                      </div>                     
+                    {%- else -%}
+                        <div class="flwr_second_level">
+                          {{ childlink.title | escape }}
+                        </div>
+                        <div class="flwr_second_level_container">                          
+                          {%- for grandchildlink in childlink.links -%}
+                            <div class="flwr_third_level">
+                              {% assign link_handle = grandchildlink.title | handle %}
+                              <div class="img_container">
+                                {% if collections[link_handle].image.src != blank %}
+                                  <img src="{{ collections[link_handle].image.src | image_url }}">
+                                {% else %}
+                                  <img src="https://cdn.shopify.com/s/files/1/0507/4452/5007/files/htgt_gradient.jpg?v=1652066074">
+                                {% endif %}
+                              </div>
+                              <div>
+                                <a href="{{ grandchildlink.url }}">
+                                  {{ grandchildlink.title | escape }}
+                                  <svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
+                                </path></svg>
+                                </a>
+                              </div>
+                            </div>
+                          {%- endfor -%}
+                        </div>
+                      </div>
+                    {%- endif -%}
+                  </div>
+                {%- endfor -%}
+              </div>
+            </div>
+          </div>
+        </div>
+      {%- else -%}
+        <!-- HOME falls into this cateogry - purposefully skip -->
+      {%- endif -%}
+    </div>
+  {%- endfor -%}
+</div>
+
+<style>
+  .flwr-collections-all-section {
+    max-width: 90%;
+    margin: 40px auto;
+  }
+  .flwr_second_level {
+    font-size: 3rem;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  .flwr_second_level.selected {
+    border: 0px solid black;
+    background: black;
+    color: white;
+  }
+  .flwr_second_level {
+    font-size: 2rem;
+    padding: 1rem 4rem;
+    border: 1px solid black;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  .flwr_second_level_container {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 16px;
+  }
+  .flwr_second_level_container.sho {
+    display: flex;
+  }
+  .flwr_third_level {
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;   
+  }
+  .flwr_second_level a, .flwr_third_level a {
+    text-decoration: none;
+    color: black;   
+  }
+  .flwr_third_level {
+    width: 31%;
+  }
+  .flwr_third_level .img_container {
+    height: 40vH;
+  }
+  .flwr_third_level img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+</style>
+
+<script>
+  {% assign alex = collections["coffee-tables"] | json %}
+  var alex = {{ alex }};
+  var debug = {{ collections["coffee-tables"] | json }};   
+  console.log(debug);
+  
+  window.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('.flwr_second_level').forEach(function(el) {
+            el.addEventListener("click", () => {
+                console.log("clicked button" + el);         
+                if (el.parentNode.querySelector(".flwr_second_level_container").classList.contains("sho")) {
+                  closeAll();
+                } else {
+                  closeAll();
+                  el.parentNode.querySelector(".flwr_second_level_container").classList.add("sho");
+                  el.classList.add("selected");
+                }
+            })
+        })
+    });
+  function closeAll(){
+   document.querySelectorAll('.flwr_second_level_container').forEach(function(el) {
+     el.classList.remove("sho");
+   })
+   document.querySelectorAll('.flwr_second_level').forEach(function(el) {
+     el.classList.remove("selected");
+   })
+  }
+</script>
+
