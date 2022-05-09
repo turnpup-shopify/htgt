@@ -62,6 +62,7 @@
                             {%- for grandchildlink in childlink.links -%}
                               <div>
                                 <a class="flwr_third_level" href="{{ grandchildlink.url }}">
+                                  <img src="">
                                   {{ grandchildlink.title | escape }}
                                 </a>
                               </div>
@@ -90,5 +91,7 @@
   }
 </style>
 
-{% javascript %}
-{% endjavascript %}
+<script>
+  var debug = {{ collections }}   
+</script>
+
