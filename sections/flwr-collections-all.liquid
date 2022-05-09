@@ -42,12 +42,10 @@
         <div id="flwr-collection-all-{{ forloop.index }}">
           <div class="flwr-summary">
             {{ link.title | escape }}
-            {% render 'icon-arrow' %}
-            {% render 'icon-caret' %}
           </div>
           <div id="link-{{ link.title | escape }}">
             <div class="flwr-submenu">
-              <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+              <button>
                 {{ link.title | escape }}
               </button>
               <div>
