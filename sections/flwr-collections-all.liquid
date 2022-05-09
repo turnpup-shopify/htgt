@@ -51,13 +51,13 @@
                     <div>
                       {% assign child_link_handle = childlink.title | handle %}
                       {%- if childlink.links == blank -%}
-                      <div class="flwr_second_level" data-id="open-{{child_link_handle}}">
+                      <div class="flwr_second_level" data-id="{{child_link_handle}}">
                           <a href="{{ childlink.url }}">
                             {{ childlink.title | escape }}
                           </a>
                         </div>                     
                       {%- else -%}
-                          <div class="flwr_second_level" data-id="open-{{child_link_handle}}">
+                          <div class="flwr_second_level" data-id="{{child_link_handle}}">
                             {{ childlink.title | escape }}
                           </div>                          
                         </div>
