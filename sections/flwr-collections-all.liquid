@@ -108,6 +108,14 @@
     display: inline-block;
     margin-bottom: 1rem;
   }
+  .flwr_second_level {
+    font-size: 3rem;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
   .flwr_second_level_container {
     display: none;
     flex-direction: row;
@@ -151,6 +159,12 @@
         document.querySelectorAll('.flwr_second_level').forEach(function(el) {
             el.addEventListener("click", () => {
                 console.log("clicked button" + el);
+                if (el.classList.contains("selected")) {
+                  el.classList.remove("selected");
+                } else {
+                  el.classList.add("selected");
+                }
+          
                 if (el.parentNode.querySelector(".flwr_second_level_container").classList.contains("sho")) {
                   closeAll();
                 } else {
