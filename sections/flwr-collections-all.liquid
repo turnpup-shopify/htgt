@@ -60,7 +60,13 @@
                           {%- for grandchildlink in childlink.links -%}
                             <div class="flwr_third_level">
                               {% assign link_handle = grandchildlink.title | handle %}
-                              <div><img src="{{ collections[link_handle].image.src | image_url }}"></div>
+                              <div>
+                                {% if collections[link_handle].image.src != blank %}
+                                  <img src="{{ collections[link_handle].image.src | image_url }}">
+                                {% else %}
+                                  <img src="https://cdn.shopify.com/s/files/1/0507/4452/5007/files/htgt_gradient.jpg?v=1652066074">
+                                {% endif %}
+                              </div>
                               <div>
                                 <a href="{{ grandchildlink.url }}">
                                   {{ grandchildlink.title | escape }}                                
