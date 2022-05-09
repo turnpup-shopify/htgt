@@ -37,7 +37,7 @@
 {% endschema %}
 <div class="flwr-collections-all-section">
   {%- for link in section.settings.menu.links -%}
-    <li>
+    <div>
       {%- if link.links != blank and link.title != "Home" -%}
         <div id="flwr-collection-all-{{ forloop.index }}">
           <div class="flwr-summary">
@@ -81,7 +81,7 @@
           {{ link.title | escape }}
         </a>
       {%- endif -%}
-    </li>
+    </div>
   {%- endfor -%}
 </div>
 
