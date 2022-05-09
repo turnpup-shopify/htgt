@@ -36,6 +36,7 @@
 }
 {% endschema %}
 <div class="flwr-collections-all-section">
+  <div class="flwr-collections-all-left">
   {%- for link in section.settings.menu.links -%}
     <div>
       {%- if link.links != blank and link.title != 'Home' -%}
@@ -91,8 +92,10 @@
       {%- else -%}
         <!-- HOME falls into this cateogry - purposefully skip -->
       {%- endif -%}
-    </div>
   {%- endfor -%}
+  <div class="flwr-collections-all-left">
+
+  </div>
 </div>
 
 <style>
