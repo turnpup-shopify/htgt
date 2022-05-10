@@ -188,6 +188,12 @@
   var alex = {{ alex }};
   var debug = {{ collections["coffee-tables"] | json }};   
   console.log(debug);
+  
+//   const params = new Proxy(new URLSearchParams(window.location.search), {
+//     get: (searchParams, prop) => searchParams.get(prop),
+//   });
+//   // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+//   let value = params.some_key;
 
   window.addEventListener('DOMContentLoaded', (event) => {
         document.querySelectorAll('.flwr_second_level').forEach(function(el) {
