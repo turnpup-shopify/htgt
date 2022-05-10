@@ -108,17 +108,19 @@
             "collection": "art"
           }
         },
-        "a9356391-9636-43f1-ada7-2a1ac2d33844": {
-          "type": "collection",
+        "a1b8d478-c17d-4abe-b1b7-78a06eefa774": {
+          "type": "image",
           "settings": {
-            "collection": "furniture"
+            "image": "shopify:\/\/shop_images\/CIMP-12E_ROM_1-1.jpg",
+            "link": "",
+            "image_padding": false
           }
         }
       },
       "block_order": [
         "collection-0",
         "86de7a59-66c4-4000-98da-8c03a5606994",
-        "a9356391-9636-43f1-ada7-2a1ac2d33844"
+        "a1b8d478-c17d-4abe-b1b7-78a06eefa774"
       ],
       "settings": {
         "heading": "EXPLORE OUR PRODUCTS",
