@@ -96,12 +96,6 @@
     "collage": {
       "type": "collage",
       "blocks": {
-        "86de7a59-66c4-4000-98da-8c03a5606994": {
-          "type": "collection",
-          "settings": {
-            "collection": "art"
-          }
-        },
         "a1b8d478-c17d-4abe-b1b7-78a06eefa774": {
           "type": "image",
           "settings": {
@@ -109,6 +103,12 @@
             "link": "https:\/\/htgtfurniture.myshopify.com\/collections?option=living-room",
             "title": "Living Room",
             "image_padding": false
+          }
+        },
+        "86de7a59-66c4-4000-98da-8c03a5606994": {
+          "type": "collection",
+          "settings": {
+            "collection": "art"
           }
         },
         "908c7377-ed50-42fe-8baa-eda972fb2dc5": {
@@ -122,8 +122,8 @@
         }
       },
       "block_order": [
-        "86de7a59-66c4-4000-98da-8c03a5606994",
         "a1b8d478-c17d-4abe-b1b7-78a06eefa774",
+        "86de7a59-66c4-4000-98da-8c03a5606994",
         "908c7377-ed50-42fe-8baa-eda972fb2dc5"
       ],
       "settings": {
