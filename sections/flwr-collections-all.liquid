@@ -195,6 +195,10 @@
   // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
   let value = params.option;
   console.log(value);
+  if (value != null){    
+    document.querySelector("#close-"+value).classList.add("sho");
+    document.querySelector(".flwr_second_level#"+value).classList.add("selected");
+  }
 
   window.addEventListener('DOMContentLoaded', (event) => {
         document.querySelectorAll('.flwr_second_level').forEach(function(el) {
