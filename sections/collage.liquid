@@ -30,7 +30,7 @@
               <div class="collage-card color-{{ settings.card_color_scheme }}{% if block.settings.image_padding %} collage-card-spacing{% endif %}">
                 <div class="media media--transparent ratio"{% if block.settings.image != blank %} style="--ratio-percent: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%"{% else %} style="--ratio-percent: 100%"{% endif %}>
                   {%- if block.settings.image != blank -%}
-                    <a class="c" href="{{block.settings.link}}">
+                    <a class="collage_custom_ancor" href="{{block.settings.link}}">
                       <img style="object-fit: cover;width: 100%; height: 100%;"
                       srcset="{%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
                         {%- if block.settings.image.width >= 720 -%}{{ block.settings.image | image_url: width: 720 }} 720w,{%- endif -%}
@@ -56,7 +56,7 @@
               <div class="card__content" style="padding-left:0;padding-right:0;">
                     <div class="card__information" style="padding-left:0;padding-right:0;">
                       <h3 class="card__heading">
-                        <a href="{{block.settings.link}}" class="full-unstyled-link"> {{ block.settings.title }} <span class="icon-wrap"><svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
+                        <a href="{{block.settings.link}}" class="collage_custom_ancor full-unstyled-link"> {{ block.settings.title }} <span class="icon-wrap"><svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
                           </path></svg>
                           </span>
@@ -161,6 +161,11 @@
     </div>
   </div>
 </div>
+<style>
+  .card__heading a.collage_custom_ancor:after {
+    
+  }
+</style>
 
 {% schema %}
 {
