@@ -47,8 +47,13 @@
                       width="{{ block.settings.image.width }}"
                       height="{{ block.settings.image.height }}"
                       >
-<!--                     </a> -->
-                  <div class="card__content">
+<!--                     </a> -->                  
+                  {%- else -%}
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                  {%- endif -%}
+                </div>
+              </div>
+              <div class="card__content">
                     <div class="card__information">
                       <h3 class="card__heading">
                         <a href="/collections/art" class="full-unstyled-link"> {{ block.settings.title }} <span class="icon-wrap"><svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
@@ -59,11 +64,6 @@
                       </h3>
                     </div>
                   </div>
-                  {%- else -%}
-                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-                  {%- endif -%}
-                </div>
-              </div>
             {%- when 'product' -%}
               {% render 'card-product',
                 card_product: block.settings.product,
