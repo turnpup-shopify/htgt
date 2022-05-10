@@ -96,12 +96,6 @@
     "collage": {
       "type": "collage",
       "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": "accessories"
-          }
-        },
         "86de7a59-66c4-4000-98da-8c03a5606994": {
           "type": "collection",
           "settings": {
@@ -116,12 +110,21 @@
             "title": "Living Room",
             "image_padding": false
           }
+        },
+        "908c7377-ed50-42fe-8baa-eda972fb2dc5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/CKEN-295N-671_ROM_1.webp",
+            "link": "https:\/\/htgtfurniture.myshopify.com\/collections\/sofas\/Sofas",
+            "title": "Sofas",
+            "image_padding": false
+          }
         }
       },
       "block_order": [
-        "collection-0",
         "86de7a59-66c4-4000-98da-8c03a5606994",
-        "a1b8d478-c17d-4abe-b1b7-78a06eefa774"
+        "a1b8d478-c17d-4abe-b1b7-78a06eefa774",
+        "908c7377-ed50-42fe-8baa-eda972fb2dc5"
       ],
       "settings": {
         "heading": "EXPLORE OUR PRODUCTS",
