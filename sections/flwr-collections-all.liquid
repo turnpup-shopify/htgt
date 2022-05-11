@@ -92,11 +92,13 @@
                               <div class="flwr_third_level">
                                 {% assign link_handle = grandchildlink.title | handle %}
                                 <div class="img_container">
+                                  <a href="{{ grandchildlink.url }}">
                                   {% if collections[link_handle].image.src != blank %}
                                     <img src="{{ collections[link_handle].image.src | image_url }}">
                                   {% else %}
                                     <img src="https://cdn.shopify.com/s/files/1/0507/4452/5007/files/htgt_gradient.jpg?v=1652066074">
                                   {% endif %}
+                                  </a>
                                 </div>
                                 <div>
                                   <a href="{{ grandchildlink.url }}">
@@ -173,9 +175,9 @@
     width: 31%;
   }
   .flwr_third_level .img_container:after {
-    content:"";
+/*     content:"";
     display:block;
-    padding-bottom:100%;
+    padding-bottom:100%; */
   }
   .flwr_third_level img {
     height: 100%;
