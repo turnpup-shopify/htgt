@@ -6,12 +6,12 @@
         "1652235319804d0a4f-0": {
           "type": "text",
           "settings": {
-            "block_text": "This is the first part.",
-            "block_font_size": "24px",
+            "block_text": "SHOP BY COLLECTION",
+            "block_font_size": "36px",
             "mobile_block_font_size": "24px",
-            "block_font_color": "#884400",
-            "font_family_text": "Helvetica",
-            "font_weight_text": "800",
+            "block_font_color": "#121212",
+            "font_family_text": "Alegreya",
+            "font_weight_text": "400",
             "line_height_text": "1.2",
             "letter_spacing": "3px",
             "text_width": "100%",
@@ -28,7 +28,7 @@
         "1652235319804d0a4f-0"
       ],
       "settings": {
-        "subtitle": "Our Philosophy",
+        "subtitle": "=",
         "subtitle_font_size": "11px",
         "subtitle_font_weight": "300",
         "subtitle_font_family": "'Karla'",
