@@ -1,4 +1,4 @@
-{% schema %}
+3{% schema %}
 {
   "name": "flwr collections all",
   "class": "section-flwr-collections-all",
@@ -92,13 +92,11 @@
                               <div class="flwr_third_level">
                                 {% assign link_handle = grandchildlink.title | handle %}
                                 <div class="img_container">
-                                  <a href="{{ grandchildlink.url }}">
                                   {% if collections[link_handle].image.src != blank %}
                                     <img src="{{ collections[link_handle].image.src | image_url }}">
                                   {% else %}
                                     <img src="https://cdn.shopify.com/s/files/1/0507/4452/5007/files/htgt_gradient.jpg?v=1652066074">
                                   {% endif %}
-                                  </a>
                                 </div>
                                 <div>
                                   <a href="{{ grandchildlink.url }}">
@@ -183,6 +181,11 @@
     object-fit: cover;
     object-position: center center;
   }
+  @media screen and (max-width: 749px) {
+    .flwr_third_level {
+      width: 100%;
+    }
+  }
 </style>
 
 <script>
@@ -191,16 +194,11 @@
   var debug = {{ collections["coffee-tables"] | json }};   
   console.log(debug);
   
-  const params = new Proxy(new URLSearchParams(window.location.search), {
-    get: (searchParams, prop) => searchParams.get(prop),
-  });
-  // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
-  let value = params.option;
-  console.log(value);
-  if (value != null){    
-    document.querySelector("#close-"+value).classList.add("sho");
-    document.querySelector(".flwr_second_level#"+value).classList.add("selected");
-  }
+//   const params = new Proxy(new URLSearchParams(window.location.search), {
+//     get: (searchParams, prop) => searchParams.get(prop),
+//   });
+//   // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+//   let value = params.some_key;
 
   window.addEventListener('DOMContentLoaded', (event) => {
         document.querySelectorAll('.flwr_second_level').forEach(function(el) {
