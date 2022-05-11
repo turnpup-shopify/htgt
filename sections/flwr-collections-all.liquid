@@ -93,7 +93,7 @@
                                 {% assign link_handle = grandchildlink.title | handle %}
                                 <div class="img_container">
                                   <a href="{{ grandchildlink.url }}">
-                                  <div style="display:none;">{{ilnke_handle}}</div>
+                                  <div style="display:none;">{{link_handle}}</div>
                                   {% if collections[link_handle].image.src != blank %}
                                     <img src="{{ collections[link_handle].image.src | image_url }}">
                                   {% else %}
