@@ -169,20 +169,15 @@
   }
   .flwr_second_level a, .flwr_third_level a {
     text-decoration: none;
-    color: black; 
-    width: 100%;
-    height: 100%;
-    display: block;
+    color: black;   
   }
-  .flwr_third_level .img_container {
-    width: calc(33% - 12px);
-    height: calc(33% - 12px);
+  .flwr_third_level {
+    width: 31%;
   }
   .flwr_third_level .img_container:after {
     content:"";
     display:block;
     padding-bottom:100%;
-    position: absolute;
   }
   .flwr_third_level img {
     height: 100%;
@@ -193,12 +188,6 @@
   @media screen and (max-width: 749px) {
     .flwr_third_level {
       width: 100%;
-    }
-    .flwr_second_level a, .flwr_third_level a {
-      text-decoration: none;
-      color: black; 
-      width: 100%;
-      height: 100%;
     }
   }
 </style>
