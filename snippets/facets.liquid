@@ -109,6 +109,7 @@
                       <legend class="visually-hidden">{{ filter.label | escape }}</legend>
                       <ul class="{% if filter_type != 'vertical' %} facets__list{% endif %} list-unstyled no-js-hidden" role="list">
                         {%- for value in filter.values -%}
+                          <div> {{ filter.values.length }} </div>
                           <li class="list-menu__item facets__item{% if forloop.index > 10 and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
                             <label for="Filter-{{ filter.label | escape }}-{{ forloop.index }}" class="facet-checkbox{% if value.count == 0 and value.active == false %} facet-checkbox--disabled{% endif %}">
                               <input type="checkbox"
