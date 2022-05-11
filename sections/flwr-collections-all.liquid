@@ -207,7 +207,7 @@
 <script>
   {% assign alex = collections["coffee-tables"] | json %}
   var alex = {{ alex }};
-  var debug = {{ collections["coffee-tables"] | json }};   
+  var debug = {{ collections["accent-tables"] | json }};   
   console.log(debug);
   
   const params = new Proxy(new URLSearchParams(window.location.search), {
