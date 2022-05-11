@@ -93,9 +93,9 @@
                                 {% assign link_handle = grandchildlink.title | handle %}
                                 <div class="img_container">
                                   <a href="{{ grandchildlink.url }}">
+                                  <div style="display:none;">{{ilnke_handle}}</div>
                                   {% if collections[link_handle].image.src != blank %}
                                     <img src="{{ collections[link_handle].image.src | image_url }}">
-                                    <div style="display:none;">{{ilnke_handle}}</div>
                                   {% else %}
                                     <img src="https://cdn.shopify.com/s/files/1/0507/4452/5007/files/htgt_gradient.jpg?v=1652066074">
                                   {% endif %}
