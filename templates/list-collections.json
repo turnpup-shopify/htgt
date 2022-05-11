@@ -28,19 +28,19 @@
         "1652235319804d0a4f-0"
       ],
       "settings": {
-        "subtitle": "=",
+        "subtitle": "",
         "subtitle_font_size": "11px",
         "subtitle_font_weight": "300",
         "subtitle_font_family": "'Karla'",
         "subtitle_font_color": "#555555",
-        "background_color": "#ffffff",
-        "background_opacity": "0.2",
+        "background_color": "#fa6d12",
+        "background_opacity": "0.1",
         "max_width": 90,
         "mobile_max_width": 90,
         "margintop": 100,
         "marginbottom": 100,
         "alignment": "center",
-        "turnpup_bottom_border_color": "#fa6d12",
+        "turnpup_bottom_border_color": "rgba(0,0,0,0)",
         "mobile_font_size": "12px"
       }
     },
