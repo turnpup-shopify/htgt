@@ -176,11 +176,19 @@
   .flwr_third_level {
     width: 31%;
   }
+  .flwr_third_level .img_container {
+    position: relative; 
+    padding-bottom: 100%;
+    overflow: hidden;
+  }
   .flwr_third_level img {
-    height: auto;
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
     width: 100%;
-    object-fit: cover;
-    object-position: center center;
+/*     object-fit: cover;
+    object-position: center center; */
   }
   @media screen and (max-width: 749px) {
     .flwr_third_level {
