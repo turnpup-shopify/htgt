@@ -172,8 +172,10 @@
   .flwr_third_level {
     width: 31%;
   }
-  .flwr_third_level .img_container {
-    height: 40vH;
+  .flwr_third_level .img_container:after {
+    content:"";
+    display:block;
+    padding-bottom:100%;
   }
   .flwr_third_level img {
     height: 100%;
