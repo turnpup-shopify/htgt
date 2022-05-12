@@ -94,10 +94,10 @@
           {%- when 'buttons' -%}
             <div class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}" {{ block.shopify_attributes }}>
               {%- if block.settings.button_label_1 != blank -%}
-                <a{% if block.settings.button_link_1 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_1 }}"{% endif %} class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}">{{ block.settings.button_label_1 | escape }}</a>
+                <a{% if block.settings.button_link_1 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_1 }}"{% endif %} class="button{% if block.settings.button_style_secondary_1 %} flwr_button is_second{% else %} flwr_button is_first{% endif %}">{{ block.settings.button_label_1 | escape }}</a>
               {%- endif -%}
               {%- if block.settings.button_label_2 != blank -%}
-                <a{% if block.settings.button_link_2 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_2 }}"{% endif %} class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}">{{ block.settings.button_label_2 | escape }}</a>
+                <a{% if block.settings.button_link_2 == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link_2 }}"{% endif %} class="button{% if block.settings.button_style_secondary_2 %} flwr_button is_second{% else %} flwr_button is_first{% endif %}">{{ block.settings.button_label_2 | escape }}</a>
               {%- endif -%}
 
             </div>
@@ -106,6 +106,48 @@
     </div>
   </div>
 </div>
+
+<style>
+  .flwr_button.is_first {
+    border-color: #2d2c2c;
+    box-shadow: 8px 8px 0 0 #2d2c2c;
+    color: #2d2c2c;
+  }
+  .flwr_button.is_second {
+    border-color: #2d2c2c;
+    box-shadow: 8px 8px 0 0 #2d2c2c;
+    color: #2d2c2c;
+  }
+  .flwr_button {
+    position: relative;
+    left: -6px;
+    top: -6px;
+    margin-top: 6px;
+    margin-left: 6px;
+    padding: 0.85rem 1.45rem;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 2px solid #fb263b;
+    border-radius: 0.6rem;
+    background-color: #fff;
+    box-shadow: 8px 8px 0 0 #fb263b;
+    -webkit-transition: .2s,box-shadow .2s;
+    transition: .2s,box-shadow .2s;
+    font-family: Spacegrotesk,sans-serif;
+    color: #fb263b;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: -.2px;
+    white-space: nowrap;
+  }
+</style>
 
 {% schema %}
 {
