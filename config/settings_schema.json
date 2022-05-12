@@ -18,15 +18,13 @@
         "type": "color",
         "id": "button_primary_hero_color",
         "default": "#334FB4",
-        "label": "t:settings_schema.colors.settings.colors_solid_button_labels.label",
-        "info": "t:settings_schema.colors.settings.colors_solid_button_labels.info"
+        "label": "Primary Button Hero Color"
       },
       {
         "type": "color",
         "id": "button_secondary_hero_color",
         "default": "#fa6d12",
-        "label": "t:settings_schema.colors.settings.colors_solid_button_labels.label",
-        "info": "t:settings_schema.colors.settings.colors_solid_button_labels.info"
+        "label": "Secondary Button Hero Color"
       }
     ]
   },
