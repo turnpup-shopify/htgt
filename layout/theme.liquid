@@ -47,6 +47,9 @@
       {{ settings.type_header_font | font_face: font_display: 'swap' }}
 
       :root {
+        --custom-button-color-primary: {{ settings.button_primary_hero_color }};
+        --custom-button-color-secondary: {{ settings.button_secondary_hero_color }};
+    
         --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight: {{ settings.type_body_font.weight }};
