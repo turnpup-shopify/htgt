@@ -36,6 +36,7 @@
     overflow: hidden;
     border-radius: 20px;
     border-width: 8px;
+  border: 8px solid red;
 }
 .search-modal__form .field::before {
     content: "";
