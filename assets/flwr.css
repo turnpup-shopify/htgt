@@ -31,9 +31,7 @@
     transform: scale(1.25);
   	transition: transform 1s ease-out;
 }
-.search-modal__form .field {
-  border-radius: 20px;
-}
+
 .search-modal__form .field::before {
     content: "";
     position: absolute;
