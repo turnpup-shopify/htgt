@@ -34,6 +34,7 @@
 .search-modal__form .field {
 	position: relative;
     overflow: hidden;
+    border-radius: 20px;
 }
 .search-modal__form .field::before {
     content: "";
@@ -42,7 +43,7 @@
     left: 0;
     width: 200%; /*Making the width double the size of the parent since we are going to be animation the transform: translateX() to the left. */
     height: 100%;
-  background: linear-gradient(115deg, var(--custom-button-color-primary), var(--custom-button-color-secondary));
+    background: linear-gradient(115deg, var(--custom-button-color-primary), var(--custom-button-color-secondary));
     background-size: 50% 100%;
     border-radius: inherit;
     animation: animate_border .75s linear infinite;
