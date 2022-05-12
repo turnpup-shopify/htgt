@@ -48,9 +48,7 @@
 }
 .search-modal__form .field:focus::before {
     transform: translateX(-50%);
-    background: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
-    background-size: 50% 100%;
-    border-radius: inherit;
+    box-shadow: 0 0 0 0 rgba(var(--color-foreground));
 }
 .search-modal__form .field::after {
  	box-shadow: 0 0 0 0 black !important; 
