@@ -78,10 +78,10 @@
       ],
       "settings": {
         "subtitle": "ABOUT OUR STORE",
-        "subtitle_font_size": "22px",
-        "subtitle_font_weight": "500",
+        "subtitle_font_size": "30px",
+        "subtitle_font_weight": "900",
         "subtitle_font_family": "Alegreya",
-        "subtitle_font_color": "#334fb4",
+        "subtitle_font_color": "#121212",
         "background_color": "#ffffff",
         "background_opacity": "0.2",
         "max_width": 70,
@@ -89,7 +89,7 @@
         "margintop": 100,
         "marginbottom": 100,
         "alignment": "center",
-        "turnpup_bottom_border_color": "#f4b237",
+        "turnpup_bottom_border_color": "rgba(0,0,0,0)",
         "mobile_font_size": "12px"
       }
     },
