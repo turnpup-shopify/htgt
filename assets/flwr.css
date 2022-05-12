@@ -31,10 +31,10 @@
     transform: scale(1.25);
   	transition: transform 1s ease-out;
 }
-.search__input.field__input {
+.search-modal__form .field {
   border-radius: 20px;
 }
-.search__input.field__input::before {
+.search-modal__form .field::before {
     content: "";
     position: absolute;
     top: 0;
