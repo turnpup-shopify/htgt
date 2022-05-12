@@ -52,6 +52,10 @@
 .search-modal__form .field:focus::before {
     transform: translateX(-50%);
 }
+.search-modal_-form .field__input {
+    margin: 8px !important;
+    border-radius: 10px;
+}
 .search-modal__form .field__input:focus {
     box-shadow: 0 0 0 0 rgba(var(--color-foreground));
 }
