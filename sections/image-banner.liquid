@@ -120,7 +120,7 @@
     box-shadow: 8px 8px 0 0 {{ settings.button_secondary_hero_color }};;
     color: {{ settings.button_secondary_hero_color }};;
   }
-    .flwr_button.is_first:hover, .flwr_button.is_second:hover, .ooo-instagram-footer__button:hover {
+  .flwr_button.is_first:hover, .flwr_button.is_second:hover, .ooo-instagram-footer__button:hover {
     box-shadow: 0 0 0 0 #2d2c2c !important;
     top: 0 !important;
     left: 0 !important;
@@ -150,6 +150,11 @@
   .button::after, .button::before, .button:hover::before, .button:hover::after {
     box-shadow: 0 0 0 0 #2d2c2c !important;
     border: none !important;
+  }
+  @media screen and (max-width: 749px) {
+    .flwr_button:not(:first-child) {
+      margin-left: 0px; 
+    {
   }
 </style>
 
