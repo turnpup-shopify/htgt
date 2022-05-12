@@ -42,7 +42,7 @@
     left: 0;
     width: 200%; /*Making the width double the size of the parent since we are going to be animation the transform: translateX() to the left. */
     height: 100%;
-  background: linear-gradient(115deg, {{ settings.button_primary_hero_color }}, {{ settings.button_secondary_hero_color }});
+  background: linear-gradient(115deg, var(--custom-button-color-primary), var(--custom-button-color-secondary));
     background-size: 50% 100%;
     border-radius: inherit;
     animation: animate_border .75s linear infinite;
