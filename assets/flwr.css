@@ -46,7 +46,7 @@
     background-size: 50% 100%;
     border-radius: inherit;
 }
-.search-modal__form .field:hover::before {
+.search-modal__form .field:focus::before {
     transform: translateX(-50%);
 }
 .search-modal__form .field::after {
