@@ -8,6 +8,29 @@
     "theme_support_url": "https:\/\/support.shopify.com\/"
   },
   {
+    "name": "custom settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Custom Settings"
+      },
+      {
+        "type": "color",
+        "id": "button_primary_hero_color",
+        "default": "#334FB4",
+        "label": "t:settings_schema.colors.settings.colors_solid_button_labels.label",
+        "info": "t:settings_schema.colors.settings.colors_solid_button_labels.info"
+      },
+      {
+        "type": "color",
+        "id": "button_secondary_hero_color",
+        "default": "#fa6d12",
+        "label": "t:settings_schema.colors.settings.colors_solid_button_labels.label",
+        "info": "t:settings_schema.colors.settings.colors_solid_button_labels.info"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.colors.name",
     "settings": [
       {
