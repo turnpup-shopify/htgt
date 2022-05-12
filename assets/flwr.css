@@ -48,6 +48,8 @@
 }
 .search-modal__form .field:focus::before {
     transform: translateX(-50%);
+}
+.search-modal__form .field__input:focus::before {
     box-shadow: 0 0 0 0 rgba(var(--color-foreground));
 }
 .search-modal__form .field::after {
