@@ -34,7 +34,7 @@
 .search__input.field__input {
   border-radius: 20px;
 }
-.search__input.field__input:before {
+.search__input.field__input::before {
     content: "";
     position: absolute;
     top: 0;
