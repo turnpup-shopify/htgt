@@ -40,7 +40,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /*Making the width double the size of the parent since we are going to be animation the transform: translateX() to the left. */
+    width: 200%; /*Making the width double the size of the parent since we are going to be animation the transform: translateX() to the left. */
     height: 100%;
     background: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
     background-size: 50% 100%;
