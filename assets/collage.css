@@ -110,7 +110,7 @@
   background: rgb(var(--color-background));
   border-radius: var(--card-corner-radius);
   border: var(--card-border-width) solid rgba(var(--color-foreground), var(--card-border-opacity));
-  height: 100%;
+/*   height: 100%; */
   padding: var(--card-image-padding);
   position: relative;
 }
