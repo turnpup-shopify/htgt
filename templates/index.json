@@ -133,6 +133,7 @@
         "desktop_layout": "left",
         "mobile_layout": "column",
         "color_scheme": "background-1",
+        "two_by_two": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
