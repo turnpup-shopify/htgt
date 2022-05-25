@@ -162,6 +162,11 @@
   </div>
 </div>
 <style>
+  @media screen and (min-width: 750px) {
+    .collage_two_by_two.collage {
+        grid-template-columns: repeat(4,minmax(0,1fr));      
+      }
+  }
   .card__heading a.collage_custom_ancor:after {
     position: static;
   }
