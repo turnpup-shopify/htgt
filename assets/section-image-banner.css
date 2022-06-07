@@ -148,6 +148,14 @@
   top: 0;
   width: 100%;
 }
+.banner__media.mobile {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: none;
+}
 
 .banner__media-half {
   width: 50%;
