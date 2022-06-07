@@ -30,6 +30,18 @@
     <!--  CUSTOM GOOGLE CONSOLE OWNERSHIP    -->
     <meta name="google-site-verification" content="kBRT5hMFDvUFScDV7558k2Lr6xl30F05uqbxOE9e0yw" />
 
+    <!--  GOOGLE ANALYTICS OLD UNIVERSAL ANALYTICS    -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123748118-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-123748118-1');
+    </script>
+
+    
     {% render 'meta-tags' %}
 
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
