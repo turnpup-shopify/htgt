@@ -55,7 +55,7 @@
         "1651619589fa9e48ce-0": {
           "type": "text",
           "settings": {
-            "block_text": "Transitional, contemporary and coastal, quality furniture, art and accents at best value pricing.  Local family owned and operated, one-of-a-kind furniture store situated within renovated warehouse\/hanger in Costa Mesa.  Visit our Promotions page to sign up for newsletters and special offers. If you have a special request or hard to find item, let us know via the Contact Us page.",
+            "block_text": "Transitional, contemporary and coastal, quality furniture, art and accents at best value pricing.  Local family owned and operated, one-of-a-kind furniture store situated within renovated warehouse\/hanger in Costa Mesa. If you have a special request or hard to find item, let us know via the Contact Us page.",
             "block_font_size": "30px",
             "mobile_block_font_size": "20px",
             "block_font_color": "#121212",
@@ -273,7 +273,7 @@
         "16545648716a37a12c-1": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Be the first to know about new products and exclusive offers.<\/p>"
+            "text": "<p>Be the first to know about new products and exclusive promotions.<\/p>"
           }
         },
         "16545648716a37a12c-2": {
