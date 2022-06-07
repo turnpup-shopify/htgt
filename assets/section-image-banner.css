@@ -180,6 +180,7 @@
   }
   .banner__media.mobile {    
     display: block;
+    border-radius: 50% 50% 0 0;
   }
 }
 
