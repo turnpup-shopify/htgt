@@ -82,7 +82,7 @@
   
   <!--  ADDING MOBILE BELOW HERE  -->
   {%- if section.settings.mobile_image != blank -%}
-    <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}">
+    <div class="mobile banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}">
       <img
         srcset="{%- if section.settings.image.width >= 375 -%}{{ section.settings.image | image_url: width: 375 }} 375w,{%- endif -%}
           {%- if section.settings.image.width >= 550 -%}{{ section.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
@@ -104,12 +104,12 @@
       >
     </div>
   {%- elsif section.settings.image_2 == blank -%}
-    <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}">
+    <div class="mobile banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}">
       {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
     </div>
   {%- endif -%}
   {%- if section.settings.image_2 != blank -%}
-    <div class="banner__media media{% if section.settings.image != blank %} banner__media-half{% endif %}">
+    <div class="mobile banner__media media{% if section.settings.image != blank %} banner__media-half{% endif %}">
       <img
         srcset="{%- if section.settings.image_2.width >= 375 -%}{{ section.settings.image_2 | image_url: width: 375 }} 375w,{%- endif -%}
           {%- if section.settings.image_2.width >= 750 -%}{{ section.settings.image_2 | image_url: width: 750 }} 750w,{%- endif -%}
