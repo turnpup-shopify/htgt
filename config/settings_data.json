@@ -104,7 +104,7 @@
             "type": "announcement",
             "settings": {
               "text": "Ask about design consultations to help you find the perfect pieces for your home.",
-              "color_scheme": "inverse",
+              "color_scheme": "background-2",
               "link": ""
             }
           }
