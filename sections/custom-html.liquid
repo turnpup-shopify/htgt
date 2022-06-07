@@ -1,12 +1,37 @@
+<div id="custom-html-section">  
+  {%- if section.settings.title != blank -%}
+    <div class=""><h2>{{section.settings.title}}</h2></div>  
+  {%- endif -%}    
+  <div class="">{{section.settings.custom_html}}</div>
+</div>
+<style> 
+  #custom-html-section {position:relative;}
+  #custom-html-section h2 {text-align:center;}
+</style>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Custom HTML",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type":"textarea",
+        "id": "custom_html",
+        "label": "HTML"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom HTML",
+        "category": "Custom",
+        "settings": {
+
+        }
+      }
+    ]
   }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
