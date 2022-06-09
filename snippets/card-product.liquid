@@ -121,7 +121,8 @@
                 >
                   <span>
                     {%- if card_product.selected_or_first_available_variant.available -%}
-                      {{ Shop Now | t }}
+                      Shop Now
+                      {% comment %} {{ 'products.product.add_to_cart' | t }} {% endcomment %}
                     {%- else -%}
                       {{ 'products.product.sold_out' | t }}
                     {%- endif -%}
