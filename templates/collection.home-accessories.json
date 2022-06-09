@@ -20,7 +20,7 @@
             "text_padding_bottom": "0px",
             "is_own_line": true,
             "text_has_wavy_animation": false,
-            "wavy_animation_color": "#f6b700",
+            "wavy_animation_color": "#334FB4",
             "underline_animation": true,
             "underline_animation_color": "#F6B700"
           }
@@ -43,8 +43,8 @@
             "is_own_line": true,
             "text_has_wavy_animation": true,
             "wavy_animation_color": "#f6b700",
-            "underline_animation": false,
-            "underline_animation_color": "#F6B700"
+            "underline_animation": true,
+            "underline_animation_color": "#334FB4"
           }
         },
         "1654742761f6df9ac3-0": {
