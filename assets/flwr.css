@@ -92,7 +92,7 @@ body {
   opacity: 1;
   transform: translateY(calc(-100% - 10px));
 /*   transition: transform 0.4s linear; */
-  animation: moveup 4s ease-in-out;
+  animation: moveup 0.4s ease-in-out;
 }
 @keyframes moveup {
     0% {
