@@ -83,6 +83,7 @@ body {
   margin-bottom: 10px;
   opacity: 0;
   border-radius: 20px;
+  background: black;
 }
 .quick-add__submit.show:not(.button:disabled) {
   opacity: 1;
