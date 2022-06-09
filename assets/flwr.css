@@ -80,7 +80,7 @@ body {
   opacity: 0;
   display: none;
 }
-.card__heading a:hover:after .quick-add__submit {
+.quick-add__submit.show {
   animation: show__productcard__button 1s linear 0s;
 }
 @keyframes show__productcard__button {
