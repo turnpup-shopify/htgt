@@ -9,11 +9,11 @@
          {% for block in section.blocks %}
           
             {% if block.settings.is_own_line %}
-              {% if block.settings.text_has_wavy_animation %}<p style="margin-bottom:{{ block.settings.text_padding_bottom }};"><span id="block-{{ block.id }}" class="wavy">
+              {% if block.settings.underline_animation %}<p style="margin-bottom:{{ block.settings.text_padding_bottom }};"><span id="block-{{ block.id }}" class="underline_animation">
               {% else %}<p id="block-{{ block.id }}">
           {% endif %}{% if block.settings.block_text != blank %}{{block.settings.block_text}}{% endif %}</span></p>
             {% else %}
-              {% if block.settings.text_has_wavy_animation %}<span id="block-{{ block.id }}" class="wavy">
+              {% if block.settings.underline_animation %}<span id="block-{{ block.id }}" class="underline_animation">
               {% else %}<span id="block-{{ block.id }}">
               {% endif %}{% if block.settings.block_text != blank %}{{block.settings.block_text}}{% endif %}</span>
             {% endif %}
