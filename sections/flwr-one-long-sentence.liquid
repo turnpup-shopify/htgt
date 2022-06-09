@@ -28,7 +28,14 @@
                 letter-spacing: {{ block.settings.letter_spacing }};
                 width: {{ block.settings.text_width }};
                 margin: 0 auto;
-              }              
+                position: relative;
+              } 
+              #block-{{ block.id }}::after {
+                position: absolute;
+                height: 50%;
+                top: 50%;
+                background: purple;
+              }
               .wavy:hover {
                 padding-bottom: .25em;
                 text-decoration: none;
