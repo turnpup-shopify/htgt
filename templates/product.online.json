@@ -66,10 +66,11 @@
         },
         "collapsible-row-1": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Shipping & Returns",
             "icon": "truck",
-            "content": "",
+            "content": "<p>Shipping<\/p>",
             "page": ""
           }
         },
@@ -78,7 +79,7 @@
           "settings": {
             "heading": "Dimensions",
             "icon": "ruler",
-            "content": "",
+            "content": "<p>{{ product.metafields.pdp.dimensions | metafield_tag }}<\/p>",
             "page": ""
           }
         },
