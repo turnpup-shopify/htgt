@@ -5,6 +5,12 @@ $(window).on('scroll', function(){
 });
 
 window.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll(".underline_animation").forEach((el, i) => {
+    var xxx = i*400 + 200;
+    setTimeout(() => {
+      el.classList.add("show"); 
+    }, xxx)    
+  })
   document.querySelectorAll(".card--standard").forEach((el) => {
     el.addEventListener("mouseenter", () => {
       el.querySelector(".quick-add__submit").classList.add("show");
@@ -15,11 +21,4 @@ window.addEventListener('DOMContentLoaded', (event) => {
   })
 });
 
-window.addEventListener('DOMContentLoaded', (event) => {
-  document.querySelectorAll(".underline_animation").forEach((el, i) => {
-    var xxx = i*400 + 200;
-    setTimeout(() => {
-      el.classList.add("show"); 
-    }, xxx)    
-  })
-});
+  
