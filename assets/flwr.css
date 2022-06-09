@@ -77,7 +77,7 @@ body {
 
 /* shop now button */
 .quick-add {
-  height: 0;
+  height: 0px;
 }
 .quick-add.show {
   animation: show__productcard__button 1s linear 0s;
