@@ -80,10 +80,11 @@ body {
 }
 /* shop now button */
 .quick-add__submit, .quick-add__submit.button:disabled {
-  opacity: 0;
   border-radius: 30px;
   background: black;
   color: white;
+  opacity: 0;
+  transform: translateY(0);
 }
 .quick-add__submit.button:after, .quick-add__submit.button:before {
  box-shadow: none; 
