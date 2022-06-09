@@ -95,7 +95,7 @@ body {
   animation: moveup 0.4s linear;
 }
 .flwr__marquee { 
-   animation: marquee 10s linear infinite;
+   animation: flwr__marquee 10s linear infinite;
 }
 @keyframes moveup {
     0% {
