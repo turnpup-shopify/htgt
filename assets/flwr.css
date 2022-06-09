@@ -80,7 +80,6 @@ body {
 }
 /* shop now button */
 .quick-add__submit, .quick-add__submit.button:disabled {
-  margin-bottom: 20px;
   opacity: 0;
   border-radius: 30px;
   background: black;
@@ -91,7 +90,7 @@ body {
 }
 .quick-add__submit.show:not(.button:disabled) {
   opacity: 1;
-  transform: translateY(calc(-100% - 0px));
+  transform: translateY(calc(-100% - 10px));
   animation: show__productcard__button 0.4s linear 0s;
 }
 @keyframes show__productcard__button {
@@ -105,6 +104,6 @@ body {
     }
     100% {
       opacity: 1;
-      transform: translateY(calc(-100% - 0px));
+      transform: translateY(calc(-100% - 10px));
     }
 }
