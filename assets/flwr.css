@@ -77,11 +77,10 @@ body {
 
 /* shop now button */
 .quick-add {
-  display: none; 
+  height: 0;
 }
 .quick-add.show {
-  display: block;
-  display: 
+  animation: show__productcard__button 1s linear 0s;
 }
 @keyframes show__productcard__button {
     from {
