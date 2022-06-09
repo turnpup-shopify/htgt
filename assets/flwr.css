@@ -76,7 +76,7 @@ body {
 }
 
 /* shop now button */
-.quick-add {
+.quick-add .form {
   height: 0px;
 }
 .quick-add.show {
