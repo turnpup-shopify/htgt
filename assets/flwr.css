@@ -91,7 +91,7 @@ body {
 .quick-add__submit.show:not(.button:disabled) {
   opacity: 1;
   transform: translateY(calc(-100% - 10px));
-  transition: transform 1s linear;
+  transition: transform 0.4s linear;
 }
 .
 @keyframes moveup {
