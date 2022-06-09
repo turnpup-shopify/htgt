@@ -75,6 +75,9 @@ body {
     }
 }
 
+.quick-add {
+   height: 0px; 
+}
 /* shop now button */
 .quick-add__submit {
   margin-bottom: 0px;
