@@ -270,6 +270,12 @@
       {{ content_for_layout }}
     </main>
     
+    {% case template %}
+      {% when 'online' %}
+    <script> console.log("script " + "{{ template }}"); </script>
+      {% else %}
+    {% endcase %}
+    
     <a href="tel:1-949-279-5791"><div class="floating_phone">✆</div></a>
 
     {% section 'flwr-simple-footer' %}
