@@ -86,6 +86,9 @@ body {
   background: black;
   color: white;
 }
+.quick-add__submit.button:after, .quick-add__submit.button:before {
+ box-shadow: none; 
+}
 .quick-add__submit.show:not(.button:disabled) {
   opacity: 1;
   transform: translateY(calc(-100% - 0px));
