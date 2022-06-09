@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 window.addEventListener('DOMContentLoaded', (event) => {
   document.querySelectorAll(".underline_animation").forEach((el, i) => {
-    var xxx = i*200 + 200;
+    var xxx = i*400 + 200;
     setTimeout(() => {
       el.classList.add("show"); 
     }, xxx)    
