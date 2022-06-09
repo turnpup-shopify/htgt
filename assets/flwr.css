@@ -94,6 +94,9 @@ body {
 /*   transition: transform 0.4s linear; */
   animation: moveup 0.4s linear;
 }
+.marquee { 
+   animation: marquee 10s linear infinite;
+}
 @keyframes moveup {
     0% {
       opacity: 0;
@@ -118,4 +121,12 @@ body {
     100% {
       width: 100%;
     }
+}
+keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
