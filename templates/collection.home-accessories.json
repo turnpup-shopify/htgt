@@ -117,11 +117,19 @@
         "padding_top": 0,
         "padding_bottom": 36
       }
+    },
+    "16547535960fdfc6a3": {
+      "type": "custom-html",
+      "settings": {
+        "title": "",
+        "custom_html": "<div style=\"background: black;color:white;padding: 100px 0;font-size: 40px; transform: translateX(-100%); font-family: '\">\n<marquee>\nRECYCLABLE PACKAGING FAST SHIPPING ETHICALLY SOURCED TIMELESS TREASURES QUALITY ITEMS LUXE INTERIORS RECYCLABLE PACKAGING FAST SHIPPING ETHICALLY SOURCED TIMELESS TREASURES QUALITY ITEMS LUXE INTERIORS  \n<\/marquee>\n<\/div>"
+      }
     }
   },
   "order": [
     "16547427612e19168b",
     "banner",
-    "product-grid"
+    "product-grid",
+    "16547535960fdfc6a3"
   ]
 }
