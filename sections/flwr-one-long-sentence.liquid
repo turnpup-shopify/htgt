@@ -31,7 +31,14 @@
                 position: relative;
               } 
               span.underline_animation {
-                color: purple;
+                
+              }
+              span.underline_animation::after {
+                content: '';
+                background: purple;
+                top: 0;
+                left: 0;
+                height: 50%;
               }
               .wavy:hover {
                 padding-bottom: .25em;
