@@ -85,9 +85,11 @@ body {
 }
 @keyframes show__productcard__button {
     from {
-        height: 0px;
+      opacity: 0;
+      display: none;
     }  
     to {
-        height: 100%;
+      opacity: 1;
+      display: block;
     }
 }
