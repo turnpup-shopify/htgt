@@ -272,8 +272,9 @@
     
     {% case template %}
       {% when 'online' %}
-    <script> console.log("script " + "{{ template }}"); </script>
       {% else %}
+        <script> console.log("script " + "{{ template }}"); </script>
+
     {% endcase %}
     
     <a href="tel:1-949-279-5791"><div class="floating_phone">✆</div></a>
