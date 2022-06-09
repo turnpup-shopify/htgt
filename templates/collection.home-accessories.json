@@ -20,9 +20,9 @@
             "text_padding_bottom": "0px",
             "is_own_line": true,
             "text_has_wavy_animation": false,
-            "wavy_animation_color": "#334FB4",
+            "wavy_animation_color": "#334fb4",
             "underline_animation": true,
-            "underline_animation_color": "#334FB4"
+            "underline_animation_color": "#334fb4"
           }
         },
         "2f325d2d-63be-46fe-b300-ef3e6cb4f0f4": {
@@ -44,7 +44,7 @@
             "text_has_wavy_animation": true,
             "wavy_animation_color": "#f6b700",
             "underline_animation": true,
-            "underline_animation_color": "#334FB4"
+            "underline_animation_color": "#334fb4"
           }
         },
         "1654742761f6df9ac3-0": {
@@ -66,7 +66,7 @@
             "text_has_wavy_animation": true,
             "wavy_animation_color": "#f6b700",
             "underline_animation": false,
-            "underline_animation_color": "#F6B700"
+            "underline_animation_color": "#f6b700"
           }
         }
       },
@@ -122,7 +122,7 @@
       "type": "custom-html",
       "settings": {
         "title": "",
-        "custom_html": "<div style=\"background: black;color:white;padding: 35px 0 20px; font-size: 40px;  font-family: '\">\n<div class=\"marquee\">\nRECYCLABLE PACKAGING \n| FAST SHIPPING TIMELESS TREASURES QUALITY ITEMS LUXE INTERIORS RECYCLABLE PACKAGING FAST SHIPPING ETHICALLY SOURCED TIMELESS TREASURES QUALITY ITEMS LUXE INTERIORS  \n\n<\/div>\n<\/div>"
+        "custom_html": "<div style=\"background: black;color:white;padding: 35px 0 20px; font-size: 40px;  font-family: '\">\n<div class=\"flwr__marquee\">\nRECYCLABLE PACKAGING \n| FAST SHIPPING TIMELESS TREASURES QUALITY ITEMS LUXE INTERIORS RECYCLABLE PACKAGING FAST SHIPPING ETHICALLY SOURCED TIMELESS TREASURES QUALITY ITEMS LUXE INTERIORS  \n\n<\/div>\n<\/div>"
       }
     }
   },
