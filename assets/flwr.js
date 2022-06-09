@@ -16,10 +16,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 window.addEventListener('DOMContentLoaded', (event, i) => {
-  var try = i*200 + 200;
+  var xxx = i*200 + 200;
   document.querySelectorAll(".underline_animation").forEach((el) => {
     setTimeout(() => {
       el.classList.add("show"); 
-    }, try)    
+    }, xxx)    
   })
 });
