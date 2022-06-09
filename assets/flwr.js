@@ -6,8 +6,10 @@ $(window).on('scroll', function(){
 
 window.addEventListener('DOMContentLoaded', (event) => {
   console.log("dom loaded");
-  document.querySelector(".card__heading a:after").addEventListener("mouseenter", () => {
-    console.log("mouse over");                                                     
+  document.querySelectorAll(".card__heading a:after").forEach((el) => {
+    el.addEventListener("mouseenter", () => {
+      console.log("mouse over");                                                     
+    })
   })
 });
 
