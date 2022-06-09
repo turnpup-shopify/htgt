@@ -91,10 +91,10 @@ body {
 .quick-add__submit.show:not(.button:disabled) {
   opacity: 1;
   transform: translateY(calc(-100% - 10px));
-  animation: show__productcard__button 0.4s linear;
+  animation: moveup 0.4s linear;
 }
 .
-@keyframes show__productcard__button {
+@keyframes moveup {
     0% {
       opacity: 0;
       transform: translateY(-30%);
