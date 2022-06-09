@@ -20,7 +20,7 @@
             "text_padding_bottom": "0px",
             "is_own_line": true,
             "text_has_wavy_animation": true,
-            "wavy_animation_color": "#F6B700"
+            "wavy_animation_color": "#f6b700"
           }
         },
         "2f325d2d-63be-46fe-b300-ef3e6cb4f0f4": {
@@ -40,7 +40,7 @@
             "text_padding_bottom": "10px",
             "is_own_line": true,
             "text_has_wavy_animation": true,
-            "wavy_animation_color": "#F6B700"
+            "wavy_animation_color": "#f6b700"
           }
         },
         "1654742761f6df9ac3-0": {
@@ -60,7 +60,7 @@
             "text_padding_bottom": "0px",
             "is_own_line": true,
             "text_has_wavy_animation": true,
-            "wavy_animation_color": "#F6B700"
+            "wavy_animation_color": "#f6b700"
           }
         }
       },
@@ -103,7 +103,7 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "enable_quick_add": false,
+        "enable_quick_add": true,
         "enable_filtering": true,
         "filter_type": "vertical",
         "enable_sorting": true,
