@@ -33,7 +33,7 @@
               }               
               #block-{{ block.id }}.underline_animation::after {
                 content: " ";
-                background: #fa6d12;
+                background: {{ block.settings.underline_animation_color }};
                 top: 70%;
                 left: 0px;
                 height:20px;
