@@ -77,12 +77,12 @@ body {
 
 /* shop now button */
 .quick-add__submit {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   opacity: 0;
 }
 .quick-add__submit.show {
   opacity: 1;
-  transform: translateY(calc(-100% - 20px));
+  transform: translateY(calc(-100% - 0px));
   animation: show__productcard__button 0.4s linear 0s;
 }
 @keyframes show__productcard__button {
@@ -96,6 +96,6 @@ body {
     }
     100% {
       opacity: 1;
-      transform: translateY(calc(-100% - 20px));
+      transform: translateY(calc(-100% - 0px));
     }
 }
