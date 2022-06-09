@@ -84,14 +84,13 @@ body {
   background: black;
   color: white;
   opacity: 0;
-  transform: translateY(0);
 }
 .quick-add__submit.button:after, .quick-add__submit.button:before {
  box-shadow: none; 
 }
 .quick-add__submit.show:not(.button:disabled) {
   opacity: 1;
-/*   transform: translateY(calc(-100% - 10px)); */
+  transform: translateY(calc(-100% - 10px));
   animation: show__productcard__button 0.4s linear 0s;
 }
 .
