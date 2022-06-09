@@ -83,6 +83,7 @@ body {
 .quick-add__submit.show {
   display: block;
   opacity: 1;
+  transform: translateY(-100%);
   animation: show__productcard__button 0.4s linear 0s;
 }
 @keyframes show__productcard__button {
@@ -93,6 +94,6 @@ body {
     to {
       opacity: 1;
       display: block;
-      transform: translateY(-30px);
+      transform: translateY(-100%);
     }
 }
