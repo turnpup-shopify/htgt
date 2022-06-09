@@ -82,7 +82,7 @@ body {
 .quick-add__submit, .quick-add__submit.button:disabled {
   margin-bottom: 10px;
   opacity: 0;
-  border-radius: 20px;
+  border-radius: 50%;
   background: black;
   color: white;
 }
