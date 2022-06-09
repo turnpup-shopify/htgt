@@ -7,7 +7,7 @@ $(window).on('scroll', function(){
 window.addEventListener('DOMContentLoaded', (event) => {
   document.querySelector(".card__inner").addEventListener("mouseover", () => {
     console.log("mouse over");                                                     
-  }}
+  })
 });
 
 
