@@ -7,8 +7,10 @@ $(window).on('scroll', function(){
 window.addEventListener('DOMContentLoaded', (event) => {
   document.querySelectorAll(".card--standard").forEach((el) => {
     el.addEventListener("mouseenter", () => {
-      console.log("mouse over");  
       el.querySelector(".quick-add__submit").classList.add("show");
+    })
+    el.addEventListener("mouseout", () => {
+      el.querySelector(".quick-add__submit").classList.remove("show");
     })
   })
 });
