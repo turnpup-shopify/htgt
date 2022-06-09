@@ -15,3 +15,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
   })
 });
 
+window.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll(".underline_animation").forEach((el) => {
+    el.classList.add("show"); 
+  })
+});
