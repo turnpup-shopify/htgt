@@ -122,7 +122,7 @@
       "type": "custom-html",
       "settings": {
         "title": "",
-        "custom_html": "<div style=\"background: black;color:white;padding: 35px 0 20px; font-size: 40px;  font-family: '\">\n<marquee>\nRECYCLABLE PACKAGING \n| FAST SHIPPING TIMELESS TREASURES QUALITY ITEMS LUXE INTERIORS RECYCLABLE PACKAGING FAST SHIPPING ETHICALLY SOURCED TIMELESS TREASURES QUALITY ITEMS LUXE INTERIORS  \n<\/marquee>\n<\/div>"
+        "custom_html": "<div style=\"background: black;color:white;padding: 35px 0 20px; font-size: 40px;  font-family: '\">\n<div class=\"marquee\">\nRECYCLABLE PACKAGING \n| FAST SHIPPING TIMELESS TREASURES QUALITY ITEMS LUXE INTERIORS RECYCLABLE PACKAGING FAST SHIPPING ETHICALLY SOURCED TIMELESS TREASURES QUALITY ITEMS LUXE INTERIORS  \n\n<\/div>\n<\/div>"
       }
     }
   },
