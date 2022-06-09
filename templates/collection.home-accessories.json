@@ -3,18 +3,38 @@
     "16547427612e19168b": {
       "type": "flwr-one-long-sentence",
       "blocks": {
+        "16289d0b-0d97-43dd-9486-4fa527449b75": {
+          "type": "text",
+          "settings": {
+            "block_text": "DESIGNER SCULPTURES",
+            "block_font_size": "80px",
+            "mobile_block_font_size": "16px",
+            "block_font_color": "#fa6d12",
+            "font_family_text": "Helvetica",
+            "font_weight_text": "800",
+            "line_height_text": "1.1",
+            "letter_spacing": "3px",
+            "text_width": "80%",
+            "mobile_text_width": "80%",
+            "text_padding_left": "0px",
+            "text_padding_bottom": "10px",
+            "is_own_line": true,
+            "text_has_wavy_animation": true,
+            "wavy_animation_color": "#F6B700"
+          }
+        },
         "1654742761f6df9ac3-0": {
           "type": "text",
           "settings": {
             "block_text": "Check out our sculpture home decor selection for the very best in unique or custom, handmade pieces from our shops.",
             "block_font_size": "24px",
             "mobile_block_font_size": "24px",
-            "block_font_color": "#fa6d12",
+            "block_font_color": "#121212",
             "font_family_text": "cooper-black-std, serif;",
             "font_weight_text": "800",
-            "line_height_text": "1.2",
+            "line_height_text": "1.4",
             "letter_spacing": "3px",
-            "text_width": "100%",
+            "text_width": "80%",
             "mobile_text_width": "90%",
             "text_padding_left": "0px",
             "text_padding_bottom": "0px",
@@ -25,21 +45,22 @@
         }
       },
       "block_order": [
+        "16289d0b-0d97-43dd-9486-4fa527449b75",
         "1654742761f6df9ac3-0"
       ],
       "settings": {
         "subtitle": "",
-        "subtitle_font_size": "11px",
-        "subtitle_font_weight": "300",
+        "subtitle_font_size": "14px",
+        "subtitle_font_weight": "600",
         "subtitle_font_family": "'Karla'",
-        "subtitle_font_color": "#555555",
+        "subtitle_font_color": "#fa6d12",
         "background_color": "#ffffff",
         "background_opacity": "0.2",
         "max_width": 90,
         "mobile_max_width": 90,
         "margintop": 100,
         "marginbottom": 100,
-        "alignment": "center",
+        "alignment": "left",
         "turnpup_bottom_border_color": "#F4B237",
         "mobile_font_size": "12px"
       }
