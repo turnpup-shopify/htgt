@@ -83,7 +83,7 @@ body {
   margin-bottom: 0px;
   opacity: 0;
 }
-.quick-add__submit.show {
+.quick-add__submit.show:not(.button:disabled) {
   opacity: 1;
   transform: translateY(calc(-100% - 0px));
   animation: show__productcard__button 0.4s linear 0s;
