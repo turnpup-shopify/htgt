@@ -79,7 +79,7 @@ body {
    height: 0px; 
 }
 /* shop now button */
-.quick-add__submit {
+.button:disabled .quick-add__submit {
   margin-bottom: 0px;
   opacity: 0;
 }
