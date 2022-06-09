@@ -10,6 +10,3 @@ window.addEventListener('DOMContentLoaded', (event) => {
   })
 });
 
-
-
-card__inner
