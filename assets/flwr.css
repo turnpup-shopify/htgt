@@ -107,3 +107,14 @@ body {
       transform: translateY(calc(-100% - 10px));
     }
 }
+@keyframes underline_animation_keyframe {
+    0% {
+      width: 0%;
+    }  
+  	50% {
+      width: 50%;
+    }
+    100% {
+      width: 100%;
+    }
+}
