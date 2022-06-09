@@ -77,7 +77,7 @@ body {
 
 /* shop now button */
 .quick-add__submit {
-  margin-top: 20px;
+  margin-bottom: 20px;
   opacity: 0;
 }
 .quick-add__submit.show {
@@ -96,6 +96,6 @@ body {
     }
     100% {
       opacity: 1;
-      transform: translateY(calc(-100%));
+      transform: translateY(calc(-100% - 20px));
     }
 }
