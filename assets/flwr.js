@@ -5,11 +5,10 @@ $(window).on('scroll', function(){
 });
 
 window.addEventListener('DOMContentLoaded', (event) => {
-  console.log("dom loaded");
   document.querySelectorAll(".card__heading").forEach((el) => {
-    console.log("for each");
     el.addEventListener("mouseenter", () => {
-      console.log("mouse over");                                                     
+      console.log("mouse over");  
+
     })
   })
 });
