@@ -74,3 +74,8 @@ body {
         transform: translateX(-50%)
     }
 }
+
+/* shop now button */
+.quick-add {
+   display: none; 
+}
