@@ -81,6 +81,8 @@ body {
   display: none;
 }
 .quick-add__submit.show {
+  display: block;
+  opacity: 1;
   animation: show__productcard__button 1s linear 0s;
 }
 @keyframes show__productcard__button {
