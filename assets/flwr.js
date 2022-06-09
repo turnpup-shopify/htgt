@@ -15,10 +15,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
   })
 });
 
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded', (event, i) => {
   document.querySelectorAll(".underline_animation").forEach((el) => {
     setTimeout(() => {
       el.classList.add("show"); 
-    }, 200)    
+    }, i+2*100)    
   })
 });
