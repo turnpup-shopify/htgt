@@ -89,8 +89,8 @@
     "banner": {
       "type": "main-collection-banner",
       "settings": {
-        "show_collection_description": false,
-        "show_collection_image": false,
+        "show_collection_description": true,
+        "show_collection_image": true,
         "color_scheme": "background-1"
       }
     },
@@ -99,10 +99,10 @@
       "settings": {
         "products_per_page": 24,
         "columns_desktop": 4,
-        "image_ratio": "square",
+        "image_ratio": "portrait",
         "show_secondary_image": true,
         "show_vendor": false,
-        "show_rating": false,
+        "show_rating": true,
         "enable_quick_add": true,
         "enable_filtering": true,
         "filter_type": "vertical",
