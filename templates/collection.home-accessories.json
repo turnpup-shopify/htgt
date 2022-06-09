@@ -82,7 +82,7 @@
         "margintop": 170,
         "marginbottom": 170,
         "alignment": "left",
-        "turnpup_bottom_border_color": "#F4B237",
+        "turnpup_bottom_border_color": "#e5e5e5",
         "mobile_font_size": "12px"
       }
     },
