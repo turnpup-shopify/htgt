@@ -5,7 +5,7 @@ $(window).on('scroll', function(){
 });
 
 window.addEventListener('DOMContentLoaded', (event) => {
-  document.querySelectorAll(".card").forEach((el) => {
+  document.querySelectorAll(".card--standard").forEach((el) => {
     el.addEventListener("mouseenter", () => {
       console.log("mouse over");  
       el.querySelector(".quick-add__submit").classList.add("show");
