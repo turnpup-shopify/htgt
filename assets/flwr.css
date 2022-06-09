@@ -80,9 +80,9 @@ body {
 }
 /* shop now button */
 .quick-add__submit, .quick-add__submit.button:disabled {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   opacity: 0;
-  border-radius: 50%;
+  border-radius: 30px;
   background: black;
   color: white;
 }
