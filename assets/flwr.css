@@ -93,6 +93,7 @@ body {
   transform: translateY(calc(-100% - 10px));
   animation: show__productcard__button 0.4s linear 0s;
 }
+.
 @keyframes show__productcard__button {
     0% {
       opacity: 0;
