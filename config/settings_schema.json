@@ -1153,6 +1153,16 @@
         "type": "image_picker",
         "id": "badge_image",
         "label": "Badge"
+      },
+      {
+        "type": "image_picker",
+        "id": "badge_image_two",
+        "label": "Badge Two"
+      },
+      {
+        "type": "image_picker",
+        "id": "badge_image_three",
+        "label": "Badge Three"
       }
     ]
   },
