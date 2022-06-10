@@ -86,7 +86,7 @@
     background-color: {{ section.settings.background_color | color_modify: 'alpha', float_opacity }};
     border-bottom: 1px solid {{section.settings.turnpup_bottom_border_color}};
     overflow-x: hidden;
-    background: url('{{section.settings.image | img_url }}');
+    background-image: url('{{section.settings.image | img_url }}');
   }
   .one_long_sentence_wrapper {
     text-align: {{ section.settings.alignment }};
