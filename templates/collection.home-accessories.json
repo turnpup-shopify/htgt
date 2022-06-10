@@ -122,7 +122,7 @@
       "type": "custom-html",
       "settings": {
         "title": "",
-        "custom_html": "<div style=\"background: black;color:white;padding: 35px 0 20px; font-size: 40px;  font-family: '\">\n<p class=\"flwr__marquee\">\nQUALITY ITEMS \/\/  FAST SHIPPING  \/\/ TIMELESS TREASURES \/\/  LUXE INTERIORS \/\/ QUALITY ITEMS \/\/  FAST SHIPPING  \/\/ TIMELESS TREASURES \/\/  LUXE INTERIORS \n<\/p>\n<\/div>"
+        "custom_html": "<div style=\"background: black;color:white;padding: 35px 0 20px; font-size: 40px;  font-family: '\">\n<p class=\"flwr__marquee\">\nQUALITY ITEMS ~ FAST SHIPPING ~  LUXE INTERIORS ~ QUALITY ITEMS ~ FAST SHIPPING  ~  LUXE INTERIORS \n<\/p>\n<\/div>"
       }
     }
   },
