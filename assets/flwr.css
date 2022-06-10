@@ -134,11 +134,33 @@ body {
 .design_badge {
   animation: infinite-spinning 1s infinite alternate;
 }
-  @keyframes infinite-spinning {
+.design_badge_two {
+  animation: infinite-spinning_two 1.3s infinite alternate;
+}
+.design_badge_three {
+  animation: infinite-spinning_three 0.8s infinite alternate;
+}
+@keyframes infinite-spinning {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(20deg);
+  }
+}
+@keyframes infinite-spinning_two {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(50deg);
+  }
+}
+@keyframes infinite-spinning_three {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(30deg);
   }
 }
