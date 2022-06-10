@@ -96,6 +96,7 @@
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
     "favicon": "shopify:\/\/shop_images\/htgtfurniture.jpg",
+    "badge_image": "shopify:\/\/shop_images\/htgt_sticker.png",
     "currency_code_enabled": true,
     "sections": {
       "announcement-bar": {
