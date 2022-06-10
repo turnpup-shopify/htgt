@@ -8,7 +8,7 @@
           "settings": {
             "block_text": "DESIGNER",
             "block_font_size": "60px",
-            "mobile_block_font_size": "16px",
+            "mobile_block_font_size": "24px",
             "block_font_color": "#ffffff",
             "font_family_text": "Helvetica Neue",
             "font_weight_text": "800",
@@ -22,7 +22,7 @@
             "text_has_wavy_animation": false,
             "wavy_animation_color": "#334fb4",
             "underline_animation": true,
-            "underline_animation_color": "#334fb4"
+            "underline_animation_color": "#fa6d12"
           }
         },
         "2f325d2d-63be-46fe-b300-ef3e6cb4f0f4": {
@@ -41,10 +41,10 @@
             "text_padding_left": "0px",
             "text_padding_bottom": "10px",
             "is_own_line": true,
-            "text_has_wavy_animation": true,
+            "text_has_wavy_animation": false,
             "wavy_animation_color": "#f6b700",
             "underline_animation": true,
-            "underline_animation_color": "#334fb4"
+            "underline_animation_color": "#fa6d12"
           }
         },
         "1654742761f6df9ac3-0": {
