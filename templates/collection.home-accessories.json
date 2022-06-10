@@ -105,7 +105,7 @@
       "type": "main-collection-product-grid",
       "settings": {
         "products_per_page": 24,
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "image_ratio": "portrait",
         "show_secondary_image": true,
         "show_vendor": false,
