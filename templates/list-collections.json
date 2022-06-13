@@ -20,7 +20,9 @@
             "text_padding_bottom": "0px",
             "is_own_line": true,
             "text_has_wavy_animation": true,
-            "wavy_animation_color": "#F6B700"
+            "wavy_animation_color": "#f6b700",
+            "underline_animation": false,
+            "underline_animation_color": "#F6B700"
           }
         }
       },
@@ -40,6 +42,7 @@
         "margintop": 100,
         "marginbottom": 100,
         "alignment": "center",
+        "image": "shopify:\/\/shop_images\/C680BFD4-B1E7-4CCF-93A4-584851115622.jpg",
         "turnpup_bottom_border_color": "rgba(0,0,0,0)",
         "mobile_font_size": "12px"
       }
