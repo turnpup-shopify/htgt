@@ -139,6 +139,11 @@ body {
 }
 .design_badge_three {
   animation: infinite-spinning_three 0.8s infinite alternate;
+  position: absolute;
+  top: 90px;
+  right: 20px;
+  z-index: 6;
+}
 }
 @keyframes infinite-spinning {
   from {
