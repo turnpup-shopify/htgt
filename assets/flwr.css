@@ -140,7 +140,7 @@ body {
 .design_badge_three {
   animation: infinite-spinning_three 0.8s infinite alternate;
   position: absolute;
-  top: 90px;
+  top: 70px;
   right: 20px;
   z-index: 6;
   width: 120px;
