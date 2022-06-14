@@ -71,7 +71,7 @@
   }
 {% endschema %}
 
-<div class="pdp-benefit-wrapper">
+<div class="custom_svg">
   {% if block.settings.benefit_icon_one != blank %} <div class="benefit_container">{{ block.settings.benefit_icon_one }} <span class="benefit_text"> {{ block.settings.benefit_icon_one_text }} </span> </div> {% endif %}
   {% if block.settings.benefit_icon_two != blank %} <div class="benefit_container">{{ block.settings.benefit_icon_two}} <span class="benefit_text"> {{ block.settings.benefit_icon_two_text }} </span> </div> {% endif %}
   {% if block.settings.benefit_icon_three != blank %} <div class="benefit_container">{{ block.settings.benefit_icon_three }} <span class="benefit_text"> {{ block.settings.benefit_icon_three_text }} </span> </div> {% endif %}
@@ -79,10 +79,10 @@
   {% if block.settings.benefit_icon_five != blank %} <div class="benefit_container">{{ block.settings.benefit_icon_five }} <span class="benefit_text"> {{ block.settings.benefit_icon_five_text }} </span> </div> {% endif %}
   {% if block.settings.benefit_icon_six != blank %} <div class="benefit_container">{{ block.settings.benefit_icon_six }} <span class="benefit_text"> {{ block.settings.benefit_icon_six_text }} </span> </div> {% endif %}
   <style> 
-    .pdp-benefit-wrapper svg { 
+    .custom_svg svg { 
       width: {{ block.settings.benefit_icon_height }}; 
     }
-    .pdp-benefit-wrapper .benefit_text { 
+    .custom_svg .benefit_text { 
       width: {{block.settings.benefit_icon_height}} 
     } 
   </style>
