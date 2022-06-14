@@ -50,7 +50,7 @@
         "1654742761f6df9ac3-0": {
           "type": "text",
           "settings": {
-            "block_text": "A versatile collection inspired by shapes found in nature and designed to last – these tables look right at home next to the bed or sofa.",
+            "block_text": "A versatile collection of accessories inspired by shapes found in nature and designed to last. Find your statement piece.",
             "block_font_size": "24px",
             "mobile_block_font_size": "24px",
             "block_font_color": "#121212",
@@ -58,7 +58,7 @@
             "font_weight_text": "400",
             "line_height_text": "1.4",
             "letter_spacing": "0px",
-            "text_width": "80%",
+            "text_width": "60%",
             "mobile_text_width": "90%",
             "text_padding_left": "0px",
             "text_padding_bottom": "0px",
