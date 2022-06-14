@@ -125,6 +125,7 @@
     },
     "16547535960fdfc6a3": {
       "type": "custom-html",
+      "disabled": true,
       "settings": {
         "title": "",
         "custom_html": "<div style=\"border-top: 0.5px solid #DDD; background: white;black;padding: 35px 0 20px; font-size: 40px;  font-family: '\">\n<p class=\"flwr__marquee\">\nQUALITY ITEMS ~ FAST SHIPPING ~  LUXE INTERIORS ~ QUALITY ITEMS ~ FAST SHIPPING  ~  LUXE INTERIORS \n<\/p>\n<\/div>"
