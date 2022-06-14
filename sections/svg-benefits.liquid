@@ -86,10 +86,10 @@
   {% if section.settings.benefit_icon_six != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_six }} <span class="benefit_text"> {{ section.settings.benefit_icon_six_text }} </span> </div> {% endif %}
   <style> 
     .custom_svg svg { 
-      width: {{ block.settings.benefit_icon_height }}; 
+      width: {{ section.settings.benefit_icon_height }}; 
     }
     .custom_svg .benefit_text { 
-      width: {{block.settings.benefit_icon_height}} 
+      width: {{section.settings.benefit_icon_height}} 
     } 
   </style>
 </div>
