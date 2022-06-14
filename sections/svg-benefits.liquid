@@ -93,12 +93,15 @@
     }
     .benefit_container {
       width: {{section.settings.benefit_icon_height}};
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     .custom_svg svg { 
-      width: {{ section.settings.benefit_icon_height }}; 
+      width: 100%; 
     }
     .custom_svg .benefit_text { 
-      width: {{section.settings.benefit_icon_height}};
+      width: 100%;
       text-align: center;
     } 
   </style>
