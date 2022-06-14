@@ -98,7 +98,11 @@
       "settings": {
         "show_collection_description": false,
         "show_collection_image": false,
-        "color_scheme": "inverse"
+        "color_scheme": "inverse",
+        "background_color": "#333333",
+        "text_color": "#ffffff",
+        "font_size_desktop": "30px",
+        "font_size_mobile": "20px"
       }
     },
     "product-grid": {
