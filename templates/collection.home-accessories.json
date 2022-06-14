@@ -34,7 +34,7 @@
             "block_font_color": "#121212",
             "font_family_text": "\"Domine, 'Helvetica'\"",
             "font_weight_text": "800",
-            "line_height_text": "1.2",
+            "line_height_text": "1.0",
             "letter_spacing": "3px",
             "text_width": "100%",
             "mobile_text_width": "90%",
@@ -50,7 +50,7 @@
         "1654742761f6df9ac3-0": {
           "type": "text",
           "settings": {
-            "block_text": "Check out our sculpture home decor selection for the very best in unique or custom, handmade pieces from our shops.",
+            "block_text": "Buy premium, high-end designer accessories to turn your space into your dream home.",
             "block_font_size": "24px",
             "mobile_block_font_size": "24px",
             "block_font_color": "#121212",
