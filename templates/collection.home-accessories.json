@@ -6,7 +6,7 @@
         "16289d0b-0d97-43dd-9486-4fa527449b75": {
           "type": "text",
           "settings": {
-            "block_text": "BUY DESIGNER",
+            "block_text": "HIGH-END",
             "block_font_size": "60px",
             "mobile_block_font_size": "42px",
             "block_font_color": "#121212",
@@ -28,7 +28,7 @@
         "2f325d2d-63be-46fe-b300-ef3e6cb4f0f4": {
           "type": "text",
           "settings": {
-            "block_text": "ACCESORIES ONLINE",
+            "block_text": "ACCESORIES",
             "block_font_size": "60px",
             "mobile_block_font_size": "42px",
             "block_font_color": "#121212",
@@ -50,7 +50,7 @@
         "1654742761f6df9ac3-0": {
           "type": "text",
           "settings": {
-            "block_text": "Buy premium, high-end designer accessories to turn your space into your dream home.",
+            "block_text": "A versatile collection inspired by shapes found in nature and designed to last – these tables look right at home next to the bed or sofa.",
             "block_font_size": "24px",
             "mobile_block_font_size": "24px",
             "block_font_color": "#121212",
