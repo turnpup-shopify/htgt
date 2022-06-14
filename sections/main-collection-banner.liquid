@@ -44,8 +44,10 @@
 </div>
 <style>
   .collection-hero {
-    {% if section.settings.text_color %} color: {{ section.settings.text_color }}; {% endif %}
     {% if section.settings.background_color %} background: {{ section.settings.background_color }} {% endif %}
+  }
+  .collection-hero h1 {
+    {% if section.settings.text_color %} color: {{ section.settings.text_color }}; {% endif %}
   }
 </style>
 
