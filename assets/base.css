@@ -2202,6 +2202,12 @@ input[type='checkbox'] {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
 
+@media screen and (max-width: 750px) {
+  .header-wrapper--border-bottom {
+    border-bottom: 0rem solid rgba(var(--color-foreground), 0.08);
+  }
+}
+
 .header {
   display: grid;
   grid-template-areas: 'left-icon heading icons';
