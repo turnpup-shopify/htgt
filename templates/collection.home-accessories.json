@@ -8,7 +8,7 @@
           "settings": {
             "block_text": "BUY DESIGNER",
             "block_font_size": "60px",
-            "mobile_block_font_size": "48px",
+            "mobile_block_font_size": "34px",
             "block_font_color": "#121212",
             "font_family_text": "\"Domine\"",
             "font_weight_text": "800",
@@ -30,7 +30,7 @@
           "settings": {
             "block_text": "ACCESORIES ONLINE",
             "block_font_size": "60px",
-            "mobile_block_font_size": "48px",
+            "mobile_block_font_size": "34px",
             "block_font_color": "#121212",
             "font_family_text": "\"Domine, 'Helvetica'\"",
             "font_weight_text": "800",
@@ -111,6 +111,7 @@
         "show_vendor": false,
         "show_rating": true,
         "enable_quick_add": true,
+        "enable_price": true,
         "enable_filtering": true,
         "filter_type": "vertical",
         "enable_sorting": true,
