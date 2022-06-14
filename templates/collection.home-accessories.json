@@ -8,7 +8,7 @@
           "settings": {
             "block_text": "HIGH-END",
             "block_font_size": "60px",
-            "mobile_block_font_size": "30px",
+            "mobile_block_font_size": "24px",
             "block_font_color": "#121212",
             "font_family_text": "\"Domine\"",
             "font_weight_text": "800",
@@ -30,7 +30,7 @@
           "settings": {
             "block_text": "ACCESORIES",
             "block_font_size": "60px",
-            "mobile_block_font_size": "30px",
+            "mobile_block_font_size": "24px",
             "block_font_color": "#121212",
             "font_family_text": "\"Domine, 'Helvetica'\"",
             "font_weight_text": "800",
