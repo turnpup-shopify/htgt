@@ -10,7 +10,7 @@
             "block_font_size": "60px",
             "mobile_block_font_size": "24px",
             "block_font_color": "#121212",
-            "font_family_text": "\"Domine\"",
+            "font_family_text": "Helvetica Neue",
             "font_weight_text": "800",
             "line_height_text": "1.1",
             "letter_spacing": "3px",
@@ -28,11 +28,11 @@
         "2f325d2d-63be-46fe-b300-ef3e6cb4f0f4": {
           "type": "text",
           "settings": {
-            "block_text": "ACCESORIES",
+            "block_text": "ACCESSORIES",
             "block_font_size": "60px",
             "mobile_block_font_size": "24px",
             "block_font_color": "#121212",
-            "font_family_text": "\"Domine, 'Helvetica'\"",
+            "font_family_text": "Helvetica Neue",
             "font_weight_text": "800",
             "line_height_text": "1.0",
             "letter_spacing": "3px",
