@@ -129,12 +129,31 @@
         "title": "",
         "custom_html": "<div style=\"border-top: 0.5px solid #DDD; background: white;black;padding: 35px 0 20px; font-size: 40px;  font-family: '\">\n<p class=\"flwr__marquee\">\nQUALITY ITEMS ~ FAST SHIPPING ~  LUXE INTERIORS ~ QUALITY ITEMS ~ FAST SHIPPING  ~  LUXE INTERIORS \n<\/p>\n<\/div>"
       }
+    },
+    "1655249273615617be": {
+      "type": "svg-benefits",
+      "settings": {
+        "benefit_icon_height": "300px",
+        "benefit_icon_one": "",
+        "benefit_icon_one_text": "Quality",
+        "benefit_icon_two": "",
+        "benefit_icon_two_text": "Trusted",
+        "benefit_icon_three": "",
+        "benefit_icon_three_text": "Delivered to You",
+        "benefit_icon_four": "",
+        "benefit_icon_four_text": "",
+        "benefit_icon_five": "",
+        "benefit_icon_five_text": "",
+        "benefit_icon_six": "",
+        "benefit_icon_six_text": ""
+      }
     }
   },
   "order": [
     "16547427612e19168b",
     "banner",
     "product-grid",
-    "16547535960fdfc6a3"
+    "16547535960fdfc6a3",
+    "1655249273615617be"
   ]
 }
