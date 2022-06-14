@@ -8,7 +8,7 @@
           "settings": {
             "block_text": "HIGH-END",
             "block_font_size": "60px",
-            "mobile_block_font_size": "42px",
+            "mobile_block_font_size": "30px",
             "block_font_color": "#121212",
             "font_family_text": "\"Domine\"",
             "font_weight_text": "800",
@@ -30,7 +30,7 @@
           "settings": {
             "block_text": "ACCESORIES",
             "block_font_size": "60px",
-            "mobile_block_font_size": "42px",
+            "mobile_block_font_size": "30px",
             "block_font_color": "#121212",
             "font_family_text": "\"Domine, 'Helvetica'\"",
             "font_weight_text": "800",
@@ -52,7 +52,7 @@
           "settings": {
             "block_text": "A versatile collection of accessories inspired by shapes found in nature and designed to last. Find your statement piece.",
             "block_font_size": "24px",
-            "mobile_block_font_size": "24px",
+            "mobile_block_font_size": "16px",
             "block_font_color": "#121212",
             "font_family_text": "\"Domine\"",
             "font_weight_text": "400",
@@ -85,8 +85,8 @@
         "background_opacity": "0",
         "max_width": 70,
         "mobile_max_width": 90,
-        "margintop": 170,
-        "marginbottom": 170,
+        "margintop": 110,
+        "marginbottom": 110,
         "alignment": "left",
         "image": "shopify:\/\/shop_images\/augustine-wong-li0iC0rjvvg-unsplash.jpg",
         "turnpup_bottom_border_color": "#e5e5e5",
