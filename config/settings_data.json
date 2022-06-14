@@ -214,12 +214,20 @@
               "flwr_footer_block_header": "Hours",
               "flwr_footer_block_description": "Mon – Fri: 10:30am – 4:00pm"
             }
+          },
+          "cfa848f9-e9b7-4297-a5bd-d5841401c4ed": {
+            "type": "text",
+            "settings": {
+              "flwr_footer_block_header": "Policies",
+              "flwr_footer_block_description": "Return\/Refund Policy"
+            }
           }
         },
         "block_order": [
           "a03e4c80-c9c8-48c1-892a-3be3014f7e53",
           "dc56bd29-c304-4747-ab22-d076b9706e20",
-          "5909b695-48ce-426b-a2de-c057415c8bc6"
+          "5909b695-48ce-426b-a2de-c057415c8bc6",
+          "cfa848f9-e9b7-4297-a5bd-d5841401c4ed"
         ],
         "settings": {
           "flwr_footer_header": "FOOTER"
