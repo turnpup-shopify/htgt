@@ -98,7 +98,7 @@
       "settings": {
         "show_collection_description": false,
         "show_collection_image": false,
-        "color_scheme": "background-1"
+        "color_scheme": "inverse"
       }
     },
     "product-grid": {
