@@ -5,6 +5,11 @@ body {
   position: relative
 }
 
+.section-flwr-custom-footer {
+  background: #444;
+  color: white;
+}
+
 #cart-icon-bubble {
     display: none;
 }
