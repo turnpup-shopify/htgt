@@ -29,6 +29,11 @@
         },
         {
           "type": "text",
+          "id": "header_font_weight",          
+          "label": "Header Font Weight"
+        },
+        {
+          "type": "text",
           "id": "header_font_margin_bottom",          
           "label": "Header Font Margin Bottom"
         },
@@ -108,7 +113,7 @@
 {% endschema %}
 
 <div class="custom_svg_outer_container">
-  {%- if section.settings.header_text -%}<div class="custom_svg_title"> </div>{%- endif -%}
+  {%- if section.settings.header_text -%}<div class="custom_svg_title"> {{ section.settings.header_text }} </div>{%- endif -%}
   <div class="custom_svg">
     {% if section.settings.benefit_icon_one != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_one }} <span class="benefit_text"> {{ section.settings.benefit_icon_one_text }} </span> </div> {% endif %}
     {% if section.settings.benefit_icon_two != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_two}} <span class="benefit_text"> {{ section.settings.benefit_icon_two_text }} </span> </div> {% endif %}
@@ -121,12 +126,13 @@
   <style> 
     .custom_svg_outer_container {
       width: {{ section.settings.container_width | default: "80%"}}; 
+      margin: 0 auto;
     }
     .custom_svg_title {
-      font-family: {{ section.settings.font_family | default: "Helvetica Neue"}}; 
-      font-size: {{ section.settings.font_size | default: "2em"}}; 
-      color: {{ section.settings.font_color | default: "white" }}; 
-      font-weight: {{ section.settings.font_weight | default: 400}}; 
+      font-family: {{ section.settings.header_font_family | default: "Helvetica Neue"}}; 
+      font-size: {{ section.settings.header_font_size | default: "2em"}}; 
+      color: {{ section.settings.header_font_color | default: "white" }}; 
+      font-weight: {{ section.settings.header_font_weight | default: 400}}; 
     }
     .custom_svg {
       margin: 30px auto;
