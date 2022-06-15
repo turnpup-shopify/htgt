@@ -115,6 +115,7 @@
         "show_rating": true,
         "enable_quick_add": true,
         "enable_price": true,
+        "button_color": "#fa6d12",
         "enable_filtering": true,
         "filter_type": "vertical",
         "enable_sorting": true,
