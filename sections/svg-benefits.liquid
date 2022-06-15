@@ -4,6 +4,36 @@
     "settings": [
         {
           "type": "text",
+          "id": "container_width",          
+          "label": "Container Width"
+        },
+        {
+          "type": "text",
+          "id": "header_text",          
+          "label": "Header Text"
+        },
+        {
+          "type": "text",
+          "id": "header_font_size",          
+          "label": "Header Font Size"
+        },
+        {
+          "type": "text",
+          "id": "header_font_family",          
+          "label": "Header Font Family"
+        },
+        {
+          "type": "text",
+          "id": "header_font_color",          
+          "label": "Header Font Color"
+        },
+        {
+          "type": "text",
+          "id": "header_font_margin_bottom",          
+          "label": "Header Font Margin Bottom"
+        },
+        {
+          "type": "text",
           "id": "benefit_icon_height",          
           "label": "Benefit Icon Height"
         },        
@@ -77,14 +107,27 @@
   }
 {% endschema %}
 
-<div class="custom_svg">
-  {% if section.settings.benefit_icon_one != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_one }} <span class="benefit_text"> {{ section.settings.benefit_icon_one_text }} </span> </div> {% endif %}
-  {% if section.settings.benefit_icon_two != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_two}} <span class="benefit_text"> {{ section.settings.benefit_icon_two_text }} </span> </div> {% endif %}
-  {% if section.settings.benefit_icon_three != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_three }} <span class="benefit_text"> {{ section.settings.benefit_icon_three_text }} </span> </div> {% endif %}
-  {% if section.settings.benefit_icon_four != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_four }} <span class="benefit_text"> {{ section.settings.benefit_icon_four_text }} </span> </div> {% endif %}
-  {% if section.settings.benefit_icon_five != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_five }} <span class="benefit_text"> {{ section.settings.benefit_icon_five_text }} </span> </div> {% endif %}
-  {% if section.settings.benefit_icon_six != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_six }} <span class="benefit_text"> {{ section.settings.benefit_icon_six_text }} </span> </div> {% endif %}
+<div class="custom_svg_outer_container">
+  {%- if section.settings.header_text -%}<div class="custom_svg_title"> </div>{%- endif -%}
+  <div class="custom_svg">
+    {% if section.settings.benefit_icon_one != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_one }} <span class="benefit_text"> {{ section.settings.benefit_icon_one_text }} </span> </div> {% endif %}
+    {% if section.settings.benefit_icon_two != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_two}} <span class="benefit_text"> {{ section.settings.benefit_icon_two_text }} </span> </div> {% endif %}
+    {% if section.settings.benefit_icon_three != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_three }} <span class="benefit_text"> {{ section.settings.benefit_icon_three_text }} </span> </div> {% endif %}
+    {% if section.settings.benefit_icon_four != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_four }} <span class="benefit_text"> {{ section.settings.benefit_icon_four_text }} </span> </div> {% endif %}
+    {% if section.settings.benefit_icon_five != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_five }} <span class="benefit_text"> {{ section.settings.benefit_icon_five_text }} </span> </div> {% endif %}
+    {% if section.settings.benefit_icon_six != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_six }} <span class="benefit_text"> {{ section.settings.benefit_icon_six_text }} </span> </div> {% endif %}
+  </div>
+</div>
   <style> 
+    .custom_svg_outer_container {
+      width: {{ section.settings.container_width | default: "80%"}}; 
+    }
+    .custom_svg_title {
+      font-family: {{ section.settings.font_family | default: "Helvetica Neue"}}; 
+      font-size: {{ section.settings.font_size | default: "2em"}}; 
+      color: {{ section.settings.font_color | default: "white" }}; 
+      font-weight: {{ section.settings.font_weight | default: 400}}; 
+    }
     .custom_svg {
       margin: 30px auto;
       display: flex;
