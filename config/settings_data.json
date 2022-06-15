@@ -219,7 +219,7 @@
             "type": "text",
             "settings": {
               "flwr_footer_block_header": "Policies",
-              "flwr_footer_block_description": "<a href=\"\">Return and Refund Policy<\/a>"
+              "flwr_footer_block_description": "<a class=\"footer_link_policy\" href=\"https:\/\/htgtfurniture.com\/pages\/on-line-return-refund-policy\">Return and Refund Policy<\/a>"
             }
           }
         },
