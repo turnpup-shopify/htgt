@@ -6,12 +6,12 @@
         "16289d0b-0d97-43dd-9486-4fa527449b75": {
           "type": "text",
           "settings": {
-            "block_text": "HIGH-END",
+            "block_text": "One-of-a-kind",
             "block_font_size": "60px",
             "mobile_block_font_size": "24px",
             "block_font_color": "#121212",
-            "font_family_text": "Helvetica Neue",
-            "font_weight_text": "800",
+            "font_family_text": "nimbus-sans-dv, sans-serif;",
+            "font_weight_text": "700",
             "line_height_text": "1.1",
             "letter_spacing": "3px",
             "text_width": "80%",
@@ -28,12 +28,12 @@
         "2f325d2d-63be-46fe-b300-ef3e6cb4f0f4": {
           "type": "text",
           "settings": {
-            "block_text": "ACCESSORIES",
+            "block_text": "Statement Pieces",
             "block_font_size": "60px",
             "mobile_block_font_size": "24px",
             "block_font_color": "#121212",
-            "font_family_text": "Helvetica Neue",
-            "font_weight_text": "800",
+            "font_family_text": "nimbus-sans-dv, sans-serif;",
+            "font_weight_text": "700",
             "line_height_text": "1.0",
             "letter_spacing": "3px",
             "text_width": "100%",
@@ -50,7 +50,7 @@
         "1654742761f6df9ac3-0": {
           "type": "text",
           "settings": {
-            "block_text": "A versatile collection of accessories inspired by shapes found in nature and designed to last. Find your statement piece.",
+            "block_text": "A versatile collection of accessories inspired by shapes found in nature and designed to last. We are excited for you to find your new favorite home decoration.",
             "block_font_size": "24px",
             "mobile_block_font_size": "16px",
             "block_font_color": "#121212",
