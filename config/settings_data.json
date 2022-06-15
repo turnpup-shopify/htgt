@@ -198,28 +198,44 @@
             "type": "text",
             "settings": {
               "flwr_footer_block_header": "Address",
-              "flwr_footer_block_description": "1644 Superior Ave <br> Costa Mesa, CA, 92627"
+              "flwr_footer_block_description": "1644 Superior Ave <br> Costa Mesa, CA, 92627",
+              "flwr_footer_block_description_2": "",
+              "flwr_footer_block_description_3": "",
+              "flwr_footer_block_description_4": "",
+              "flwr_footer_block_description_5": ""
             }
           },
           "dc56bd29-c304-4747-ab22-d076b9706e20": {
             "type": "text",
             "settings": {
               "flwr_footer_block_header": "Contact Information",
-              "flwr_footer_block_description": "T: (949) 515-9484 <br> Mail:  <a href=\"mailto:info@htgtfurniture.com\">info@htgtfurniture.com<\/a>"
+              "flwr_footer_block_description": "T: (949) 515-9484 <br> Mail:  <a href=\"mailto:info@htgtfurniture.com\">info@htgtfurniture.com<\/a>",
+              "flwr_footer_block_description_2": "",
+              "flwr_footer_block_description_3": "",
+              "flwr_footer_block_description_4": "",
+              "flwr_footer_block_description_5": ""
             }
           },
           "5909b695-48ce-426b-a2de-c057415c8bc6": {
             "type": "text",
             "settings": {
               "flwr_footer_block_header": "Hours",
-              "flwr_footer_block_description": "Mon – Fri: 10:30am – 4:00pm"
+              "flwr_footer_block_description": "Mon – Fri: 10:30am – 4:00pm",
+              "flwr_footer_block_description_2": "",
+              "flwr_footer_block_description_3": "",
+              "flwr_footer_block_description_4": "",
+              "flwr_footer_block_description_5": ""
             }
           },
           "cfa848f9-e9b7-4297-a5bd-d5841401c4ed": {
             "type": "text",
             "settings": {
               "flwr_footer_block_header": "Policies",
-              "flwr_footer_block_description": "<a class=\"footer_link_policy\" href=\"https:\/\/htgtfurniture.com\/pages\/on-line-return-refund-policy\">Return and Refund Policy<\/a>"
+              "flwr_footer_block_description": "<a class=\"footer_link_policy\" href=\"https:\/\/htgtfurniture.com\/pages\/on-line-return-refund-policy\">Return and Refund Policy<\/a>",
+              "flwr_footer_block_description_2": "<a class=\"footer_link_policy\" href=\"\">Privacy Policy<\/a>",
+              "flwr_footer_block_description_3": "<a class=\"footer_link_policy\" href=\"\">CCPA<\/a>",
+              "flwr_footer_block_description_4": "",
+              "flwr_footer_block_description_5": ""
             }
           }
         },
