@@ -103,7 +103,7 @@ body {
  animation: flwr__marquee 10s linear infinite;
   white-space: nowrap;
 }
-.footer_link_policy, .footer_link_policy:hover {
+.flwr_footer_block_description a.footer_link_policy, .flwr_footer_block_description a.footer_link_policy:hover {
   color: black;
 }
 @keyframes moveup {
