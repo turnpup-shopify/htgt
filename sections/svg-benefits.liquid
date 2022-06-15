@@ -34,7 +34,7 @@
         },
         {
           "type": "text",
-          "id": "header_font_margin_bottom",          
+          "id": "header_margin_bottom",          
           "label": "Header Font Margin Bottom"
         },
         {
@@ -135,6 +135,7 @@
       font-size: {{ section.settings.header_font_size | default: "2em"}}; 
       color: {{ section.settings.header_font_color | default: "white" }}; 
       font-weight: {{ section.settings.header_font_weight | default: 400}}; 
+      margin-bottom: {{ section.settings.header_margin_bottom }};
       text-align: center;
     }
     .custom_svg {
