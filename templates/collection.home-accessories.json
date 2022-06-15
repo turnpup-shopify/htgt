@@ -7,7 +7,7 @@
           "type": "text",
           "settings": {
             "block_text": "One-of-a-kind",
-            "block_font_size": "60px",
+            "block_font_size": "calc(var(--font-heading-scale) * 4rem)",
             "mobile_block_font_size": "24px",
             "block_font_color": "#121212",
             "font_family_text": "nimbus-sans-dv, sans-serif;",
@@ -29,7 +29,7 @@
           "type": "text",
           "settings": {
             "block_text": "Statement Pieces",
-            "block_font_size": "60px",
+            "block_font_size": "calc(var(--font-heading-scale) * 4rem)",
             "mobile_block_font_size": "24px",
             "block_font_color": "#121212",
             "font_family_text": "nimbus-sans-dv, sans-serif;",
@@ -51,11 +51,11 @@
           "type": "text",
           "settings": {
             "block_text": "A versatile collection of accessories inspired by shapes found in nature and designed to last. We are excited for you to find your new favorite home decoration.",
-            "block_font_size": "24px",
+            "block_font_size": "20px",
             "mobile_block_font_size": "16px",
             "block_font_color": "#121212",
-            "font_family_text": "\"Domine\"",
-            "font_weight_text": "400",
+            "font_family_text": "Times New Roman",
+            "font_weight_text": "300",
             "line_height_text": "1.4",
             "letter_spacing": "0px",
             "text_width": "60%",
