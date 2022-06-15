@@ -112,22 +112,23 @@
   }
 {% endschema %}
 
-<div class="custom_svg_outer_container">
-  {%- if section.settings.header_text -%}<div class="custom_svg_title"> {{ section.settings.header_text }} </div>{%- endif -%}
-  <div class="custom_svg">
-    {% if section.settings.benefit_icon_one != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_one }} <span class="benefit_text"> {{ section.settings.benefit_icon_one_text }} </span> </div> {% endif %}
-    {% if section.settings.benefit_icon_two != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_two}} <span class="benefit_text"> {{ section.settings.benefit_icon_two_text }} </span> </div> {% endif %}
-    {% if section.settings.benefit_icon_three != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_three }} <span class="benefit_text"> {{ section.settings.benefit_icon_three_text }} </span> </div> {% endif %}
-    {% if section.settings.benefit_icon_four != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_four }} <span class="benefit_text"> {{ section.settings.benefit_icon_four_text }} </span> </div> {% endif %}
-    {% if section.settings.benefit_icon_five != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_five }} <span class="benefit_text"> {{ section.settings.benefit_icon_five_text }} </span> </div> {% endif %}
-    {% if section.settings.benefit_icon_six != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_six }} <span class="benefit_text"> {{ section.settings.benefit_icon_six_text }} </span> </div> {% endif %}
+<div style="border-top: 1px solid black;">
+  <div class="custom_svg_outer_container">
+    {%- if section.settings.header_text -%}<div class="custom_svg_title"> {{ section.settings.header_text }} </div>{%- endif -%}
+    <div class="custom_svg">
+      {% if section.settings.benefit_icon_one != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_one }} <span class="benefit_text"> {{ section.settings.benefit_icon_one_text }} </span> </div> {% endif %}
+      {% if section.settings.benefit_icon_two != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_two}} <span class="benefit_text"> {{ section.settings.benefit_icon_two_text }} </span> </div> {% endif %}
+      {% if section.settings.benefit_icon_three != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_three }} <span class="benefit_text"> {{ section.settings.benefit_icon_three_text }} </span> </div> {% endif %}
+      {% if section.settings.benefit_icon_four != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_four }} <span class="benefit_text"> {{ section.settings.benefit_icon_four_text }} </span> </div> {% endif %}
+      {% if section.settings.benefit_icon_five != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_five }} <span class="benefit_text"> {{ section.settings.benefit_icon_five_text }} </span> </div> {% endif %}
+      {% if section.settings.benefit_icon_six != blank %} <div class="benefit_container">{{ section.settings.benefit_icon_six }} <span class="benefit_text"> {{ section.settings.benefit_icon_six_text }} </span> </div> {% endif %}
+    </div>
   </div>
 </div>
   <style>     
     .custom_svg_outer_container {
       width: {{ section.settings.container_width | default: "80%"}}; 
       margin: 0 auto;
-      border-top: 1px solid black;
     }
     .custom_svg_title {
       font-family: {{ section.settings.header_font_family | default: "Helvetica Neue"}}; 
