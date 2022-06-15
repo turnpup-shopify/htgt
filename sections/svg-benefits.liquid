@@ -133,11 +133,12 @@
       font-size: {{ section.settings.header_font_size | default: "2em"}}; 
       color: {{ section.settings.header_font_color | default: "white" }}; 
       font-weight: {{ section.settings.header_font_weight | default: 400}}; 
+      text-align: center;
     }
     .custom_svg {
       margin: 30px auto;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
     }
     .benefit_container {
@@ -145,7 +146,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      margin: 0 10px;
+      margin: 0 20px;
     }
     .custom_svg svg { 
       width: 100%; 
