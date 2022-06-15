@@ -116,6 +116,7 @@
                     lazy_load: lazy_load,
                     show_quick_add: section.settings.enable_quick_add,
                     show_price: section.settings.enable_price,
+                    color: section.settings.button_color,
                     section_id: section.id
 
                   %}
@@ -211,6 +212,12 @@
       "id": "enable_price",
       "default": false,
       "label": "Enable Price"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "default": "#000000",
+      "label": "Button Color"
     },
     {
       "type": "header",
