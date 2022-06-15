@@ -104,7 +104,7 @@ body {
   white-space: nowrap;
 }
 .flwr_footer_block_description a.footer_link_policy, .flwr_footer_block_description a.footer_link_policy:hover {
-  color: black;
+  color: white;
 }
 @keyframes moveup {
     0% {
