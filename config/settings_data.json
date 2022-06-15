@@ -219,7 +219,7 @@
             "type": "text",
             "settings": {
               "flwr_footer_block_header": "Policies",
-              "flwr_footer_block_description": "Return and Refund Policy"
+              "flwr_footer_block_description": "<a href=\"\">Return and Refund Policy<\/a>"
             }
           }
         },
