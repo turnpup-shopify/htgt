@@ -219,7 +219,7 @@
           "5909b695-48ce-426b-a2de-c057415c8bc6": {
             "type": "text",
             "settings": {
-              "flwr_footer_block_header": "Hours",
+              "flwr_footer_block_header": "STORE HOURS",
               "flwr_footer_block_description": "Mon – Fri: 10:30am – 4:00pm",
               "flwr_footer_block_description_2": "",
               "flwr_footer_block_description_3": "",
