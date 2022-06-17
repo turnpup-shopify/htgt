@@ -231,10 +231,10 @@
             "type": "text",
             "settings": {
               "flwr_footer_block_header": "Policies",
-              "flwr_footer_block_description": "<a class=\"footer_link_policy\" href=\"https:\/\/htgtfurniture.com\/pages\/on-line-return-refund-policy\">Return and Refund<\/a>",
-              "flwr_footer_block_description_2": "<a class=\"footer_link_policy\" href=\"https:\/\/htgtfurniture.com\/pages\/terms-of-service\">Terms of Service<\/a>",
-              "flwr_footer_block_description_3": "<a class=\"footer_link_policy\" href=\"https:\/\/htgtfurniture.com\/pages\/privacy-policy\">Privacy<\/a>",
-              "flwr_footer_block_description_4": "<a class=\"footer_link_policy\" href=\"https:\/\/htgtfurniture.com\/pages\/ccpa-opt-out\">CCPA<\/a>",
+              "flwr_footer_block_description": "<a class=\"footer_link_policy\" href=\"https:\/\/htgtfurniture.com\/pages\/terms-of-service\">Terms of Service<\/a>",
+              "flwr_footer_block_description_2": "<a class=\"footer_link_policy\" href=\"https:\/\/htgtfurniture.com\/pages\/on-line-return-refund-policy\">Return and Refund<\/a>",
+              "flwr_footer_block_description_3": "<a class=\"footer_link_policy\" href=\"https:\/\/htgtfurniture.com\/pages\/on-line-return-refund-policy\">\nShipments<\/a>",
+              "flwr_footer_block_description_4": "",
               "flwr_footer_block_description_5": ""
             }
           },
