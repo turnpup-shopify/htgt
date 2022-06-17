@@ -21,7 +21,7 @@
             "is_own_line": true,
             "text_has_wavy_animation": false,
             "wavy_animation_color": "#f6b700",
-            "underline_animation": true,
+            "underline_animation": false,
             "underline_animation_color": "#cecece"
           }
         },
@@ -39,11 +39,11 @@
             "text_width": "80%",
             "mobile_text_width": "80%",
             "text_padding_left": "0px",
-            "text_padding_bottom": "0px",
+            "text_padding_bottom": "10px",
             "is_own_line": true,
             "text_has_wavy_animation": false,
             "wavy_animation_color": "#334fb4",
-            "underline_animation": true,
+            "underline_animation": false,
             "underline_animation_color": "#cecece"
           }
         },
