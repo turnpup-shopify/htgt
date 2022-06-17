@@ -197,7 +197,7 @@
           "a03e4c80-c9c8-48c1-892a-3be3014f7e53": {
             "type": "text",
             "settings": {
-              "flwr_footer_block_header": "Address",
+              "flwr_footer_block_header": "ADDRESS",
               "flwr_footer_block_description": "1644 Superior Ave <br> Costa Mesa, CA, 92627",
               "flwr_footer_block_description_2": "",
               "flwr_footer_block_description_3": "",
