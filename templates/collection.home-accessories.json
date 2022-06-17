@@ -3,28 +3,6 @@
     "16547427612e19168b": {
       "type": "flwr-one-long-sentence",
       "blocks": {
-        "16289d0b-0d97-43dd-9486-4fa527449b75": {
-          "type": "text",
-          "settings": {
-            "block_text": "One-of-a-kind",
-            "block_font_size": "calc(var(--font-heading-scale) * 4rem)",
-            "mobile_block_font_size": "24px",
-            "block_font_color": "#121212",
-            "font_family_text": "nimbus-sans-dv, sans-serif;",
-            "font_weight_text": "700",
-            "line_height_text": "1.1",
-            "letter_spacing": "3px",
-            "text_width": "80%",
-            "mobile_text_width": "80%",
-            "text_padding_left": "0px",
-            "text_padding_bottom": "0px",
-            "is_own_line": true,
-            "text_has_wavy_animation": false,
-            "wavy_animation_color": "#334fb4",
-            "underline_animation": true,
-            "underline_animation_color": "#cecece"
-          }
-        },
         "2f325d2d-63be-46fe-b300-ef3e6cb4f0f4": {
           "type": "text",
           "settings": {
@@ -39,10 +17,32 @@
             "text_width": "100%",
             "mobile_text_width": "90%",
             "text_padding_left": "0px",
-            "text_padding_bottom": "10px",
+            "text_padding_bottom": "0px",
             "is_own_line": true,
             "text_has_wavy_animation": false,
             "wavy_animation_color": "#f6b700",
+            "underline_animation": true,
+            "underline_animation_color": "#cecece"
+          }
+        },
+        "16289d0b-0d97-43dd-9486-4fa527449b75": {
+          "type": "text",
+          "settings": {
+            "block_text": "For Your Home",
+            "block_font_size": "calc(var(--font-heading-scale) * 4rem)",
+            "mobile_block_font_size": "24px",
+            "block_font_color": "#121212",
+            "font_family_text": "nimbus-sans-dv, sans-serif;",
+            "font_weight_text": "700",
+            "line_height_text": "1.1",
+            "letter_spacing": "3px",
+            "text_width": "80%",
+            "mobile_text_width": "80%",
+            "text_padding_left": "0px",
+            "text_padding_bottom": "0px",
+            "is_own_line": true,
+            "text_has_wavy_animation": false,
+            "wavy_animation_color": "#334fb4",
             "underline_animation": true,
             "underline_animation_color": "#cecece"
           }
@@ -71,8 +71,8 @@
         }
       },
       "block_order": [
-        "16289d0b-0d97-43dd-9486-4fa527449b75",
         "2f325d2d-63be-46fe-b300-ef3e6cb4f0f4",
+        "16289d0b-0d97-43dd-9486-4fa527449b75",
         "1654742761f6df9ac3-0"
       ],
       "settings": {
