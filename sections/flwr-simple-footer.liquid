@@ -6,12 +6,12 @@
             {% if current_match != last_match %} 
               {% if forloop.index != 0 %}
                 <div class="desktop_footer_spacer"></div>
-              {% endif %}
-            <div class="flwr_footer_block">
+              {% endif %}            
+            {% endif %}    
+                <div class="flwr_footer_block">
                <p class="flwr_footer_block_header">
                     {{ block.settings.flwr_footer_block_header }}
               </p>
-            {% endif %}               
                 <p class="flwr_footer_block_description">
                     {{ block.settings.flwr_footer_block_description }}
                 </p>
