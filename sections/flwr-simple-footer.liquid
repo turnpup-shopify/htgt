@@ -1,9 +1,8 @@
 <div class="flwr_outer_footer page-width">
     <div class="flwr_inner_footer">
         {% for block in section.blocks %} 
-            {% assign last_match = "n/a" %}
             {% assign current_match = block.settings.flwr_footer_block_header | default: "none" %}
-            {% if current_match == last_match %}
+            {% if current_match != last_match %}
             <div class="flwr_footer_block">
             {% endif %}
                 <p class="flwr_footer_block_header">
@@ -32,7 +31,7 @@
                       {{ block.settings.flwr_footer_block_description_5 }}
                   </p>
                 {%- endif -%}
-            {% if current_match == last_match %}
+            {% if current_match != last_match %}
             </div>
             {% endif %}
             {% assign last_match = block.settings.flwr_footer_block_header | default: "none" %}
