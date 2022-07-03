@@ -11,7 +11,9 @@
                 <div class="flwr_footer_block">
                <p class="flwr_footer_block_header">
                   {% if current_match != last_match %} 
-                 {{ block.settings.flwr_footer_block_header }}
+                 {{ block.settings.flwr_footer_block_header }} 
+                 {% else %}
+                  <br>
                  {% endif %}            
               </p>
                 <p class="flwr_footer_block_description">
