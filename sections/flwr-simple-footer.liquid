@@ -5,10 +5,10 @@
             <script> console.log("{{current_match}} - {{last_match}}");</script>
             {% if current_match != last_match %}
             <div class="flwr_footer_block">
-            {% endif %}
-                <p class="flwr_footer_block_header">
+               <p class="flwr_footer_block_header">
                     {{ block.settings.flwr_footer_block_header }}
-                </p>
+              </p>
+            {% endif %}               
                 <p class="flwr_footer_block_description">
                     {{ block.settings.flwr_footer_block_description }}
                 </p>
