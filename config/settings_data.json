@@ -241,11 +241,11 @@
           "07c49657-5ee2-45dc-a0e9-faf81ed3a152": {
             "type": "text",
             "settings": {
-              "flwr_footer_block_header": "",
-              "flwr_footer_block_description": "<br>",
-              "flwr_footer_block_description_2": "<a class=\"footer_link_policy\" href=\"https:\/\/htgtfurniture.com\/pages\/privacy-policy\">Privacy<\/a>",
-              "flwr_footer_block_description_3": "<a class=\"footer_link_policy\" href=\"https:\/\/htgtfurniture.com\/pages\/ccpa-opt-out\">CCPA<\/a>",
-              "flwr_footer_block_description_4": "<a class=\"footer_link_policy\" href=\"https:\/\/htgtfurniture.com\/pages\/accessability\">Accessability<\/a>",
+              "flwr_footer_block_header": "POLICIES",
+              "flwr_footer_block_description": "<a class=\"footer_link_policy\" href=\"https:\/\/htgtfurniture.com\/pages\/privacy-policy\">Privacy<\/a>",
+              "flwr_footer_block_description_2": "<a class=\"footer_link_policy\" href=\"https:\/\/htgtfurniture.com\/pages\/ccpa-opt-out\">CCPA<\/a>",
+              "flwr_footer_block_description_3": "<a class=\"footer_link_policy\" href=\"https:\/\/htgtfurniture.com\/pages\/accessability\">Accessability<\/a>",
+              "flwr_footer_block_description_4": "",
               "flwr_footer_block_description_5": ""
             }
           }
