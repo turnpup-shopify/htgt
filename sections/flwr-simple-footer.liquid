@@ -5,7 +5,7 @@
             <script> console.log("{{current_match}} - {{last_match}}");</script>
             {% if current_match != last_match %} 
               {% if forloop.index != 0 %}
-                <br>
+                <div class="desktop_footer_spacer"></div>
               {% endif %}
             <div class="flwr_footer_block">
                <p class="flwr_footer_block_header">
@@ -69,6 +69,9 @@
    	color: #fa6e12;
     text-decoration: none;
   }
+  .desktop_footer_spacer {
+    height: 1rem;
+  }
   @media screen and (max-width: 749px) {
     .flwr_inner_footer {
       display: block;
@@ -78,6 +81,9 @@
     .flwr_inner_footer .flwr_footer_block {
       flex: 1 0; 
       width: 100vW;
+    }
+    .desktop_footer_spacer {
+      height: 0rem;
     }
   }
 </style>
