@@ -2,7 +2,7 @@
     <div class="flwr_inner_footer">
         {% for block in section.blocks %} 
             {% assign current_match = block.settings.flwr_footer_block_header | default: "none" %}
-            <script> console.log("{{current_match}}");</script>
+            <script> console.log("{{current_match}} - {{last_match}}");</script>
             <script> console.log("{{last_match}}");</script>
             {% if current_match != last_match %}
             <div class="flwr_footer_block">
