@@ -3,7 +3,10 @@
         {% for block in section.blocks %} 
             {% assign current_match = block.settings.flwr_footer_block_header | default: "none" %}
             <script> console.log("{{current_match}} - {{last_match}}");</script>
-            {% if current_match != last_match %}            
+            {% if current_match != last_match %} 
+              {% if forloop.index != 0 %}
+                <br>
+              {% endif %}
             <div class="flwr_footer_block">
                <p class="flwr_footer_block_header">
                     {{ block.settings.flwr_footer_block_header }}
@@ -53,7 +56,7 @@
   .flwr_inner_footer .flwr_footer_block {
     flex: 1 0; 
     width: 32vW;
-    margin: 0 0 1em 0;
+/*     margin: 0 0 1em 0; */
   }
   .flwr_footer_block_header {
     margin: 0;
