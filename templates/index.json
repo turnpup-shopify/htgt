@@ -116,6 +116,7 @@
         },
         "908c7377-ed50-42fe-8baa-eda972fb2dc5": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/CKEN-295N-671_ROM_1.webp",
             "link": "https:\/\/htgtfurniture.myshopify.com\/collections\/sofas\/Sofas",
