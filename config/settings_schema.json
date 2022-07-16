@@ -1011,6 +1011,18 @@
         ],
         "default": "inverse",
         "label": "t:settings_schema.badges.settings.sold_out_badge_color_scheme.label"
+      },
+      {
+        "type": "color",
+        "id": "custom_badge_color_scheme",
+        "default": "#FA6D12",
+        "label": "Custom Badge Backgground Color"
+      },
+      {
+        "type": "color",
+        "id": "in_store_badge_color_scheme",
+        "default": "#FA6D12",
+        "label": "Custom Badge Backgground Color"
       }
     ]
   },
