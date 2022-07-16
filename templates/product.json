@@ -15,6 +15,12 @@
           "settings": {
           }
         },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
         "caption": {
           "type": "text",
           "settings": {
@@ -36,13 +42,6 @@
           "type": "price",
           "disabled": true,
           "settings": {
-          }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "disabled": true,
-          "settings": {
-            "picker_type": "button"
           }
         },
         "quantity_selector": {
@@ -109,11 +108,11 @@
       "block_order": [
         "vendor",
         "title",
+        "variant_picker",
         "caption",
         "4ba3d4c2-7659-490c-acfe-cce0cf05f1d7",
         "description",
         "price",
-        "variant_picker",
         "quantity_selector",
         "buy_buttons",
         "collapsible-row-0",
