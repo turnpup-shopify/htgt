@@ -92,7 +92,7 @@
             </h3>
           </div>
           <div class="card__badge {{ settings.badge_position }}">            
-            {%- if card_product.metafields.pdp.badge_text -%}
+            {%- if card_product.available == false and card_product.metafields.pdp.badge_text -%}
               <span class="badge badge--bottom-left color-{{ settings.online_color_scheme }}"
                     style="color: {{ settings.custom_badge_text_color }};background-color: {{ settings.custom_badge_color_scheme }};display:block;border: none;margin-bottom: 10px;">
                 Buy Online Now
