@@ -97,8 +97,6 @@
             {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
               <span class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
             {%- endif -%}
-          </div>
-          <div class="card__badge {{ settings.badge_position }}">
             {%- if card_product.metafields.pdp.badge_text -%}
               <span class="badge badge--bottom-left color-{{ settings.online_color_scheme }}">{{ card_product.metafields.pdp.badge_text }}</span>
             {% endif %}
