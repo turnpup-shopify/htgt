@@ -1020,9 +1020,21 @@
       },
       {
         "type": "color",
+        "id": "custom_badge_text_color",
+        "default": "#ffffff",
+        "label": "Custom Badge Text Color"
+      },
+      {
+        "type": "color",
         "id": "in_store_badge_color_scheme",
         "default": "#334FB4",
         "label": "In-Store Badge Background Color"
+      },
+      {
+        "type": "color",
+        "id": "in_store_badge_text_color",
+        "default": "#ffffff",
+        "label": "In-Store Badge Text Color"
       }
     ]
   },
