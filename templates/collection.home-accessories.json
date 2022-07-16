@@ -1,7 +1,27 @@
 {
   "sections": {
+    "165799748948faeabe": {
+      "type": "flwr-online-collection-header",
+      "settings": {
+        "subtitle": "Our Philosophy",
+        "subtitle_font_size": "11px",
+        "subtitle_font_weight": "300",
+        "subtitle_font_family": "'Karla'",
+        "subtitle_font_color": "#555555",
+        "background_color": "#ffffff",
+        "background_opacity": "0.2",
+        "max_width": 90,
+        "mobile_max_width": 90,
+        "margintop": 100,
+        "marginbottom": 100,
+        "alignment": "left",
+        "turnpup_bottom_border_color": "#F4B237",
+        "mobile_font_size": "12px"
+      }
+    },
     "16547427612e19168b": {
       "type": "flwr-one-long-sentence",
+      "disabled": true,
       "blocks": {
         "2f325d2d-63be-46fe-b300-ef3e6cb4f0f4": {
           "type": "text",
@@ -151,6 +171,7 @@
     }
   },
   "order": [
+    "165799748948faeabe",
     "16547427612e19168b",
     "banner",
     "product-grid",
