@@ -5,7 +5,7 @@
       "settings": {
         "subtitle": "Our Philosophy",
         "subtitle_font_size": "11px",
-        "subtitle_font_weight": "300",
+        "subtitle_font_weight": "700",
         "subtitle_font_family": "'Karla'",
         "subtitle_font_color": "#555555",
         "background_color": "#ffffff",
@@ -15,7 +15,7 @@
         "margintop": 100,
         "marginbottom": 100,
         "alignment": "left",
-        "turnpup_bottom_border_color": "#F4B237",
+        "turnpup_bottom_border_color": "rgba(0,0,0,0)",
         "mobile_font_size": "12px"
       }
     },
