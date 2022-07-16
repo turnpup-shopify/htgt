@@ -99,8 +99,13 @@
             {%- endif -%}
             {%- if card_product.metafields.pdp.badge_text -%}
               <span class="badge badge--bottom-left color-{{ settings.online_color_scheme }}"
-                    style="display:block;border: none;margin-top: 10px;">
+                    style="background-color: {{ settings.custom_badge_color_scheme }};display:block;border: none;margin-top: 10px;">
                 {{ card_product.metafields.pdp.badge_text }}
+              </span>
+            {% else %}
+              <span class="badge badge--bottom-left color-{{ settings.online_color_scheme }}"
+                    style="background-color: {{ settings.in_store_badge_color_scheme }};display:block;border: none;margin-top: 10px;">
+                In-Store
               </span>
             {% endif %}
           </div>
