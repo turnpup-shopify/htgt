@@ -124,14 +124,6 @@
         "padding_bottom": 36
       }
     },
-    "16547535960fdfc6a3": {
-      "type": "custom-html",
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "custom_html": "<div style=\"border-top: 0.5px solid #DDD; background: white;black;padding: 35px 0 20px; font-size: 40px;  font-family: '\">\n<p class=\"flwr__marquee\">\nQUALITY ITEMS ~ FAST SHIPPING ~  LUXE INTERIORS ~ QUALITY ITEMS ~ FAST SHIPPING  ~  LUXE INTERIORS \n<\/p>\n<\/div>"
-      }
-    },
     "1655249273615617be": {
       "type": "svg-benefits",
       "settings": {
@@ -156,53 +148,12 @@
         "benefit_icon_six": "",
         "benefit_icon_six_text": ""
       }
-    },
-    "1657951106d8da3caa": {
-      "type": "rich-text",
-      "disabled": true,
-      "blocks": {
-        "1657951106c087bf78-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "MORE DETAILS ABOUT THIS COLLECTION",
-            "heading_size": "h1"
-          }
-        },
-        "1657951106c087bf78-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>{{ collection.metafields.gridwall.seo_description | metafield_tag }}<\/p>"
-          }
-        },
-        "1657951106c087bf78-2": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "1657951106c087bf78-0",
-        "1657951106c087bf78-1",
-        "1657951106c087bf78-2"
-      ],
-      "settings": {
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
     "16547427612e19168b",
     "banner",
     "product-grid",
-    "16547535960fdfc6a3",
-    "1655249273615617be",
-    "1657951106d8da3caa"
+    "1655249273615617be"
   ]
 }
