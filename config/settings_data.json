@@ -82,6 +82,7 @@
     "badge_corner_radius": 40,
     "sale_badge_color_scheme": "accent-2",
     "sold_out_badge_color_scheme": "inverse",
+    "in_store_badge_color_scheme": "#121212",
     "accent_icons": "text",
     "social_twitter_link": "",
     "social_facebook_link": "",
