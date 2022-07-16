@@ -1,12 +1,288 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{% assign image = section.settings.image %}
+<div class="one-long-sentence" data-section-id="{{ section.id }}" data-section-type="custom-content-section">
+  <div>
+    <div class="one_long_sentence_wrapper module">
+      <div style="display:inline-block;vertical-align:middle;" class="custom__item-{{ block.type }} {% if block.settings.full_width %}custom__item-full_width{% endif %}" {{ block.shopify_attributes }}>
+        <h1> {{ collection.metafields.gridwall.seo_description | default: 'title' }} </h1>
+        <p> {{ collection.metafields.gridwall.seo_description | default: 'description' }} </p>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  {% assign float_opacity = section.settings.background_opacity | plus: 0 %}
+  .one-long-sentence-subtitle {
+    font-family: {{ section.settings.subtitle_font_family }};
+    font-size: {{ section.settings.subtitle_font_size}};
+    color: {{ section.settings.subtitle_font_color}};
+    font-weight: {{ section.settings.subtitle_font_weight }};
   }
+  .one-long-sentence p {
+    margin: 0 0 0 0; 
+  }
+  .one-long-sentence {
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-color: {{ section.settings.background_color | color_modify: 'alpha', float_opacity }};
+    border-bottom: 1px solid {{section.settings.turnpup_bottom_border_color}};
+    overflow-x: hidden;
+    {%- if section.settings.image != null -%} background-image: url('{{section.settings.image | img_url }}'); {%- endif -%}
+  }
+  .one_long_sentence_wrapper {
+    text-align: {{ section.settings.alignment }};
+    max-width:{{ section.settings.max_width }}%;
+    margin: {{ section.settings.margintop | divided_by: 2 }}px auto {{ section.settings.marginbottom | divided_by: 2 }}px;
+  }
+  .block_container_one_sentence {
+	float: left; 
+  }
+  @media only screen and (max-width: 700px) {
+    .one_long_sentence_wrapper { 
+      max-width:{{ section.settings.mobile_max_width }}%;
+    }
+  }
+
+</style>
+
+{% schema %}
+{
+  "name": "One Long Sentence",
+  "class": "section-one-long-sentence",
+  "settings": [
+    {
+        "type": "textarea",
+        "id": "subtitle",
+        "label": "Subtitle",
+        "default": "Our Philosophy"
+    },
+    {
+        "type": "text",
+        "id": "subtitle_font_size",
+        "label": "Subtitle Font Size",
+        "default": "11px"
+    },
+    {
+        "type": "text",
+        "id": "subtitle_font_weight",
+        "label": "Subtitle Weight",
+        "default": "300"
+    },
+    {
+        "type": "text",
+        "id": "subtitle_font_family",
+        "label": "Subtitle Font Family",
+        "default": "'Karla'"
+    },
+    {
+        "type": "color",
+        "id": "subtitle_font_color",
+        "label": "Subtitle Font Color",
+        "default": "#555555"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "background_opacity",
+      "label": "Background Opacity",
+      "default": "0.2"
+    },
+    {
+      "type":"range",
+      "id":"max_width",
+      "min":0,
+      "max":100,
+      "step":5,
+      "unit":"%",
+      "label":"Max Width (% of width)",
+      "default":90
+	},
+    {
+      "type":"range",
+      "id":"mobile_max_width",
+      "min":0,
+      "max":100,
+      "step":5,
+      "unit":"%",
+      "label":"Mobile: Max Width",
+      "default":90
+	},
+    {
+      "type":"range",
+      "id":"margintop",
+      "min":0,
+      "max":200,
+      "step":10,
+      "unit":"px",
+      "label":"Top Margin",
+      "default":100
+	},
+    {
+      "type":"range",
+      "id":"marginbottom",
+      "min":0,
+      "max":200,
+      "step":10,
+      "unit":"px",
+      "label":"Bottom Margin",
+      "default":100
+	},
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Alignment",
+      "default": "center",
+      "options": [
+        {"value": "left", "label": "Left"},
+        {"value": "center", "label": "Center"},
+        {"value": "right", "label": "Right"}
+      ]
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background Image (optional)"
+    },
+    {
+      "type": "color",
+      "id": "turnpup_bottom_border_color",
+      "label": "Bottom Border Color",
+      "default": "#F4B237"
+    },
+    {
+      "type": "text",
+      "id": "mobile_font_size",
+      "label": "Mobile Font Size",
+      "default": "12px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Rich text",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "block_text",
+          "label": "First part of sentence text",
+          "default": "first.part."
+        },
+        {
+          "type": "text",
+          "id": "block_font_size",
+          "label": "Text Size",
+          "default": "24px"
+        },
+        {
+          "type": "text",
+          "id": "mobile_block_font_size",
+          "label": "Mobile: Text Size",
+          "default": "24px"
+        },
+        {
+          "type": "color",
+          "id": "block_font_color",
+          "label": "Text Color",
+          "default": "#884400"
+        },
+        {
+          "type": "text",
+          "id": "font_family_text",
+          "label": "Text Family",
+          "default": "Helvetica"
+		},
+        {
+          "type": "text",
+          "id": "font_weight_text",
+          "label": "Text Weight",
+          "default": "800"
+		},
+        {
+          "type": "text",
+          "id": "line_height_text",
+          "label": "Text Line Height",
+          "default": "1.2"
+		},
+        {
+          "type": "text",
+          "id": "letter_spacing",
+          "label": "Letter Spacing (can type normal)",
+          "default": "3px"
+		},
+        {
+          "type": "text",
+          "id": "text_width",
+          "label": "Text Width",
+          "default": "100%"
+        },
+        {
+          "type": "text",
+          "id": "mobile_text_width",
+          "label": "Mobile: Text Width",
+          "default": "90%"
+        },
+        {
+          "type": "text",
+          "id": "text_padding_left",
+          "label": "Padding Left",
+          "default": "0px"
+        },
+        {
+          "type": "text",
+          "id": "text_padding_bottom",
+          "label": "Padding Bottom",
+          "default": "0px"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_own_line",
+          "label": "Separate Line?",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "text_has_wavy_animation",
+          "label": "Wavy Animation",
+          "default": true
+        },
+        {
+          "type": "color",
+          "id": "wavy_animation_color",
+          "label": "Wavy Animation Color",
+          "default": "#F6B700"
+        },
+        {
+          "type": "checkbox",
+          "id": "underline_animation",
+          "label": "Underline",
+          "default": false
+        },
+        {
+          "type": "color",
+          "id": "underline_animation_color",
+          "label": "Underline Animation Color",
+          "default": "#F6B700"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "One Long Sentence - FLWR",
+      "category": "CUSTOM",
+      "blocks": [
+        {
+          "type": "text",
+          "settings": {
+            "block_text": "This is the first part."
+          }
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
