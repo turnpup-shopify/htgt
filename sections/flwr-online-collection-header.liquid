@@ -3,7 +3,7 @@
   <div>
     <div class="one_long_sentence_wrapper module">
       <div style="display:inline-block;vertical-align:middle;" class="custom__item-{{ block.type }} {% if block.settings.full_width %}custom__item-full_width{% endif %}" {{ block.shopify_attributes }}>
-        <h1> {{ collection.metafields.gridwall.seo_description | default: 'title' }} </h1>
+        <h1> {{ collection.metafields.gridwall.seo_header | default: 'title' }} </h1>
         <p> {{ collection.metafields.gridwall.seo_description | default: 'description' }} </p>
       </div>
     </div>
