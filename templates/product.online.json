@@ -15,6 +15,12 @@
           "settings": {
           }
         },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
         "caption": {
           "type": "text",
           "settings": {
@@ -22,25 +28,19 @@
             "text_style": "subtitle"
           }
         },
-        "4ba3d4c2-7659-490c-acfe-cce0cf05f1d7": {
-          "type": "custom_item_number",
+        "description": {
+          "type": "description",
           "settings": {
           }
         },
-        "description": {
-          "type": "description",
+        "4ba3d4c2-7659-490c-acfe-cce0cf05f1d7": {
+          "type": "custom_item_number",
           "settings": {
           }
         },
         "price": {
           "type": "price",
           "settings": {
-          }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
           }
         },
         "quantity_selector": {
@@ -103,11 +103,11 @@
       "block_order": [
         "vendor",
         "title",
-        "caption",
-        "4ba3d4c2-7659-490c-acfe-cce0cf05f1d7",
-        "description",
-        "price",
         "variant_picker",
+        "caption",
+        "description",
+        "4ba3d4c2-7659-490c-acfe-cce0cf05f1d7",
+        "price",
         "quantity_selector",
         "buy_buttons",
         "collapsible-row-0",
