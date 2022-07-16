@@ -1016,13 +1016,13 @@
         "type": "color",
         "id": "custom_badge_color_scheme",
         "default": "#FA6D12",
-        "label": "Custom Badge Backgground Color"
+        "label": "Custom Badge Background Color"
       },
       {
         "type": "color",
         "id": "in_store_badge_color_scheme",
-        "default": "#FA6D12",
-        "label": "Custom Badge Backgground Color"
+        "default": "#334FB4",
+        "label": "In-Store Badge Background Color"
       }
     ]
   },
