@@ -156,7 +156,7 @@
         "subtitle_font_color": "#121212",
         "background_color": "#ffffff",
         "background_opacity": "0.2",
-        "max_width": 70,
+        "max_width": 90,
         "mobile_max_width": 90,
         "margintop": 100,
         "marginbottom": 100,
