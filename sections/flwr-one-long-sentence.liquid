@@ -14,7 +14,7 @@
           {% endif %}{% if block.settings.block_text != blank %}{{block.settings.block_text}}{% endif %}</span></p>
             {% else %}
               {% if block.settings.underline_animation %}<span id="block-{{ block.id }}" class="underline_animation" style="margin-bottom:{{ block.settings.text_padding_bottom }};">
-              {% else %}<span id="block-{{ block.id }}">
+              {% else %}<span id="block-{{ block.id }}" style="margin-bottom:{{ block.settings.text_padding_bottom }};">
               {% endif %}{% if block.settings.block_text != blank %}{{block.settings.block_text}}{% endif %}</span>
             {% endif %}
             <style>
