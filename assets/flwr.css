@@ -179,3 +179,8 @@ body {
     transform: rotate(30deg);
   }
 }
+@media screen and (max-width: 750px) [
+  .design_badge_three {
+   display: none; 
+  }
+}
