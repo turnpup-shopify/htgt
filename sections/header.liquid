@@ -371,8 +371,6 @@
 
     {%- if use_menu != blank -%}
       {%- if section.settings.menu_type_desktop == 'dropdown' -%}
-              <script> console.log("{{template}}");</script>
-        {%- if template != "collection.home-accessories" -%}
         <nav class="header__inline-menu">
           <ul class="list-menu list-menu--inline" role="list">
             {%- for link in use_menu.links -%}
@@ -422,7 +420,6 @@
             {%- endfor -%}
           </ul>
         </nav>
-        {%- endif -%}
       {%- else -%}
         <nav class="header__inline-menu">
           <ul class="list-menu list-menu--inline" role="list">
