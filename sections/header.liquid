@@ -11,6 +11,11 @@
   <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
   <noscript>{{ 'component-mega-menu.css' | asset_url | stylesheet_tag }}</noscript>
 {%- endif -%}
+{%- if template == 'collection.home-accessories' -%}    
+  {%- assign use_menu = section.settings.online_menu -%}
+{%- else -%}
+  {%- assign use_menu = section.settings.menu -%}
+{%- endif -%}
 
 <noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
