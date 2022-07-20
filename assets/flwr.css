@@ -6,7 +6,7 @@ body {
 }
 
 .card__heading h5 {
- font-size: 2em; 
+ font-size: 2em !important; 
 }
 
 .section-flwr-custom-footer {
