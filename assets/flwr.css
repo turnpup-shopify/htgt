@@ -5,8 +5,8 @@ body {
   position: relative
 }
 
-.card__heading h5 {
- font-size: 2em !important; 
+.card__heading.h5 {
+ font-size: 1.4em !important; 
 }
 
 .section-flwr-custom-footer {
