@@ -11,7 +11,8 @@ body {
 }
 
 #cart-icon-bubble {
-    display: inline-block;
+    display: block;
+    transform: translateY(3px);
 }
 .collage {
     opacity: 0;
