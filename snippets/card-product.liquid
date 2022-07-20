@@ -187,6 +187,11 @@
             <a href="{{ card_product.url }}" class="full-unstyled-link">
               {{ card_product.title | escape }} <br>
               {%- if show_price -%} {{ card_product.price | money }} {%- endif -%}
+              {%- if card_product.available == true -%}
+              {%- if card_product.metafields.pdp.badge_text -%}
+               "Free Shipping"
+              {%- endif -%}
+              {%- endif -%}
             </a>
           </h3>
           <div class="card-information">
