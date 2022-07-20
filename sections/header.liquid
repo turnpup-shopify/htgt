@@ -565,8 +565,8 @@
             render 'icon-cart'
           endif
         -%}
-        <span>{{ 'templates.cart.cart' | t }}</span>
         {%- comment -%}
+        <span>{{ 'templates.cart.cart' | t }}</span>
         {%- if cart != empty -%}
           <div class="cart-count-bubble">
             {%- if cart.item_count < 100 -%}
