@@ -96,6 +96,7 @@ body {
   color: white;
   opacity: 0;
   font-size: 0.8em;
+  height: 20px;
   margin: 0px 10% 0px 10%;
 }
 .quick-add__submit.button:after, .quick-add__submit.button:before {
