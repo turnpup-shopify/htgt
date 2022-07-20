@@ -88,6 +88,7 @@ body {
 .quick-add {
   height: 0px; 
   width: 80%;
+  margin: 0 auto;
 }
 /* shop now button */
 .quick-add__submit, .quick-add__submit.button:disabled {
