@@ -86,9 +86,7 @@ body {
 }
 
 .quick-add {
-  height: 0px; 
-  width: 80%;
-  margin: 0 auto;
+  height: 0px;   
 }
 /* shop now button */
 .quick-add__submit, .quick-add__submit.button:disabled {
@@ -96,6 +94,8 @@ body {
   background: black;
   color: white;
   opacity: 0;
+  width: 80%;
+  margin: 0 auto;
 }
 .quick-add__submit.button:after, .quick-add__submit.button:before {
  box-shadow: none; 
