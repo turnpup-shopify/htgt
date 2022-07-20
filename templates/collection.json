@@ -6,7 +6,7 @@
         "show_collection_description": false,
         "show_collection_image": false,
         "color_scheme": "background-1",
-        "background_color": "#fff",
+        "background_color": "#ffffff",
         "text_color": "#000000",
         "font_size_desktop": "30px",
         "font_size_mobile": "20px"
@@ -22,7 +22,8 @@
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": false,
-        "enable_price": false,
+        "enable_price": true,
+        "button_color": "#000000",
         "enable_filtering": true,
         "filter_type": "vertical",
         "enable_sorting": true,
