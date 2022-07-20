@@ -103,6 +103,7 @@ body {
   transform: translateY(calc(-100% - 10px));
 /*   transition: transform 0.4s linear; */
   animation: moveup 0.4s linear;
+  width: 80%;
 }
 .flwr__marquee { 
  animation: flwr__marquee 10s linear infinite;
