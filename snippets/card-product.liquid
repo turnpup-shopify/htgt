@@ -129,8 +129,7 @@
                   aria-haspopup="dialog"
                   aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
                   aria-live="polite"
-                  data-sold-out-message="true"
-                  style="background-color:{{button_color | default:"#000000" }}"
+                  data-sold-out-message="true"                  
                   {% if card_product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                 >
                   <span>
