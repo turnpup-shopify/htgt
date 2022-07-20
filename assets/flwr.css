@@ -91,7 +91,7 @@ body {
 /* shop now button */
 .quick-add__submit, .quick-add__submit.button:disabled {
   border-radius: 30px;
-  background: black;
+  background-color: rbga(0,0,0,0.8);
   color: white;
   opacity: 0;
   width: 80%;
