@@ -5,6 +5,10 @@ body {
   position: relative
 }
 
+.card__heading h5 {
+ font-size: 2em; 
+}
+
 .section-flwr-custom-footer {
   background: #222;
   color: white;
