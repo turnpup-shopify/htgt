@@ -6,7 +6,8 @@ body {
 }
 
 .card__heading.h5 {
- font-size: 1.1em !important; 
+ font-size: 1em !important; 
+  font-family: 'Alegreya Sans';
 }
 
 .section-flwr-custom-footer {
