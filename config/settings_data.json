@@ -84,7 +84,7 @@
     "sale_badge_color_scheme": "accent-2",
     "sold_out_badge_color_scheme": "inverse",
     "custom_badge_color_scheme": "#121212",
-    "custom_badge_text_color": "#facece",
+    "custom_badge_text_color": "#ffffff",
     "in_store_badge_color_scheme": "#f5f5f5",
     "in_store_badge_text_color": "#121212",
     "accent_icons": "text",
