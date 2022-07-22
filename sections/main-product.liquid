@@ -585,7 +585,7 @@
 
 
 {% assign current_variant = product.selected_or_first_available_variant %}
-<script> console.log("HI --> {{ current_variant.barcode | json }}"); </script>
+<script> console.log("HI --> "+{{ current_variant.barcode | json }}); </script>
                       
   {%- liquid
     if product.selected_or_first_available_variant.featured_media
