@@ -606,6 +606,7 @@
       {% if product.selected_or_first_available_variant.sku != blank -%}
         "sku": {{ product.selected_or_first_available_variant.sku | json }},
       {%- endif %}
+      <script> console.log("{{ current_variant.barcode | json }}"); </script>
       {%- if current_variant.barcode.size == 12 -%}
         "gtin12": {{ current_variant.barcode | json }},
       {%- endif -%}
