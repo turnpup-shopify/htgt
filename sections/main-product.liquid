@@ -611,7 +611,7 @@
         "sku": {{ product.selected_or_first_available_variant.sku | json }},
       {%- endif %}
       {%- if current_variant.barcode.size == 12 -%}
-        "gtin12": {{ current_variant.barcode | json }},
+        "gtin12": {{ current_variant.barcode | json }},        
       {%- endif -%}
       {%- if current_variant.barcode.size == 13 -%}
         "gtin13": {{ current_variant.barcode | json }},
