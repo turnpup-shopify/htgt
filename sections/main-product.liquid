@@ -583,8 +583,11 @@
     });
   </script>
 
-  <script> console.log("HI --> {{ current_variant.barcode }}"); </script>
-
+<!-- FLWR MARKET ADD -->
+{% assign current_variant = product.selected_or_first_available_variant %}
+<script> console.log("HI --> {{ current_variant.barcode | json }}"); </script>
+<!-- FLWR MARKET END -->
+                      
   {%- liquid
     if product.selected_or_first_available_variant.featured_media
       assign seo_media = product.selected_or_first_available_variant.featured_media
