@@ -606,9 +606,15 @@
       {% if product.selected_or_first_available_variant.sku != blank -%}
         "sku": {{ product.selected_or_first_available_variant.sku | json }},
       {%- endif %}
-      {% if product.selected_or_first_available_variant.gtin != blank -%}
-        "gtin": {{ product.selected_or_first_available_variant.gtin | json }},
-      {%- endif %}
+      {%- if current_variant.barcode.size == 12 -%}
+        "gtin12": {{ current_variant.barcode | json }},
+      {%- endif -%}
+      {%- if current_variant.barcode.size == 13 -%}
+        "gtin13": {{ current_variant.barcode | json }},
+      {%- endif -%}
+      {%- if current_variant.barcode.size == 14 -%}
+        "gtin14": {{ current_variant.barcode | json }},
+      {%- endif -%}
       "brand": {
         "@type": "Brand",
         "name": {{ product.vendor | json }}
