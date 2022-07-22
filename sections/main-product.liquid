@@ -585,6 +585,9 @@
 
 <!-- FLWR MARKET ADD -->
 {% assign current_variant = product.selected_or_first_available_variant %}
+<script> 
+  console.log("REVIEWS --> "+{{ current_variant.reviews.rating }} );
+</script>
 <!-- FLWR MARKET END -->
                       
   {%- liquid
@@ -622,6 +625,11 @@
       "brand": {
         "@type": "Brand",
         "name": {{ product.vendor | json }}
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "0",
+        "reviewCount": "0"
       },
       "offers": [
         {%- for variant in product.variants -%}
