@@ -583,6 +583,8 @@
     });
   </script>
 
+  <script> console.log("HI --> {{ current_variant.barcode | json }}"); </script>
+
   {%- liquid
     if product.selected_or_first_available_variant.featured_media
       assign seo_media = product.selected_or_first_available_variant.featured_media
@@ -606,7 +608,6 @@
       {% if product.selected_or_first_available_variant.sku != blank -%}
         "sku": {{ product.selected_or_first_available_variant.sku | json }},
       {%- endif %}
-      <script> console.log("{{ current_variant.barcode | json }}"); </script>
       {%- if current_variant.barcode.size == 12 -%}
         "gtin12": {{ current_variant.barcode | json }},
       {%- endif -%}
