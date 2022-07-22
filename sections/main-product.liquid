@@ -586,7 +586,7 @@
 <!-- FLWR MARKET ADD -->
 {% assign current_variant = product.selected_or_first_available_variant %}
 <script> 
-  console.log("REVIEWS --> "+{{ current_variant.reviews.rating }} );
+  console.log("REVIEWS --> " + {{ current_variant.reviews.rating | json }} );
 </script>
 <!-- FLWR MARKET END -->
                       
