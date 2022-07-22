@@ -48,40 +48,6 @@
               <div class="flwr-submenu">
                 <div>
                   {%- for childlink in link.links -%}
-                      {% assign child_link_handle = childlink.title | handle %}
-                      {%- if childlink.links == blank -%}
-                        <div class="flwr_second_level" id="{{child_link_handle}}" data-id="{{child_link_handle}}">
-                          <a href="{{ childlink.url }}">
-                            {{ childlink.title | escape }}
-                          </a>
-                        </div>                     
-                      {%- else -%}
-                          <div class="flwr_second_level" id="{{child_link_handle}}" data-id="{{child_link_handle}}">
-                            {{ childlink.title | escape }}
-                          </div>                          
-                      {%- endif -%}
-                  {%- endfor -%}
-                </div>
-              </div>
-            </div>
-          </div>
-        {%- else -%}
-          <!-- HOME falls into this cateogry - purposefully skip -->
-        {%- endif -%}
-    {%- endfor -%}
-  </div>
-  <div class="flwr-collections-all-right">
-    {%- for link in section.settings.menu.links -%}
-      <div>
-        {%- if link.links != blank and link.title != 'Home' -%}
-          <div id="flwr-collection-all-{{ forloop.index }}">
-            <div style="display:none" class="flwr_first_level">
-              {{ link.title | escape }}
-            </div>
-            <div id="link-{{ link.title | escape }}">
-              <div class="flwr-submenu">
-                <div>
-                  {%- for childlink in link.links -%}
                     <div>
                       {%- if childlink.links == blank -%}
                                             
