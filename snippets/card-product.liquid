@@ -99,10 +99,12 @@
                   Buy Online
                 </span>
               {% else %}
-                <span class="badge badge--bottom-left color-{{ settings.online_color_scheme }}"
+                {% if settings.instore-badge-copy != "" %}
+                  <span class="badge badge--bottom-left color-{{ settings.online_color_scheme }}"
                       style="opacity: 0.7;color: {{ settings.in_store_badge_text_color }};background-color: {{ settings.in_store_badge_color_scheme }};display:block;border: none;margin-bottom: 10px;">
-                  In-Store
+                  {{  settings.instore-badge-copy }}
                 </span>
+                {%  endif %}
               {%- endif -%}
             {%- endif -%}
             {%- if card_product.available == false -%}
