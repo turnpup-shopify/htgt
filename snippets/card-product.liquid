@@ -94,15 +94,17 @@
           <div class="card__badge {{ settings.badge_position }}">            
             {%- if card_product.available == true -%}
               {%- if card_product.metafields.pdp.badge_text -%}
-                <span class="badge badge--bottom-left color-{{ settings.online_color_scheme }}"
-                      style="color: {{ settings.custom_badge_text_color }};background-color: {{ settings.custom_badge_color_scheme }};display:block;border: none;margin-bottom: 10px;">
-                  Buy Online
-                </span>
+                {% if settings.online-badge-copy != "" %}
+                  <span class="badge badge--bottom-left color-{{ settings.online_color_scheme }}"
+                        style="color: {{ settings.custom_badge_text_color }};background-color: {{ settings.custom_badge_color_scheme }};display:block;border: none;margin-bottom: 10px;">
+                    {{ settings.online-badge-copy }}
+                  </span>
+                {%  endif %}
               {% else %}
                 {% if settings.instore-badge-copy != "" %}
                   <span class="badge badge--bottom-left color-{{ settings.online_color_scheme }}"
                       style="opacity: 0.7;color: {{ settings.in_store_badge_text_color }};background-color: {{ settings.in_store_badge_color_scheme }};display:block;border: none;margin-bottom: 10px;">
-                  {{  settings.instore-badge-copy }}
+                  {{ settings.instore-badge-copy }}
                 </span>
                 {%  endif %}
               {%- endif -%}
