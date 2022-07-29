@@ -1013,6 +1013,13 @@
         "label": "t:settings_schema.badges.settings.sold_out_badge_color_scheme.label"
       },
       {
+        "type": "text",
+        "id": "online-badge-copy",
+        "default": "Buy Online",
+        "label": "Online Badge Copy",
+        "info": "Leave blank if you don't want anything to show"
+      },
+      {
         "type": "color",
         "id": "custom_badge_color_scheme",
         "default": "#FA6D12",
