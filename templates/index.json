@@ -7,7 +7,7 @@
           "type": "heading",
           "settings": {
             "heading": "FURNITURE, ART, & ACCESSORIES",
-            "heading_size": "h0"
+            "heading_size": "h1"
           }
         },
         "text": {
@@ -38,7 +38,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/htgt-1-6.jpg",
         "mobile_image": "shopify:\/\/shop_images\/DSCF5702.jpg",
-        "image_overlay_opacity": 50,
+        "image_overlay_opacity": 60,
         "image_height": "medium",
         "adapt_height_first_image": false,
         "desktop_content_position": "middle-center",
@@ -149,11 +149,11 @@
         "83f6a62a-f740-49fc-8911-a75e462dd9b5"
       ],
       "settings": {
-        "subtitle": "STORE CLOSED  until 8\/8\/22 (vacation)",
-        "subtitle_font_size": "30px",
+        "subtitle": "STORE CLOSED UNTIL 8\/8\/22",
+        "subtitle_font_size": "20px",
         "subtitle_font_weight": "900",
         "subtitle_font_family": "Alegreya",
-        "subtitle_font_color": "#121212",
+        "subtitle_font_color": "#334FB4",
         "background_color": "#ffffff",
         "background_opacity": "0.2",
         "max_width": 90,
