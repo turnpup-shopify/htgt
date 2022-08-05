@@ -75,52 +75,9 @@
             "underline_animation_color": "#f6b700"
           }
         },
-        "67981e8b-fe82-43f1-8e80-a2e8d1dcdf8b": {
-          "type": "text",
-          "settings": {
-            "block_text": "Shopping is Available Online with Free Delivery on many Home Decor and Accessory items. Most furniture and larger items viewed on this site are only available through our physical store location.",
-            "block_font_size": "30px",
-            "mobile_block_font_size": "20px",
-            "block_font_color": "#121212",
-            "font_family_text": "\"Alegraya Sans\"",
-            "font_weight_text": "300",
-            "line_height_text": "1.2",
-            "letter_spacing": "normal",
-            "text_width": "100%",
-            "mobile_text_width": "90%",
-            "text_padding_left": "0px",
-            "text_padding_bottom": "0.6em",
-            "is_own_line": true,
-            "text_has_wavy_animation": false,
-            "wavy_animation_color": "#f6b700",
-            "underline_animation": false,
-            "underline_animation_color": "#f6b700"
-          }
-        },
-        "d928ec0f-99fc-412e-bbbe-f80a0c183b95": {
-          "type": "text",
-          "settings": {
-            "block_text": "You will find exquisitely curated coastal, transitional, contemporary quality furniture, art and home decorations at best value pricing. Locally owned and operated, this one-of-a-kind furniture store is situated within a large renovated warehouse\/hanger in Costa Mesa.",
-            "block_font_size": "30px",
-            "mobile_block_font_size": "20px",
-            "block_font_color": "#121212",
-            "font_family_text": "\"Alegreya Sans\"",
-            "font_weight_text": "300",
-            "line_height_text": "1.2",
-            "letter_spacing": "normal",
-            "text_width": "100%",
-            "mobile_text_width": "90%",
-            "text_padding_left": "0px",
-            "text_padding_bottom": "0.6em",
-            "is_own_line": true,
-            "text_has_wavy_animation": false,
-            "wavy_animation_color": "#f6b700",
-            "underline_animation": false,
-            "underline_animation_color": "#f6b700"
-          }
-        },
         "83f6a62a-f740-49fc-8911-a75e462dd9b5": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "block_text": "",
             "block_font_size": "30px",
@@ -140,13 +97,57 @@
             "underline_animation": false,
             "underline_animation_color": "#f6b700"
           }
+        },
+        "d928ec0f-99fc-412e-bbbe-f80a0c183b95": {
+          "type": "text",
+          "settings": {
+            "block_text": "You will find exquisitely curated coastal, transitional, contemporary quality furniture, art and home decorations at best value pricing. Locally owned and operated, this one-of-a-kind furniture store is modern and high-end. We are situated within a large renovated warehouse\/hanger in Costa Mesa.",
+            "block_font_size": "30px",
+            "mobile_block_font_size": "20px",
+            "block_font_color": "#121212",
+            "font_family_text": "\"Alegreya Sans\"",
+            "font_weight_text": "300",
+            "line_height_text": "1.2",
+            "letter_spacing": "normal",
+            "text_width": "100%",
+            "mobile_text_width": "90%",
+            "text_padding_left": "0px",
+            "text_padding_bottom": "0.6em",
+            "is_own_line": true,
+            "text_has_wavy_animation": false,
+            "wavy_animation_color": "#f6b700",
+            "underline_animation": false,
+            "underline_animation_color": "#f6b700"
+          }
+        },
+        "67981e8b-fe82-43f1-8e80-a2e8d1dcdf8b": {
+          "type": "text",
+          "settings": {
+            "block_text": "Shopping is Available Online with Free Delivery on many Home Decor and Accessory items. Most furniture and larger items viewed on this site are only available through our physical store location.",
+            "block_font_size": "30px",
+            "mobile_block_font_size": "20px",
+            "block_font_color": "#121212",
+            "font_family_text": "\"Alegreya Sans\"",
+            "font_weight_text": "300",
+            "line_height_text": "1.2",
+            "letter_spacing": "normal",
+            "text_width": "100%",
+            "mobile_text_width": "90%",
+            "text_padding_left": "0px",
+            "text_padding_bottom": "0.6em",
+            "is_own_line": true,
+            "text_has_wavy_animation": false,
+            "wavy_animation_color": "#f6b700",
+            "underline_animation": false,
+            "underline_animation_color": "#f6b700"
+          }
         }
       },
       "block_order": [
         "1651619589fa9e48ce-0",
-        "67981e8b-fe82-43f1-8e80-a2e8d1dcdf8b",
+        "83f6a62a-f740-49fc-8911-a75e462dd9b5",
         "d928ec0f-99fc-412e-bbbe-f80a0c183b95",
-        "83f6a62a-f740-49fc-8911-a75e462dd9b5"
+        "67981e8b-fe82-43f1-8e80-a2e8d1dcdf8b"
       ],
       "settings": {
         "subtitle": "STORE CLOSED UNTIL 8\/8\/22",
