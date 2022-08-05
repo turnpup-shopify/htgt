@@ -153,7 +153,7 @@
         "subtitle_font_size": "20px",
         "subtitle_font_weight": "900",
         "subtitle_font_family": "Alegreya",
-        "subtitle_font_color": "#334FB4",
+        "subtitle_font_color": "#334fb4",
         "background_color": "#ffffff",
         "background_opacity": "0.2",
         "max_width": 90,
@@ -216,7 +216,7 @@
         "a6e315d7-1116-4df1-b736-116e352da46d": {
           "type": "shopify:\/\/apps\/section-feed-by-maestrooo\/blocks\/app-block\/43cd482b-515a-4e82-b170-05d391763cd2",
           "settings": {
-            "title": "SEE OUR LATEST RECENT ARRIVALS",
+            "title": "SEE OUR RECENT ARRIVALS",
             "subheading": "",
             "button_text": "Follow us on instagram",
             "button_link": "https:\/\/www.instagram.com\/htgthome\/",
