@@ -101,7 +101,7 @@
         "d928ec0f-99fc-412e-bbbe-f80a0c183b95": {
           "type": "text",
           "settings": {
-            "block_text": "You will find exquisitely curated coastal, transitional, contemporary quality furniture, art and home decorations at best value pricing. Locally owned and operated, this one-of-a-kind furniture store is modern and high-end. We are situated within a large renovated warehouse\/hanger in Costa Mesa.",
+            "block_text": "We are situated within a large renovated warehouse\/hanger in Costa Mesa. This is where you will find exquisitely curated coastal, transitional, contemporary quality furniture, art and home decorations at best value pricing. Locally owned and operated, this one-of-a-kind furniture store is modern and high-end.",
             "block_font_size": "30px",
             "mobile_block_font_size": "20px",
             "block_font_color": "#121212",
@@ -123,7 +123,7 @@
         "67981e8b-fe82-43f1-8e80-a2e8d1dcdf8b": {
           "type": "text",
           "settings": {
-            "block_text": "Shopping is Available Online with Free Delivery on many Home Decor and Accessory items. Most furniture and larger items viewed on this site are only available through our physical store location.",
+            "block_text": "Shopping is Available Online with Free Delivery on many Home Decor and Accessory items. Many furniture pieces and larger items viewed on this site are only available for purchase through our physical store location.",
             "block_font_size": "30px",
             "mobile_block_font_size": "20px",
             "block_font_color": "#121212",
@@ -150,7 +150,7 @@
         "67981e8b-fe82-43f1-8e80-a2e8d1dcdf8b"
       ],
       "settings": {
-        "subtitle": "Our Physical Store",
+        "subtitle": "VISIT OUR STORE",
         "subtitle_font_size": "20px",
         "subtitle_font_weight": "900",
         "subtitle_font_family": "Alegreya",
