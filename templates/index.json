@@ -38,6 +38,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/desktop_banner_htgt.jpg",
         "mobile_image": "shopify:\/\/shop_images\/DSCF5702.jpg",
+        "dont_lazy_load": true,
         "image_overlay_opacity": 60,
         "image_height": "medium",
         "adapt_height_first_image": false,
