@@ -51,7 +51,7 @@
           {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
         sizes="{% if section.settings.image_2 != blank and section.settings.stack_images_on_mobile %}(min-width: 750px) 50vw, 100vw{% elsif section.settings.image_2 != blank %}50vw{% else %}100vw{% endif %}"
         src="{{ section.settings.image | image_url: width: 1500 }}"
-        loading="lazy"
+        {%- if section.settings.dont_lazy_load -%} loading="lazy" {%- endif -%}
         alt="{{ section.settings.image.alt | escape }}"
         width="{{ section.settings.image.width }}"
         height="{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio }}"
@@ -77,7 +77,7 @@
           {{ section.settings.image_2 | image_url }} {{ section.settings.image_2.width }}w"
         sizes="{% if section.settings.image != blank and section.settings.stack_images_on_mobile %}(min-width: 750px) 50vw, 100vw{% elsif section.settings.image != blank %}50vw{% else %}100vw{% endif %}"
         src="{{ section.settings.image_2 | image_url: width: 1500 }}"
-        loading="lazy"
+        {%- if section.settings.dont_lazy_load -%} loading="lazy" {%- endif -%}
         alt="{{ section.settings.image_2.alt | escape }}"
         width="{{ section.settings.image_2.width }}"
         height="{{ section.settings.image_2.width | divided_by: section.settings.image_2.aspect_ratio }}"
@@ -102,7 +102,7 @@
           {{ section.settings.mobile_image | image_url }} {{ section.settings.mobile_image.width }}w"
         sizes="{% if section.settings.image_2 != blank and section.settings.stack_images_on_mobile %}(min-width: 750px) 50vw, 100vw{% elsif section.settings.image_2 != blank %}50vw{% else %}100vw{% endif %}"
         src="{{ section.settings.mobile_image | image_url: width: 1500 }}"
-        loading="lazy"
+        {%- if section.settings.dont_lazy_load -%} loading="lazy" {%- endif -%}
         alt="{{ section.settings.mobile_image.alt | escape }}"
         width="{{ section.settings.mobile_image.width }}"
         height="{{ section.settings.mobile_image.width | divided_by: section.settings.mobile_image.aspect_ratio }}"
@@ -128,7 +128,7 @@
           {{ section.settings.image_2 | image_url }} {{ section.settings.image_2.width }}w"
         sizes="{% if section.settings.mobile_image != blank and section.settings.stack_images_on_mobile %}(min-width: 750px) 50vw, 100vw{% elsif section.settings.mobile_image != blank %}50vw{% else %}100vw{% endif %}"
         src="{{ section.settings.image_2 | image_url: width: 1500 }}"
-        loading="lazy"
+        {%- if section.settings.dont_lazy_load -%} loading="lazy" {%- endif -%}
         alt="{{ section.settings.image_2.alt | escape }}"
         width="{{ section.settings.image_2.width }}"
         height="{{ section.settings.image_2.width | divided_by: section.settings.image_2.aspect_ratio }}"
@@ -238,6 +238,11 @@
       "type": "image_picker",
       "id": "image_2",
       "label": "t:sections.image-banner.settings.image_2.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "dont_lazy_load",  
+      "label": "Is Homepage Hero Image?"  
     },
     {
       "type": "range",
