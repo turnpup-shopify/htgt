@@ -214,7 +214,6 @@
     },
     "165162882932982481": {
       "type": "apps",
-      "disabled": true,
       "blocks": {
         "a6e315d7-1116-4df1-b736-116e352da46d": {
           "type": "shopify:\/\/apps\/section-feed-by-maestrooo\/blocks\/app-block\/43cd482b-515a-4e82-b170-05d391763cd2",
