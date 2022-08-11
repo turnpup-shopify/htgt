@@ -78,7 +78,6 @@
         },
         "83f6a62a-f740-49fc-8911-a75e462dd9b5": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "block_text": "",
             "block_font_size": "30px",
