@@ -10,6 +10,12 @@ body {
   padding-bottom: 0 !important;
 }
 
+#shopify-section-header {
+    position: fixed;
+    width: 100%;
+}
+
+
 @media screen and (min-width: 990px) {
   .header {
     padding-top: 0 !important;
