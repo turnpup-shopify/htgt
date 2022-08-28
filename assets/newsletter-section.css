@@ -8,6 +8,9 @@
     padding-right: 9rem;
     padding-left: 9rem;
   }
+  .newsletter__wrapper h1 {
+    font-size: calc(var(--font-heading-scale) * 2rem) !important;
+  }
 }
 
 .newsletter__wrapper > * {
@@ -16,9 +19,7 @@
 }
 
 
-.newsletter__wrapper h1 {
-  font-size: calc(var(--font-heading-scale) * 2rem);
-}
+
 
 .newsletter__wrapper > * + * {
   margin-top: 0rem;
