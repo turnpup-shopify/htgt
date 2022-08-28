@@ -152,9 +152,9 @@
       "settings": {
         "subtitle": "VISIT OUR STORE",
         "subtitle_font_size": "20px",
-        "subtitle_font_weight": "900",
+        "subtitle_font_weight": "800",
         "subtitle_font_family": "Alegreya",
-        "subtitle_font_color": "#334fb4",
+        "subtitle_font_color": "#121212",
         "background_color": "#ffffff",
         "background_opacity": "0.2",
         "max_width": 90,
