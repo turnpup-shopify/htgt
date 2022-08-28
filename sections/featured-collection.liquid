@@ -74,7 +74,6 @@
         {%- else -%}
           {%- for i in (1..4) -%}
             {% assign show_price = true %}
-            <script>console.log("{{ show_price }}");</script>
             <li class="grid__item">
               {% render 'card-product', show_vendor: section.settings.show_vendor %}
             </li>
