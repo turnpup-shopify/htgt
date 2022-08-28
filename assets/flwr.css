@@ -5,6 +5,17 @@ body {
   position: relative
 }
 
+.header {
+  padding: 0 !important;
+}
+
+@media screen and (min-width: 990px) {
+  .header {
+    padding: 0 !important;
+  }
+}
+
+
 .card__heading.h5 {
  font-size: 1em !important; 
   font-family: 'Alegreya Sans';
