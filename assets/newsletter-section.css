@@ -10,6 +10,7 @@
   }
   .newsletter__wrapper h2 {
     font-size: calc(var(--font-heading-scale) * 2rem) !important;
+    font-weight: 800;
   }
 }
 
