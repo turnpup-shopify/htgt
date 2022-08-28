@@ -46,6 +46,14 @@
   width: fit-content;
 }
 
+.newsletter__wrapper .newsletter-form__field-wrapper {
+  border-bottom: 1px solid black;
+}
+
+.newsletter__wrapper .field:after {
+  box-shadow: none;
+}
+
 @media screen and (min-width: 750px) {
   .newsletter__button {
     flex-shrink: 0;
