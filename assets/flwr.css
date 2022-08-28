@@ -15,6 +15,10 @@ body {
     width: 100%;
 }
 
+.content-for-layout {
+  margin-top: 60px;
+}
+
 
 @media screen and (min-width: 990px) {
   .header {
