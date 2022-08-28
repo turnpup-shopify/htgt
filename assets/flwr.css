@@ -8,7 +8,6 @@ body {
 .header {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-  position: fixed;
 }
 
 @media screen and (min-width: 990px) {
