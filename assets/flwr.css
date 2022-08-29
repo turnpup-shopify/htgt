@@ -220,4 +220,7 @@ body {
   .design_badge_three {
    display: none; 
   }
+    .header.page-width {
+        max-width: 100%;
+    }
 }
