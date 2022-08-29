@@ -71,7 +71,7 @@
             "description_font_size": "30px",
             "description_font_size_mobile": "14px",
             "description_font_family": "'Gotham-Book'",
-            "description_font_color": "#102147",
+            "description_font_color": "#000000",
             "description_line_height": "1.3",
             "description_font_weight": "600",
             "description_margin_top": "10px",
