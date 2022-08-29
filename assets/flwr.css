@@ -1,1006 +1,226 @@
-{{ 'section-multicolumn.css' | asset_url | stylesheet_tag }}
-<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
-<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
+html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
 
-<!-- CUSTOM SECTION PADDING - START -->
-{%- style -%}
-  a:-webkit-any-link {
-    text-decoration: none;
-  }
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-right: {{ section.settings.padding_right | times: 0.75 | round: 0 }}px;
-    padding-left: {{ section.settings.padding_left | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
+.header {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
 
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-right: {{ section.settings.padding_right }}px;
-      padding-left: {{ section.settings.padding_left }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-{%- endstyle -%}
-<!-- CUSTOM SECTION PADDING - END -->
-
-{% if section.settings.overall_background_image_url != blank %}
-  <div class="multicolumn {% if section.settings.title == blank %} no-heading{% endif %}"
-  style="background: transparent url('{{ section.settings.overall_background_image_url }}') no-repeat center center/cover; background-color: {{ section.settings.section_background_color}}; color: {{ section.settings.section_text_color }};">
-{% else %}
-  <div class="multicolumn {% if section.settings.title == blank %} no-heading{% endif %}"
-    style="background-color: {{ section.settings.section_background_color}}; color: {{ section.settings.section_text_color }};">
-{% endif %}
-
-  <div class="section-{{ section.id }}-padding isolate">
-    {% unless section.settings.title == blank %}
-      <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin{% if section.settings.title == blank %} title-wrapper-with-link--no-heading{% endif %}">
-        <h2 class="title" style="font-family: {{ section.settings.title_font_family }}; font-size: {{ section.settings.title_font_size }}; color: {{ section.settings.section_text_color }}; margin-bottom: 8px; width: 100%; text-align:{{section.settings.title_alignment}}; padding: {{ section.settings.section_title_padding }}; font-weight: {{ section.settings.section_title_font_weight }}; ">
-          {{ section.settings.title | escape }}
-        </h2>
-        <p style="font-family: {{ section.settings.subtitle_font_family }}; font-size: {{ section.settings.subtitle_font_size }}; color: {{ section.settings.section_text_color }}; width: 100%; margin: 0 auto; text-align: {{section.settings.title_alignment}}; padding: {{ section.settings.section_subtitle_padding }};">
-          {{ section.settings.sub_title }}
-        </p>
-        {%- if section.settings.button_label != blank and section.settings.swipe_on_mobile -%}
-          <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">{{ section.settings.button_label | escape }}</a>
-        {%- endif -%}
-      </div>
-    {% endunless %}
-    <slider-component class="slider-mobile-gutter">
-      <ul class="multicolumn-list grid grid--gapless grid--1-col{% if section.blocks.size > 3 and section.settings.image_width != 'full' %} grid--2-col-tablet grid--4-col-desktop{% elsif section.blocks.size > 3 and section.settings.image_width == 'full' %} grid--2-col-tablet{% else %} grid--3-col-tablet{% endif %}{% if section.settings.swipe_on_mobile and section.blocks.size > 1 %} slider slider--mobile grid--peek{% endif %}"
-        id="Slider-{{ section.id }}"
-        role="list"
-        style="column-gap: {{ section.settings.column_gap }};"
-      >
-        {%- liquid
-          assign highest_ratio = 0
-          for block in section.blocks
-            if block.settings.image.aspect_ratio > highest_ratio
-              assign highest_ratio = block.settings.image.aspect_ratio
-            endif
-          endfor
-        -%}
-        {%- for block in section.blocks -%}
-          <li 
-              id="Slide-{{ section.id }}-{{ forloop.index }}" 
-              style=""
-              class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}" {{ block.shopify_attributes }}>
-            <div class="multicolumn-card content-container" {% if section.settings.enabled_border %}style="border: 1px solid {{section.settings.section_text_color}}"{% endif %} >
-              {%- if block.settings.image != blank -%}
-                <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
-                  <div class="media media--transparent media--square">
-                    <img
-                      class="multicolumn-card__image"
-                      srcset="{%- if block.settings.image.width >= 275 -%}{{ block.settings.image | img_url: '275x' }} 275w,{%- endif -%}
-                        {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | img_url: '550x' }} 550w,{%- endif -%}
-                        {%- if block.settings.image.width >= 710 -%}{{ block.settings.image | img_url: '710x' }} 710w,{%- endif -%}
-                        {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | img_url: '1420x' }} 1420w,{%- endif -%}
-                        {{ block.settings.image | img_url: 'master' }} {{ block.settings.image.width }}w"
-                      src="{{ block.settings.image | img_url: '550x' }}"
-                      sizes="(min-width: 990px) {% if section.blocks.size <= 2 %}710px{% else %}550px{% endif %},
-                        (min-width: 750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %},
-                        calc(100vw - 30px)"
-                      alt="{{ block.settings.image.alt }}"
-                      height="{{ block.settings.image.height }}"
-                      width="{{ block.settings.image.width }}"
-                      loading="lazy"
-                    >
-                  </div>
-                </div>             
-              {%- endif -%}
-              {%- if block.settings.title != blank  or block.settings.text != blank or block.settings.description != blank -%}
-                <div class="multicolumn-card__info" style="max-width: {{ block.settings.text_max_width }};">
-                  {%- if block.settings.title != blank -%}
-                    <h3>
-                        {{ block.settings.title }}
-                    </h3>
-                  {%- endif -%}
-                  {%- if block.settings.text != blank -%}
-                    <div class="rte text">
-                      {{ block.settings.text }}
-                    </div>
-                  {%- endif -%}
-                  {%- if block.settings.text != blank -%}
-                    <div class="rte description">
-                      {% if product.metafields.pdp.description.value != blank and block.settings.use_product_metafield %}
-                        {{ product.metafields.pdp.description.value }}
-                      {% else %}
-                        {{ block.settings.description }}
-                      {% endif %}
-                    </div>
-                  {%- endif -%}
-                  {% assign btn_id = "btn" | append: block.id %}
-                  {%- if block.settings.link_label != blank and block.settings.is_hero_button -%}
-                    <a href="{{block.settings.link}}">
-                      <button class="flwr_multicolumn_hero_button">                      
-                        {{ block.settings.link_label }}
-                      </button>
-                    </a>
-                  {%- elsif block.settings.link_label != blank -%}
-                    <a class="link animate-arrow" {% if block.settings.link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.link }}"{% endif %}>{{ block.settings.link_label | escape }}<span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span></a>
-                  {%- endif -%}
-                  {%- if block.settings.link_label_two != blank and block.settings.is_hero_button_two and block.settings.button_is_white_border_two -%}
-                    <a href="{{block.settings.link_two}}">
-                      <button class="flwr_multicolumn_hero_button inverse">                      
-                        {{ block.settings.link_label_two }}
-                      </button>
-                    </a>
-                  {% elsif block.settings.link_label_two != blank and block.settings.is_hero_button_two %}
-                    <a href="{{block.settings.link_two}}">
-                        <button class="flwr_multicolumn_hero_button">                      
-                        {{ block.settings.link_label_two }}
-                        </button>
-                    </a>
-                  {%- elsif block.settings.link_label_two != blank -%}
-                    <a class="link animate-arrow" {% if block.settings.link_two == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.link_two }}"{% endif %}>{{ block.settings.link_label_two | escape }}<span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span></a>
-                  {%- endif -%}                  
-                </div>
-              {%- endif -%}
-            </div>
-          </li>
-        
-        <style>  
-          #Slide-{{ section.id }}-{{ forloop.index }} {
-            {% if block.settings.vertically_align_center %}            
-              display: flex;
-              justify-content: center;
-            {% endif %}
-            flex-direction: column;
-            flex-wrap: wrap;
-            {% unless block.settings.width == blank %}
-              flex: 0 0 {{ block.settings.width }};
-            {% else %}
-              flex: 1 0;
-            {% endunless %}
-          }
-          #Slide-{{ section.id }}-{{ forloop.index }} .multicolumn-card__info {
-            max-width: {{ block.settings.text_max_width }};
-            padding-left: 0;
-            padding-right: 0;
-            margin: {{ block.settings.top_margin_column | default: "0px" }} auto 0;
-            {% if block.settings.remove_bottom_padding %} padding-bottom: 0; {% else %} padding-bottom: 3.2rem; {% endif %}
-            {% if block.settings.remove_top_padding %} padding-top: 0; {% else %} padding-top: 1.6rem; {% endif %}
-          }
-          #Slide-{{ section.id }}-{{ forloop.index }} h3 {  
-            font-size: {{ block.settings.title_font_size }};
-            color: {{ section.settings.section_text_color }}; 
-            font-family: {{ block.settings.title_font_family }};
-            font-weight: {{ block.settings.title_font_weight }};
-            line-height: {{ block.settings.title_line_height }};
-          }
-          #Slide-{{ section.id }}-{{ forloop.index }} .text {  
-            font-size: {{ block.settings.text_font_size }};
-            font-family: {{ block.settings.text_font_family }};
-            color: {{ block.settings.text_font_color }};
-            line-height: {{ block.settings.text_line_height }};
-            font-weight: {{ block.settings.text_font_weight }};
-          }
-          #Slide-{{ section.id }}-{{ forloop.index }} .description {  
-            font-size: {{ block.settings.description_font_size }};
-            font-family: {{ block.settings.description_font_family }};
-            color: {{ block.settings.description_font_color }};
-            line-height: {{ block.settings.description_line_height }};
-            font-weight: {{ block.settings.description_font_weight }};
-            margin-top: {{ block.settings.description_margin_top }};
-            margin-bottom: {{ block.settings.description_margin_bottom }};
-          }
-          #Slide-{{ section.id }}-{{ forloop.index }} .multicolumn-card__image {
-            border-radius: {{ block.settings.image_border_radius }};
-          }          
-          #Slide-{{ section.id }}-{{ forloop.index }} .flwr_multicolumn_hero_button {           	 
-            margin-right: {{ block.settings.space_between_buttons }}px;
-          }
-          @media screen and (max-width: 749px) {
-            #Slide-{{ section.id }}-{{ forloop.index }} {           
-              flex: 1 0 100%;
-              {% if block.settings.mobile_order %}
-              order: {{ block.settings.mobile_order }};
-              {% endif %}
-              margin-bottom: {{ block.settings.margin_bottom_container }};
-            }
-            #Slide-{{ section.id }}-{{ forloop.index }} .multicolumn-card__info {
-              margin-top: {{ block.settings.top_margin_column_mobile | default: "0px" }};
-            }
-            #Slide-{{ section.id }}-{{ forloop.index }} h3 {  
-              font-size: {{ block.settings.title_font_size_mobile }};
-            }
-            #Slide-{{ section.id }}-{{ forloop.index }} .text {  
-              font-size: {{ block.settings.text_font_size_mobile }};
-            }
-            #Slide-{{ section.id }}-{{ forloop.index }} .description {  
-              font-size: {{ block.settings.description_font_size_mobile }};
-              margin-top: {{ block.settings.description_margin_top }};
-              margin-bottom: {{ block.settings.description_margin_bottom }};
-            }
-            #Slide-{{ section.id }}-{{ forloop.index }} .rte.text p {
-              
-            }            
-          }
-        </style>
-        {%- endfor -%}
-      </ul>
-
-      {%- if section.settings.swipe_on_mobile -%}
-        <div class="slider-buttons no-js-hidden medium-hide{% if section.blocks.size < 2 %} small-hide{% endif %}">
-          <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-caret' %}</button>
-          <div class="slider-counter caption">
-            <span class="slider-counter--current">1</span>
-            <span aria-hidden="true"> / </span>
-            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-            <span class="slider-counter--total">{{ section.blocks.size }}</span>
-          </div>
-          <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}</button>
-        </div>
-      {%- endif -%}
-    </slider-component>
-    <div class="center{% if section.settings.swipe_on_mobile %} small-hide medium-hide{% endif %}">
-      {%- if section.settings.button_label != blank -%}
-        <a class="button flwr_multicolumn_hero_button"{% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% endif %}>
-          {{ section.settings.button_label | escape }}
-        </a>
-      {%- endif-%}
-    </div>
-  </div>
-</div>
-
-<style>
-    .flwr-multicolumn-outer {
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-    .flwr-multicolumn-outer .multicolumn:not(.background-none) .multicolumn-card {
-        height: auto;
-    }
-    .multicolumn .button {
-        margin-top: 2em;
-        margin-bottom: 2em;
-    }
-    .flwr_multicolumn_hero_button {
-        padding: {{ section.settings.button_padding }};
-        border: 1px solid {{ section.settings.button_border_color }};
-        color: {{ section.settings.button_text_color }};
-        background: {{ section.settings.button_background_color }};
-        border-radius: {{ section.settings.button_border_radius }};
-        font-family: {{ section.settings.hero_button_font_family }};
-        font-size: {{ section.settings.hero_button_font_size }};
-        font-weight: {{ section.settings.hero_button_font_weight }};
-    }
-    .flwr_multicolumn_hero_button:hover {
-        border: 1px solid {{ section.settings.button_border_color_hover }};
-        color: {{ section.settings.button_text_color_hover }};
-        background: {{ section.settings.button_background_color_hover }};
-    }
-    .flwr_multicolumn_hero_button.inverse {
-        border: 1px solid {{ section.settings.button_border_color_hover }};
-        color: {{ section.settings.button_text_color_hover }};
-        background: {{ section.settings.button_background_color_hover }};
-    }
-    .flwr_multicolumn_hero_button.inverse:hover {
-        border: 1px solid {{ section.settings.button_border_color }};
-        color: {{ section.settings.button_text_color }};
-        background: {{ section.settings.button_background_color }};
-    }
-    .button {
-        box-shadow: none !important;
-    }
-    .button:not([disabled]):hover:after {
-        box-shadow: none !important;
-    }
-  .grid {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-    padding: 0;
-    list-style: none;
-    column-gap: var(--grid-mobile-horizontal-spacing);
-    row-gap: var(--grid-mobile-vertical-spacing);
-  }
-  .grid:last-child {
-    margin-bottom: 0;
-  }
-  .grid--gapless.grid {
-    column-gap: 0;
-    row-gap: 0;
-  }
-  .media>*:not(.zoom):not(.deferred-media__poster-button), .media model-viewer {
-    display: block;
+.header.page-width {
     max-width: 100%;
+}
+
+#shopify-section-header {
+    position: fixed;
+    width: 100%;
+}
+
+.content-for-layout {
+  margin-top: 61px;
+}
+
+
+@media screen and (min-width: 990px) {
+  .header {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+
+.card__heading.h5 {
+ font-size: 1em !important; 
+  font-family: 'Alegreya Sans';
+}
+
+.section-flwr-custom-footer {
+  background: #222;
+  color: white;
+}
+
+#cart-icon-bubble {
+    display: block;
+    transform: translateY(3px);
+}
+.collage {
+    opacity: 0;
+    position: relative;
+    bottom: -200px;
+}
+.collage.flwr_show {
+    opacity: 1;
+    bottom: 0px;
+    transition: all 0.8s linear 0.4s;
+}
+.floating_phone {
+    position: fixed;
+    bottom: 10vH;
+    right: 5vW;
+    width: 60px;
+    height: 60px;
+    background-color: #fa6e12;
+    border-radius: 100%;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 40px;
+    line-height: 40px;
+	transition: transform 1s ease-out;
+}
+.floating_phone:hover {
+    transform: scale(1.25);
+  	transition: transform 1s ease-out;
+}
+.search-modal__form .field {
+	position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    border-width: 8px;
+}
+.search-modal__form .field::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
+    width: 200%; /*Making the width double the size of the parent since we are going to be animation the transform: translateX() to the left. */
     height: 100%;
-    width: 100%;
-  }
-  .media>img {
-    object-fit: cover;
-    object-position: center center;
-    transition: opacity .4s cubic-bezier(.25,.46,.45,.94);
-  }
-  .media--square {
-    padding-bottom: {{ section.settings.max_height_desktop }}%;
-  }
-  .media--transparent {
-    background-color: transparent;
-  }
-  .media {
-    display: flex;
-    background-color: rgba(var(--color-foreground),.1);
-    position: relative;
-    overflow: hidden;
-  }
-  .grid--1-col .grid__item {
-    max-width: 100%;
-    width: 100%;
-  }
-    @media screen and (max-width: 749px) {
-        .flwr-multicolumn-outer .multicolumn-list:not(.slider) {
-            padding: 0px;
-        }
-        .media--square {
-            padding-bottom: {{ section.settings.mobile_max_height_desktop }}vH;
-        }
-        .flwr_multicolumn_hero_button {           	 
-            margin-bottom: 6px;
-        }
-    }
-  @media screen and (min-width: 750px) {
-  .grid--3-col-tablet .grid__item {
-      width: calc(33.33% - var(--grid-desktop-horizontal-spacing) * 2 / 3);
-  }
-  }
-  @media screen and (min-width: 750px) {
-    .grid {
-        column-gap: var(--grid-desktop-horizontal-spacing);
-        row-gap: var(--grid-desktop-vertical-spacing);
-    }
-  }
-
-</style>
-
-{% schema %}
-    {
-    "name": "Custom Multicolumn",
-    "class": "flwr-multicolumn-outer",
-    "settings": [            
-    {
-        "type": "header",
-        "content": "Module Global Settings"
-    },
-    {
-    "type": "range",
-    "id": "padding_top",
-    "min": 0,
-    "max": 100,
-    "step": 4,
-    "unit": "px",
-    "label": "Section Padding Top",
-    "default": 0
-    },
-    {
-    "type": "range",
-    "id": "padding_bottom",
-    "min": 0,
-    "max": 100,
-    "step": 4,
-    "unit": "px",
-    "label": "Section Padding Buttom",
-    "default": 0
-    },
-    {
-    "type": "range",
-    "id": "padding_right",
-    "min": 0,
-    "max": 100,
-    "step": 4,
-    "unit": "px",
-    "label": "Section Padding Right",
-    "default": 0
-    },
-    {
-    "type": "range",
-    "id": "padding_left",
-    "min": 0,
-    "max": 100,
-    "step": 4,
-    "unit": "px",
-    "label": "section Padding Left",
-    "default": 0
-    },
-    {
-    "type": "range",
-    "id": "max_height_desktop",
-    "min": 0,
-    "max": 100,
-    "step": 2,
-    "unit": "%",
-    "label": "Max Height of Module on Desktop",
-    "default": 80,
-    "info": "Max height of module as a % of vertical height"
-    },
-    {
-        "type": "range",
-        "id": "mobile_max_height_desktop",
-        "min": 0,
-        "max": 100,
-        "step": 2,
-        "unit": "%",
-        "label": "Max Height of Module on Mobile",
-        "default": 90,
-        "info": "Mobile: Max height of module as a % of vertical height"
-    },
-    {
-    "type": "header",
-    "content": "Other Unused Settings",
-    "info": "Most of these are neve used"
-    },    
-    {
-    "type": "checkbox",
-    "id": "enabled_border",
-    "label": "Enable Border?"
-    },
-    {
-    "type": "checkbox",
-    "id": "swipe_on_mobile",
-    "default": false,
-    "label": "Swipe on Mobile"
-    },    
-    {
-      "type": "header",
-      "content": "Column Content Settings",
-      "info": "Control the information with in the columns"
-    },
-    {
-      "type": "select",
-      "id": "image_width",
-      "options": [
-        {
-          "value": "third",
-          "label": "third width"
-        },
-        {
-          "value": "half",
-          "label": "half of width"
-        },
-        {
-          "value": "full",
-          "label": "full width"
-        }
-      ],
-      "default": "full",
-      "label": "width of image"
-    },
-    {
-      "type": "select",
-      "id": "column_alignment",
-      "options": [
-        {
-          "value": "left",
-          "label": "Align Column Content Left"
-        },
-        {
-          "value": "center",
-          "label": "Align Column Content Center"
-        }
-      ],
-      "default": "left",
-      "label": "Column Content Alignment"
-    },
-    {
-      "type": "text",
-      "id": "column_gap",     
-      "label": "Column Gap Pixels",
-      "default": "0px"
-    }, 
-    {
-      "type": "header",
-      "content": "Overall Module Button Settings",
-      "info": "Live below the column content"
-    },
-    {
-        "type": "text",
-        "id": "button_padding",
-        "label": "Button Padding",
-        "default": "10px 20px"
-    },
-    {
-        "type": "text",
-        "id": "hero_button_font_family",
-        "label": "Button Font Family",
-        "default": "'Helvetica Neue'"
-      },
-      {
-        "type": "text",
-        "id": "hero_button_font_size",
-        "label": "Button Font Size",
-        "default": "18px"
-      }, 
-      {
-        "type": "text",
-        "id": "hero_button_font_weight",
-        "label": "Button Font Weight",
-        "default": "400"
-      },        
-      {
-          "type": "text",
-          "id": "button_border_radius",
-          "label": "Button Border Radius",
-          "default": "0px",
-          "info": "0px would be square corners, 4px would be slightly rounded, 20px would be a lot more rounded."
-      },
-      {
-        "type": "color",
-        "id": "button_border_color",
-        "label": "Button Border",
-        "default": "#000000"
-      },
-      {
-        "type": "color",
-        "id": "button_background_color",
-        "label": "Button Background Color",
-        "default": "#ffffff"
-      },
-      {
-        "type": "color",
-        "id": "button_text_color",
-        "label": "Button Text Color",
-        "default": "#000000"
-      },
-      {
-        "type": "color",
-        "id": "button_border_color_hover",
-        "label": "HOVER: Button Border/Text Color",
-        "default": "#ffffff"
-      },
-      {
-        "type": "color",
-        "id": "button_background_color_hover",
-        "label": "HOVER: Button Background Color",
-        "default": "#000000"
-      },
-    {
-        "type": "color",
-        "id": "button_text_color_hover",
-        "label": "HOVER: Button Text Color",
-        "default": "#ffffff"
-    },
-    {
-        "type": "header",
-        "content": "Optional Button - Below Main Column Content",
-        "info": "Live below the column content"
-    },
-    {
-        "type": "text",
-        "id": "button_label",
-        "label": "Button Text"
-    },
-    {
-        "type": "url",
-        "id": "button_link",
-        "label": "Button Link"
-    },
-    {
-        "type": "header",
-        "content": "Optional Title/Subtitle - Above Main Content",
-        "info": "This section is for the title that is the overall title across all columns. "
-      },
-      {
-        "type": "text",
-        "id": "title",
-        "label": "Title"
-      },
-      {
-        "type": "text",
-        "id": "title_font_size",
-        "default": "56px",
-        "label": "Title Font Size"
-      },
-      {
-        "type": "text",
-        "id": "title_font_family",
-        "default": "'GothamXNarrow-Medium'",
-        "label": "Title Font Family"
-      },
-      {
-        "type": "text",
-        "id": "section_title_font_weight",
-        "default": "400",
-        "label": "Title Font Weight"
-      },
-      {
-        "type": "text",
-        "id": "section_title_padding",
-        "default": "0px",
-        "label": "Title Padding"
-      },
-      {
-        "type": "header",
-        "content": "Sub-Header for Module",
-        "info": "This section is for the substitle (under the title) that is the overall title across all columns. "
-      },
-      {
-        "type": "text",
-        "id": "sub_title",
-        "label": "Subtitle Text"
-      },
-      {
-        "type": "text",
-        "id": "subtitle_font_size",
-        "default": "20px",
-        "label": "Subtitle Font Size"
-      },
-      {
-        "type": "text",
-        "id": "section_subtitle_padding",
-        "default": "0px",
-        "label": "Subtitle Padding"
-      },
-      {
-        "type": "text",
-        "id": "subtitle_font_family",
-        "default": "'Gotham-Book'",
-        "label": "Subtitle Font Family"
-      },
-      {
-        "type": "header",
-        "content": "Overall Title and Subtitle Text Settings"
-      },
-      {
-        "type": "select",
-        "id": "title_alignment",
-        "options": [
-          {
-            "value": "left",
-            "label": "Left Aligned"
-          },
-          {
-            "value": "center",
-            "label": "Center Aligned"
-          },
-          {
-            "value": "right",
-            "label": "Right Aligned"
-          }
-        ],
-        "default": "left",
-        "label": "Alignment"
-      },
-      {
-        "type": "color",
-        "id": "section_text_color",     
-        "default": "#000000",
-        "label": "Text Color"
-      },
-      {
-        "type": "header",
-        "content": "Whole Module Background Settings"
-      },
-      {
-        "type": "text",
-        "id": "overall_background_image_url",
-        "label": "Overall Background Image URL"
-      },
-      {
-        "type": "color",
-        "id": "section_background_color",     
-        "default": "#ffffff",
-        "label": "Background Color"
-      }
-  ],
-  "blocks": [
-    {
-      "type": "column",
-      "name": "Column",
-      "settings": [                
-        {
-            "type": "header",
-            "content": "Image Section",
-            "info": "Settings for the image in the column."
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Column Image Picker",
-          "info": "(Optional) - add an image if you want column to have an image. Leave blank for a text only column."
-        },
-        {
-          "type": "text",
-          "id": "image_border_radius",
-          "label": "Image Border Radius",
-          "info": "Full this in if you want to have rounded borders on the image",
-          "default": "0px"
-        },
-        {
-          "type": "header",
-          "content": "Title",
-          "info": "Settings for the Title section."
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "default": "Column",
-          "label": "Column Title Text"
-        },
-        {
-          "type": "text",
-          "id": "title_font_size",
-          "default": "22px",
-          "label": "Title Font Size"
-        },
-        {
-          "type": "text",
-          "id": "title_font_size_mobile",
-          "default": "14px",
-          "label": "Mobile Title Font Size"
-        },
-        {
-          "type": "text",
-          "id": "title_font_family",
-          "default": "'Helvetica Neue'",
-          "label": "Title Font Family"
-        },
-        {
-          "type": "text",
-          "id": "title_line_height",
-          "label": "Title Line Height",
-          "default": "1.0"
-        },
-        {
-          "type": "text",
-          "id": "title_font_weight",
-          "default": "600",
-          "label": "Title Font Weight"
-        },
-        {
-            "type": "text",
-            "id": "title_margin_top",
-            "default": "8px",
-            "label": "Title Margin Top"
-        },
-        {
-          "type": "header",
-          "content": "Subtitle",
-          "info": "Settings for the subtitle section."
-        },
-        {
-          "type": "text",
-          "id": "text",
-          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-          "label": "Subtitle"
-        },
-        {
-          "type": "text",
-          "id": "text_font_size",
-          "default": "30px",
-          "label": "Text Font Size"
-        },
-        {
-          "type": "text",
-          "id": "text_font_size_mobile",
-          "default": "16px",
-          "label": "Mobile Text Font Size"
-        },
-        {
-          "type": "text",
-          "id": "text_font_family",
-          "default": "'Helvetica Neue'",
-          "label": "Text Font Family"
-        },
-        {
-          "type": "text",
-          "id": "text_font_color",
-          "default": "#000000",
-          "label": "Text Font Color"
-        },
-        {
-          "type": "text",
-          "id": "text_line_height",
-          "default": "1.3",
-          "label": "Text Line Height"
-        },
-        {
-          "type": "text",
-          "id": "text_font_weight",
-          "default": "600",
-          "label": "Text Font Weight"
-        },
-        {
-            "type": "text",
-            "id": "subtitle_margin_top",
-            "default": "8px",
-            "label": "Sub-Title Margin Top"
-        },
-        {
-          "type": "header",
-          "content": "Description",
-          "info": "Settings for the description section. This is the optional third text section."
-        },
-        {
-          "type": "textarea",
-          "id": "description",
-          "default": "description",
-          "label": "Description"
-        },
-        {
-          "type": "text",
-          "id": "description_font_size",
-          "default": "30px",
-          "label": "Description Font Size"
-        },
-        {
-          "type": "text",
-          "id": "description_font_size_mobile",
-          "default": "14px",
-          "label": "Mobile Description Font Size"
-        },
-        {
-          "type": "text",
-          "id": "description_font_family",
-          "default": "'Helvetica Neue'",
-          "label": "Description Font Family"
-        },
-        {
-          "type": "text",
-          "id": "description_font_color",
-          "default": "#000000",
-          "label": "Description Font Color"
-        },
-        {
-            "type": "text",
-            "id": "description_line_height",
-            "default": "1.3",
-            "label": "Description Line Height"
-        },
-        {
-            "type": "text",
-            "id": "description_font_weight",
-            "default": "600",
-            "label": "Description Font Weight"
-        },
-        {
-            "type": "text",
-            "id": "description_margin_top",
-            "default": "0px",
-            "label": "Description Margin Top"
-        },
-        {
-            "type": "text",
-            "id": "description_margin_bottom",
-            "default": "0px",
-            "label": "Description Margin Bottom"
-        },        
-        {
-            "type": "header",
-            "content": "Buttons",
-            "info": "Settings for the optional buttons at the bottom."
-        },
-        {
-            "type": "text",
-            "id": "link_label",
-            "label": "Button Text"
-        },
-        {
-            "type": "url",
-            "id": "link",
-            "label": "Button Link"
-        },
-        {
-            "type": "checkbox",
-            "id": "is_hero_button",
-            "label": "Is Hero Button?"
-        },
-        {
-            "type": "text",
-            "id": "link_label_two",
-            "label": "Button Text Two"
-        },
-        {
-            "type": "url",
-            "id": "link_two",
-            "label": "Button Link Two"
-        },
-        {
-            "type": "checkbox",
-            "id": "is_hero_button_two",
-            "label": "Is Hero Button?"
-        },
-        {
-            "type": "checkbox",
-            "id": "button_is_white_border_two",
-            "label": "Make second button inverse",
-            "info": "Check to make the second button the inverse color scheme as the first button (if hero)."
-        },         
-        {
-            "type": "range",
-            "id": "space_between_buttons",
-            "min": 0,
-            "max": 20,
-            "step": 2,
-            "unit": "px",
-            "label": "Space Between Buttons",
-            "default": 8
-        },        
-        {
-          "type": "checkbox",
-          "id": "vertically_align_center",
-          "label": "Vertically Center Align?",
-          "default": false,
-          "info": "don't use: this might need to be deleted"
-        },                        
-        {
-          "type": "header",
-          "content": "Overall Column Settings",
-          "info": "Settings that apply to the whole column. "
-        },
-        {
-          "type": "text",
-          "id": "top_margin_column",
-          "label": "Top Margin of Column (e.g. 10%)",
-          "info": "This pushes content up or down "
-        },
-        {
-          "type": "text",
-          "id": "top_margin_column_mobile",
-          "label": "Mobile: Top Margin of Column (e.g. 10%)",
-          "info": "This pushes content up or down "
-        },
-        {
-          "type": "text",
-          "id": "width",
-          "label": "Width of Column (e.g. 20%)",
-          "info": "leave blank unless you are trying to make first column smaller"
-        },
-        {
-            "type": "text",
-            "id": "text_max_width",
-            "default": "80%",
-            "label": "Max width of text content within column",
-            "info": "If this is 80% it means there will be 10% spacing on left and 10% on right."
-        },                
-        {
-          "type": "checkbox",
-          "id": "hide_on_mobile",
-          "default": false,
-          "label": "Hide this column on Mobile?"
-        },   
-        {
-          "type": "text",
-          "id": "mobile_order",
-          "label": "Order Shows on Mobile"
-        },
-        {
-          "type": "text",
-          "id": "margin_bottom_container",          
-          "label": "Mobile Margin Bottom Container"
-        },
-        {
-          "type": "checkbox",
-          "id": "remove_top_padding",
-          "label": "Check to Remove Top Padding"
-        },
-        {
-          "type": "checkbox",
-          "id": "remove_bottom_padding",
-          "label": "Check to Remove Bottom Padding"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "flwr-multicolumn",
-      "blocks": [
-        {
-          "type": "column"
-        },
-        {
-          "type": "column"
-        },
-        {
-          "type": "column"
-        }
-      ]
-    }
-  ]
+    background: linear-gradient(115deg, var(--custom-button-color-primary), var(--custom-button-color-secondary));
+    background-size: 50% 100%;
+    border-radius: inherit;
+    animation: animate_border .75s linear infinite;
 }
-{% endschema %}
+.search-modal__form .field:focus::before {
+    transform: translateX(-50%);
+}
+.search-modal__form .field__input {
+/*      margin: 10px !important; */
+    border-radius: 10px !important;
+}
+.search-modal__form .field__input:focus {
+    box-shadow: 0 0 0 0 rgba(var(--color-foreground));
+}
+.search-modal__form .field::after {
+ 	box-shadow: 0 0 0 0 black !important; 
+}
+@keyframes animate_border {
+    to {
+        transform: translateX(-50%)
+    }
+}
+
+.quick-add {
+  height: 0px; 
+  width: 82%;
+}
+/* shop now button */
+.quick-add__submit, .quick-add__submit.button:disabled {
+  border-radius: 0px;
+  background-color: #FA6D12;
+  color: white;
+  opacity: 0;
+  font-size: 0.8em;
+  height: 20px;
+  margin: 0px 10% 0px 10%;
+}
+.quick-add__submit.button:after, .quick-add__submit.button:before {
+ box-shadow: none; 
+}
+.quick-add__submit.show:not(.button:disabled) {
+  opacity: 1;
+  transform: translateY(calc(-100% - 10px));
+/*   transition: transform 0.4s linear; */
+  animation: moveup 0.4s linear;
+}
+.flwr__marquee { 
+ animation: flwr__marquee 10s linear infinite;
+  white-space: nowrap;
+}
+.flwr_footer_block_description a.footer_link_policy, .flwr_footer_block_description a.footer_link_policy:hover {
+  color: white;
+}
+@keyframes moveup {
+    0% {
+      opacity: 0;
+      transform: translateY(-40%);
+    }  
+  	50% {
+      opacity: 0.8;
+      transform: translateY(-80%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(calc(-100% - 10px));
+    }
+}
+@keyframes underline_animation_keyframe {
+    0% {
+      width: 0%;
+    }  
+  	50% {
+      width: 50%;
+    }
+    100% {
+      width: 100%;
+    }
+}
+@keyframes flwr__marquee {
+  0% {
+    transform: translateX(60%);
+  }
+  100% {
+    transform: translateX(-60%);
+  }
+}
+.design_badge {
+  animation: infinite-spinning 1s infinite alternate;
+}
+.design_badge_two {
+  animation: infinite-spinning_two 1.3s infinite alternate;
+}
+.design_badge_three {
+  animation: infinite-spinning_three 0.8s infinite alternate;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  z-index: 6;
+  width: 120px;
+  height: 120px;
+}
+}
+@keyframes infinite-spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(20deg);
+  }
+}
+@keyframes infinite-spinning_two {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(50deg);
+  }
+}
+@keyframes infinite-spinning_three {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(30deg);
+  }
+}
+@media screen and (max-width: 750px) {
+    .design_badge_three {
+        display: none; 
+    }
+    .header.page-width {
+        max-width: 100%;
+    }
+}
