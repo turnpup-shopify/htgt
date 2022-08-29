@@ -215,7 +215,7 @@
             }
             #Slide-{{ section.id }}-{{ forloop.index }} .rte.text p {
               
-            }
+            }            
           }
         </style>
         {%- endfor -%}
@@ -339,6 +339,9 @@
         }
         .media--square {
             padding-bottom: {{ section.settings.mobile_max_height_desktop }}vH;
+        }
+        .flwr_multicolumn_hero_button {           	 
+            margin-bottom: 6px;
         }
     }
   @media screen and (min-width: 750px) {
