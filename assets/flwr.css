@@ -20,7 +20,7 @@ body {
 }
 
 .content-for-layout {
-  margin-top: 49px;
+  margin-top: 61px;
 }
 
 
@@ -217,9 +217,9 @@ body {
   }
 }
 @media screen and (max-width: 750px) {
-  .design_badge_three {
-   display: none; 
-  }
+    .design_badge_three {
+        display: none; 
+    }
     .header.page-width {
         max-width: 100%;
     }
