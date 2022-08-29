@@ -168,6 +168,7 @@
             font-family: {{ block.settings.title_font_family }};
             font-weight: {{ block.settings.title_font_weight }};
             line-height: {{ block.settings.title_line_height }};
+            margin-top: {{ block.settings.title_margin_top }};
           }
           #Slide-{{ section.id }}-{{ forloop.index }} .text {  
             font-size: {{ block.settings.text_font_size }};
@@ -175,6 +176,7 @@
             color: {{ block.settings.text_font_color }};
             line-height: {{ block.settings.text_line_height }};
             font-weight: {{ block.settings.text_font_weight }};
+            margin-top: {{ block.settings.subtitle_margin_top }};
           }
           #Slide-{{ section.id }}-{{ forloop.index }} .description {  
             font-size: {{ block.settings.description_font_size }};
