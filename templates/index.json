@@ -2,7 +2,6 @@
   "sections": {
     "16617360204f2f6219": {
       "type": "flwr-multicolumn",
-      "disabled": true,
       "blocks": {
         "16617360199623ac75-0": {
           "type": "column",
@@ -78,10 +77,10 @@
             "description_margin_top": "10px",
             "description_margin_bottom": "10px",
             "link_label": "Shop Online",
-            "link": "",
+            "link": "shopify:\/\/pages\/costa-mesa",
             "is_hero_button": true,
             "link_label_two": "Shop In-Store Also",
-            "link_two": "",
+            "link_two": "shopify:\/\/products\/abstract-colorful-modern-art",
             "is_hero_button_two": true,
             "button_is_white_border_two": false,
             "space_between_buttons": 8,
@@ -142,6 +141,7 @@
     },
     "image_banner": {
       "type": "image-banner",
+      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
