@@ -96,10 +96,9 @@
 
     {%- if section.settings.show_view_all and more_in_collection -%}
       <div class="center collection__view-all">
-        <a class="ooo-instagram-footer__button" href="{{ section.settings.collection.url }}"
-          class="{% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
+        <a class="flwr_multicolumn_hero_button" href="{{ section.settings.collection.url }}"
           aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
-          style="width: 200px; margin: 10px auto 0px; padding: 8px 0;"
+          style="width: 200px; margin: 10px auto 0px; padding: 10px 20px;"
         >
           {{ 'sections.featured_collection.view_all' | t }}
         </a>
