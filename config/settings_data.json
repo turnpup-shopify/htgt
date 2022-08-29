@@ -139,7 +139,7 @@
           "menu": "main-menu",
           "online_menu": "online-main-menu",
           "menu_type_desktop": "dropdown",
-          "show_line_separator": false,
+          "show_line_separator": true,
           "enable_sticky_header": true,
           "margin_bottom": 0
         }
