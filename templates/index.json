@@ -2,6 +2,7 @@
   "sections": {
     "16617360204f2f6219": {
       "type": "flwr-multicolumn",
+      "disabled": true,
       "blocks": {
         "16617360199623ac75-0": {
           "type": "column",
@@ -141,7 +142,6 @@
     },
     "image_banner": {
       "type": "image-banner",
-      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
