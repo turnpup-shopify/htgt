@@ -333,6 +333,11 @@
     max-width: 100%;
     width: 100%;
   }
+    @media screen and (max-width: 749px) {
+        .flwr-multicolumn-outer .multicolumn-list:not(.slider) {
+            padding: 0px;
+        }
+    }
   @media screen and (min-width: 750px) {
   .grid--3-col-tablet .grid__item {
       width: calc(33.33% - var(--grid-desktop-horizontal-spacing) * 2 / 3);
