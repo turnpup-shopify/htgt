@@ -79,7 +79,7 @@
             "description_line_height": "1.3",
             "description_font_weight": "600",
             "description_margin_top": "0px",
-            "description_margin_bottom": "10px",
+            "description_margin_bottom": "16px",
             "link_label": "Shop Online",
             "link": "shopify:\/\/collections",
             "is_hero_button": true,
