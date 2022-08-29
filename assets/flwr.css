@@ -10,6 +10,10 @@ body {
   padding-bottom: 0 !important;
 }
 
+.header.page-width {
+    max-width: 100%;
+}
+
 #shopify-section-header {
     position: fixed;
     width: 100%;
