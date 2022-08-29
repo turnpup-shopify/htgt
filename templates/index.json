@@ -360,8 +360,10 @@
     "1661706548baf6888a": {
       "type": "featured-collection",
       "settings": {
-        "title": "Trending Rugs",
+        "title": "TRENDING RUGS",
         "heading_size": "h1",
+        "heading_font_size": "24px",
+        "heading_font_family": "'Alegreya'",
         "description": "",
         "show_description": true,
         "description_style": "body",
