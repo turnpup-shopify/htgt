@@ -44,7 +44,7 @@
             "width": "",
             "text_max_width": "100%",
             "hide_on_mobile": false,
-            "mobile_order": "",
+            "mobile_order": "4",
             "margin_bottom_container": "",
             "remove_top_padding": false,
             "remove_bottom_padding": false
@@ -90,7 +90,7 @@
             "width": "",
             "text_max_width": "80%",
             "hide_on_mobile": false,
-            "mobile_order": "",
+            "mobile_order": "1",
             "margin_bottom_container": "0px",
             "remove_top_padding": false,
             "remove_bottom_padding": true
