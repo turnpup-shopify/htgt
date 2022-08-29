@@ -318,7 +318,6 @@
   }
   .media--square {
     padding-bottom: {{ section.settings.max_height_desktop }}%;
-    /* padding-bottom: 100%; */
   }
   .media--transparent {
     background-color: transparent;
@@ -336,6 +335,9 @@
     @media screen and (max-width: 749px) {
         .flwr-multicolumn-outer .multicolumn-list:not(.slider) {
             padding: 0px;
+        }
+        .media--square {
+            padding-bottom: {{ section.settings.mobile_max_height_desktop }}vH;
         }
     }
   @media screen and (min-width: 750px) {
@@ -410,7 +412,18 @@
     "unit": "%",
     "label": "Max Height of Module on Desktop",
     "default": 80,
-    "info": "Max heigh of module as a % of vertical height"
+    "info": "Max height of module as a % of vertical height"
+    },
+    {
+        "type": "range",
+        "id": "mobile_max_height_desktop",
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "%",
+        "label": "Max Height of Module on Mobile",
+        "default": 90,
+        "info": "Mobile: Max height of module as a % of vertical height"
     },
     {
     "type": "header",
