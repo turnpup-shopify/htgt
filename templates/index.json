@@ -2,6 +2,7 @@
   "sections": {
     "16617360204f2f6219": {
       "type": "flwr-multicolumn",
+      "disabled": true,
       "blocks": {
         "16617360199623ac75-0": {
           "type": "column",
@@ -102,6 +103,28 @@
         "16617360199623ac75-1"
       ],
       "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_right": 0,
+        "padding_left": 0,
+        "max_height_desktop": 80,
+        "enabled_border": false,
+        "swipe_on_mobile": false,
+        "image_width": "full",
+        "column_alignment": "left",
+        "column_gap": "",
+        "button_padding": "12px 20px",
+        "hero_button_font_family": "'praline-sans-regular', 'sans-serif'",
+        "hero_button_font_weight": "300",
+        "button_border_radius": "0px",
+        "button_border_color": "#121212",
+        "button_background_color": "#ffffff",
+        "button_text_color": "#121212",
+        "button_border_color_hover": "#ffffff",
+        "button_background_color_hover": "#121212",
+        "button_text_color_hover": "#ffffff",
+        "button_label": "",
+        "button_link": "",
         "title": "",
         "title_font_size": "56px",
         "title_font_family": "'GothamXNarrow-Medium'",
@@ -114,29 +137,7 @@
         "title_alignment": "left",
         "section_text_color": "#121212",
         "overall_background_image_url": "",
-        "section_background_color": "#ffffff",
-        "image_width": "full",
-        "column_alignment": "left",
-        "column_gap": "",
-        "button_label": "",
-        "button_link": "",
-        "button_padding": "12px 20px",
-        "hero_button_font_family": "'praline-sans-regular', 'sans-serif'",
-        "hero_button_font_weight": "300",
-        "button_border_radius": "0px",
-        "button_border_color": "#121212",
-        "button_background_color": "#ffffff",
-        "button_text_color": "#121212",
-        "button_border_color_hover": "#ffffff",
-        "button_background_color_hover": "#121212",
-        "button_text_color_hover": "#ffffff",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_right": 0,
-        "padding_left": 0,
-        "max_height_desktop": 80,
-        "enabled_border": false,
-        "swipe_on_mobile": false
+        "section_background_color": "#ffffff"
       }
     },
     "image_banner": {
