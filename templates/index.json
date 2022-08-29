@@ -204,8 +204,8 @@
           "type": "text",
           "settings": {
             "block_text": "",
-            "block_font_size": "30px",
-            "mobile_block_font_size": "20px",
+            "block_font_size": "24px",
+            "mobile_block_font_size": "24px",
             "block_font_color": "#121212",
             "font_family_text": "\"Alegreya Sans\"",
             "font_weight_text": "300",
