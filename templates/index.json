@@ -111,7 +111,7 @@
         "padding_right": 0,
         "padding_left": 0,
         "max_height_desktop": 80,
-        "mobile_max_height_desktop": 56,
+        "mobile_max_height_desktop": 70,
         "enabled_border": false,
         "swipe_on_mobile": false,
         "image_width": "full",
