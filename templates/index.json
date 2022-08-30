@@ -84,7 +84,7 @@
             "link": "shopify:\/\/collections",
             "is_hero_button": true,
             "link_label_two": "Shop In-Store",
-            "link_two": "shopify:\/\/collections",
+            "link_two": "https:\/\/htgtfurniture.com\/collections?option=living-room",
             "is_hero_button_two": true,
             "button_is_white_border_two": false,
             "space_between_buttons": 8,
