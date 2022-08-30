@@ -191,6 +191,30 @@ body {
   width: 120px;
   height: 120px;
 }
+.flwr_hero_button {
+  padding: 10px 20px;
+  border: 1px solid #222;
+  color: #222;
+  background: #ffffff;
+  border-radius: 0px;
+  font-family: 'Helvetica Neue';
+  font-size: 16px;
+  font-weight: 400;
+}
+.flwr_hero_button:hover {
+  border: 1px solid #fff;
+  color: #fff;
+  background: #222;
+}
+.flwr_hero_button.inverse {
+  border: 1px solid #222;
+  color: #222;
+  background: #ffffff;
+}
+.flwr_hero_button.inverse:hover {
+  border: 1px solid #fff;
+  color: #fff;
+  background: #222;
 }
 @keyframes infinite-spinning {
   from {
