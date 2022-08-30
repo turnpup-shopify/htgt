@@ -40,7 +40,7 @@
   <div class="flwr-collections-all-left">
     {%- for link in section.settings.menu.links -%}
       <div>
-        {%- if link.links != blank and link.title != 'Home' and link.title != "All Products" and link.title != "More Information" -%}
+        {%- if link.links != blank and link.title != 'Home' and link.title != "Available Online" and link.title != "More Information" -%}
           <div id="flwr-collection-all-{{ forloop.index }}">
             <div style="display:none" class="flwr_first_level">
               {{ link.title | escape }}
