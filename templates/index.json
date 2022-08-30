@@ -406,9 +406,9 @@
             "click_action": "open_instagram",
             "heading_color": "#000000",
             "subheading_color": "#000000",
-            "button_background": "#ffa000",
+            "button_background": "#121212",
             "button_color": "#ffffff",
-            "overlay_color": "#000000",
+            "overlay_color": "#222222",
             "overlay_text_color": "#ffffff",
             "overlay_opacity": 65
           }
