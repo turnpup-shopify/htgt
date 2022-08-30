@@ -207,14 +207,14 @@ body {
   background: #222;
 }
 .flwr_hero_button.inverse {
+  border: 1px solid #fff;
+  color: #fff;
+  background: #222;  
+}
+.flwr_hero_button.inverse:hover {
   border: 1px solid #222;
   color: #222;
   background: #ffffff;
-}
-.flwr_hero_button.inverse:hover {
-  border: 1px solid #fff;
-  color: #fff;
-  background: #222;
 }
 @keyframes infinite-spinning {
   from {
