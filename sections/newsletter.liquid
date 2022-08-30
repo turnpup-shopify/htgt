@@ -22,7 +22,7 @@
         {%- when '@app' -%}
           {% render block %}
         {%- when 'heading' -%}
-          <h2 class="{{ block.settings.heading_size }}" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
+          <h2 style="font-size:{{ block.settings.heading_size }};" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
         {%- when 'paragraph' -%}
           <div class="newsletter__subheading rte" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
         {%- when 'email_form' -%}
@@ -154,23 +154,9 @@
           "label": "t:sections.newsletter.blocks.heading.settings.heading.label"
         },
         {
-          "type": "select",
-          "id": "heading_size",
-          "options": [
-            {
-              "value": "h2",
-              "label": "t:sections.all.heading_size.options__1.label"
-            },
-            {
-              "value": "h1",
-              "label": "t:sections.all.heading_size.options__2.label"
-            },
-            {
-              "value": "h0",
-              "label": "t:sections.all.heading_size.options__3.label"
-            }
-          ],
-          "default": "h1",
+          "type": "text",
+          "id": "heading_size",          
+          "default": "20px",
           "label": "t:sections.all.heading_size.label"
         }
       ]
