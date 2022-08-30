@@ -40,7 +40,7 @@
   <div class="flwr-collections-all-left">
     {%- for link in section.settings.menu.links -%}
       <div>
-        {%- if link.links != blank and link.title != 'Home' and link.title != "Available Online" -%}
+        {%- if link.links != blank and link.title != 'Home' and link.title != "All Products" and link.title != "More Information" -%}
           <div id="flwr-collection-all-{{ forloop.index }}">
             <div style="display:none" class="flwr_first_level">
               {{ link.title | escape }}
@@ -213,14 +213,14 @@
   {% assign alex = collections["coffee-tables"] | json %}
   var alex = {{ alex }};
   var debug = {{ collections["accent-tables"] | json }};   
-  console.log(debug);
+  // console.log(debug);
   
   const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
   });
   // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
   let value = params.option;
-  console.log(value);
+  // console.log(value);
   if (value != null){    
     document.querySelector("#close-"+value).classList.add("sho");
     document.querySelector(".flwr_second_level#"+value).classList.add("selected");
@@ -233,8 +233,8 @@
                 var closeid = "close-"+dataid;
                 var buttonid = ".flwr_second_level#"+dataid;              
                 var containerid = "#close-"+dataid;              
-                console.log("click!!" + closeid);
-                console.log("clicked button " + dataid);  
+                // console.log("click!!" + closeid);
+                // console.log("clicked button " + dataid);  
                 if (document.querySelector(containerid).classList.contains("sho")) {
                   closeAll();
                 } else {
