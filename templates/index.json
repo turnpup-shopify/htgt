@@ -81,7 +81,7 @@
             "description_margin_top": "0px",
             "description_margin_bottom": "16px",
             "link_label": "Shop Online",
-            "link": "shopify:\/\/collections",
+            "link": "shopify:\/\/collections\/online-art",
             "is_hero_button": true,
             "link_label_two": "Shop In-Store",
             "link_two": "https:\/\/htgtfurniture.com\/collections?option=living-room",
