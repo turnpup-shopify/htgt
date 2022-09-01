@@ -216,6 +216,7 @@ body {
   color: #222;
   background: #ffffff;
 }
+.shopify-installments { display: none; }
 @keyframes infinite-spinning {
   from {
     transform: rotate(0deg);
