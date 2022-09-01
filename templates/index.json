@@ -7,7 +7,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/htgt-1-8.jpg",
-            "image_border_radius": "0px",
+            "image_border_radius": "50% 50% 0 0",
             "title": "",
             "title_font_size": "22px",
             "title_font_size_mobile": "14px",
