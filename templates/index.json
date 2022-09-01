@@ -309,8 +309,8 @@
         "background_opacity": "0.2",
         "max_width": 90,
         "mobile_max_width": 90,
-        "margintop": 100,
-        "marginbottom": 100,
+        "margintop": 60,
+        "marginbottom": 60,
         "alignment": "center",
         "turnpup_bottom_border_color": "rgba(0,0,0,0)",
         "mobile_font_size": "12px"
