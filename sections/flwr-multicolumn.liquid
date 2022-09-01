@@ -78,9 +78,7 @@
                         {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | img_url: '1420x' }} 1420w,{%- endif -%}
                         {{ block.settings.image | img_url: 'master' }} {{ block.settings.image.width }}w"
                       src="{{ block.settings.image | img_url: '550x' }}"
-                      sizes="(min-width: 990px) {% if section.blocks.size <= 2 %}710px{% else %}550px{% endif %},
-                        (min-width: 750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %},
-                        calc(100vw - 30px)"
+                      sizes="auto"
                       alt="{{ block.settings.image.alt }}"
                       height="{{ block.settings.image.height }}"
                       width="{{ block.settings.image.width }}"
@@ -118,7 +116,11 @@
                       </button>
                     </a>
                   {%- elsif block.settings.link_label != blank -%}
-                    <a class="link animate-arrow" {% if block.settings.link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.link }}"{% endif %}>{{ block.settings.link_label | escape }}<span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span></a>
+                    <a class="link animate-arrow" {% if block.settings.link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.link }}"{% endif %}>{{ block.settings.link_label | escape }}<span class="icon-wrap">&nbsp;
+                      <svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
+                      </svg>                      
+                    </span></a>
                   {%- endif -%}
                   {%- if block.settings.link_label_two != blank and block.settings.is_hero_button_two and block.settings.button_is_white_border_two -%}
                     <a href="{{block.settings.link_two}}">
@@ -133,7 +135,11 @@
                         </button>
                     </a>
                   {%- elsif block.settings.link_label_two != blank -%}
-                    <a class="link animate-arrow" {% if block.settings.link_two == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.link_two }}"{% endif %}>{{ block.settings.link_label_two | escape }}<span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span></a>
+                    <a class="link animate-arrow" {% if block.settings.link_two == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.link_two }}"{% endif %}>{{ block.settings.link_label_two | escape }}<span class="icon-wrap">
+                      &nbsp;<svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
+                      </svg>                      
+                    </span></a>
                   {%- endif -%}                  
                 </div>
               {%- endif -%}
@@ -164,7 +170,7 @@
           }
           #Slide-{{ section.id }}-{{ forloop.index }} h3 {  
             font-size: {{ block.settings.title_font_size }};
-            color: {{ section.settings.section_text_color }}; 
+            color: {{ block.settings.title_font_color }}; 
             font-family: {{ block.settings.title_font_family }};
             font-weight: {{ block.settings.title_font_weight }};
             line-height: {{ block.settings.title_line_height }};
@@ -215,9 +221,9 @@
               margin-top: {{ block.settings.description_margin_top }};
               margin-bottom: {{ block.settings.description_margin_bottom }};
             }
-            #Slide-{{ section.id }}-{{ forloop.index }} .rte.text p {
-              
-            }            
+            #Slide-{{ section.id }}-{{ forloop.index }} .multicolumn-card__image {
+              border-radius: {{ block.settings.mobile_image_border_radius }};
+            }  
           }
         </style>
         {%- endfor -%}
@@ -327,13 +333,31 @@
   }
   .media {
     display: flex;
-    background-color: rgba(var(--color-foreground),.1);
+    background-color: {{ section.settings.section_background_color }};
     position: relative;
     overflow: hidden;
   }
   .grid--1-col .grid__item {
     max-width: 100%;
     width: 100%;
+  }
+  .multicolumn-card__info .link {
+    text-decoration: none;
+    margin-top: 1.5rem;
+    color: {{ section.settings.button_text_color }};
+    font-family: {{ section.settings.hero_button_font_family }};
+    font-size: {{ section.settings.hero_button_font_size }};
+    font-weight: {{ section.settings.hero_button_font_weight }};
+  }
+  .multicolumn-card__info .icon-wrap {
+    margin-right: 0.8rem;
+    margin-left: 0rem;
+    white-space: nowrap;
+  }
+  .icon-arrow {
+    width: 1rem;
+    height: auto;
+    /* width: 44px; */
   }
     @media screen and (max-width: 749px) {
         .flwr-multicolumn-outer .multicolumn-list:not(.slider) {
@@ -600,7 +624,7 @@
       {
         "type": "text",
         "id": "title_font_family",
-        "default": "'GothamXNarrow-Medium'",
+        "default": "'Helvetica Neue'",
         "label": "Title Font Family"
       },
       {
@@ -640,7 +664,7 @@
       {
         "type": "text",
         "id": "subtitle_font_family",
-        "default": "'Gotham-Book'",
+        "default": "'Helvetica Neue'",
         "label": "Subtitle Font Family"
       },
       {
@@ -713,6 +737,13 @@
           "default": "0px"
         },
         {
+          "type": "text",
+          "id": "mobile_image_border_radius",
+          "label": "Mobile: Image Border Radius",
+          "info": "Full this in if you want to have rounded borders on the image",
+          "default": "0px"
+        },
+        {
           "type": "header",
           "content": "Title",
           "info": "Settings for the Title section."
@@ -740,6 +771,12 @@
           "id": "title_font_family",
           "default": "'Helvetica Neue'",
           "label": "Title Font Family"
+        },
+        {
+          "type": "color",
+          "id": "title_font_color",
+          "default": "#000000",
+          "label": "Title Font Color"
         },
         {
           "type": "text",
@@ -789,7 +826,7 @@
           "label": "Text Font Family"
         },
         {
-          "type": "text",
+          "type": "color",
           "id": "text_font_color",
           "default": "#000000",
           "label": "Text Font Color"
@@ -842,7 +879,7 @@
           "label": "Description Font Family"
         },
         {
-          "type": "text",
+          "type": "color",
           "id": "description_font_color",
           "default": "#000000",
           "label": "Description Font Color"
@@ -992,9 +1029,6 @@
     {
       "name": "flwr-multicolumn",
       "blocks": [
-        {
-          "type": "column"
-        },
         {
           "type": "column"
         },
