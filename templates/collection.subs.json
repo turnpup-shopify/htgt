@@ -12,8 +12,8 @@
         "font_size_mobile": "20px"
       }
     },
-    "product-grid": {
-      "type": "main-collection-product-grid",
+    "sub-collections-product-grid": {
+      "type": "sub-collections-product-grid",
       "settings": {
         "products_per_page": 24,
         "columns_desktop": 4,
@@ -35,6 +35,6 @@
   },
   "order": [
     "banner",
-    "product-grid"
+    "sub-collections-product-grid"
   ]
 }
