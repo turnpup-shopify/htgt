@@ -82,9 +82,10 @@
       </aside>
     {%- endif -%}
 
-    <div class="product-grid-container{% if section.settings.filter_type == 'vertical' and section.settings.collapse_on_larger_devices %} product-grid-container-vertical{% endif %}" id="ProductGridContainer">
+     {% assign collection_handle = "collection-" | append: collection.handle %}
+      <div class="product-grid-container{% if section.settings.filter_type == 'vertical' and section.settings.collapse_on_larger_devices %} product-grid-container-vertical{% endif %}" id="ProductGridContainer">
       {%- paginate collection.products by section.settings.products_per_page -%}
-        {%- if collection.products.size == 0 -%}
+        {%- if linklists[collection_handle].links.size == 0 -%}
           <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
             <div class="loading-overlay gradient"></div>
             <div class="title-wrapper center">
@@ -102,7 +103,6 @@
               grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
               grid--{{ section.settings.columns_desktop }}-col-desktop">
 
-              {% assign collection_handle = "collection-" | append: collection.handle %}
               {% for link in linklists[collection_handle].links %}
               {% assign sub_collection = link.object  %}
               <h2> Alex - {{ sub_collection.title  }} </h2>
