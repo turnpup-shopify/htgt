@@ -83,9 +83,6 @@
     {%- endif -%}
 
      {% assign collection_handle = "collection-" | append: collection.handle %}
-     {% for link in linklists[collection_handle].links %}
-      {% assign sub_collection = link.object  %}
-       
       <div class="product-grid-container{% if section.settings.filter_type == 'vertical' and section.settings.collapse_on_larger_devices %} product-grid-container-vertical{% endif %}" id="ProductGridContainer">
       {%- paginate collection.products by section.settings.products_per_page -%}
         {%- if linklists[collection_handle].links.size == 0 -%}
@@ -106,30 +103,32 @@
               grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
               grid--{{ section.settings.columns_desktop }}-col-desktop">
 
-              
+              {% for link in linklists[collection_handle].links %}
+              {% assign sub_collection = link.object  %}
               <div style="clear:both;width:100%"><h2> Alex - {{ sub_collection.title  }} </h2></div>
-              {%- for product in sub_collection.products -%}
-                {% assign lazy_load = false %}
-                {%- if forloop.index > 2 -%}
-                  {%- assign lazy_load = true -%}
-                {%- endif -%}
-                <li class="grid__item">
-                  {% render 'card-product',
-                    card_product: product,
-                    media_aspect_ratio: section.settings.image_ratio,
-                    show_secondary_image: section.settings.show_secondary_image,
-                    show_vendor: section.settings.show_vendor,
-                    show_rating: section.settings.show_rating,
-                    lazy_load: lazy_load,
-                    show_quick_add: section.settings.enable_quick_add,
-                    show_price: section.settings.enable_price,
-                    button_color: section.settings.button_color,
-                    section_id: section.id
+                      {%- for product in sub_collection.products -%}
+                        {% assign lazy_load = false %}
+                        {%- if forloop.index > 2 -%}
+                          {%- assign lazy_load = true -%}
+                        {%- endif -%}
+                        <li class="grid__item">
+                          {% render 'card-product',
+                            card_product: product,
+                            media_aspect_ratio: section.settings.image_ratio,
+                            show_secondary_image: section.settings.show_secondary_image,
+                            show_vendor: section.settings.show_vendor,
+                            show_rating: section.settings.show_rating,
+                            lazy_load: lazy_load,
+                            show_quick_add: section.settings.enable_quick_add,
+                            show_price: section.settings.enable_price,
+                            button_color: section.settings.button_color,
+                            section_id: section.id
+        
+                          %}
+                        </li>
+                      {%- endfor -%}
 
-                  %}
-                </li>
-              {%- endfor -%}
-
+                {% endfor %}
             </ul>
     
             {%- if paginate.pages > 1 -%}
@@ -139,7 +138,6 @@
         {%- endif -%}
       {%- endpaginate -%}
     </div>
-   {% endfor %}
   </div>
 </div>
 
