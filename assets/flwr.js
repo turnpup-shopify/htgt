@@ -18,7 +18,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
       }
     })
     el.addEventListener("mouseout", () => {
-      el.querySelector(".quick-add__submit").classList.remove("show");
+      if (el.querySelector(".quick-add__submit") !== null) {
+        el.querySelector(".quick-add__submit").classList.remove("show");
+      }
     })
   })
 });
