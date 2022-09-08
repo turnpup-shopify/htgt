@@ -105,7 +105,7 @@
 
               {% for link in linklists[collection_handle].links %}
               {% assign sub_collection = link.object  %}
-              <div style="clear:both;width:100%"><h2> Alex - {{ sub_collection.title  }} </h2></div>
+              <div style="clear:both;width:100%"><h2>{{ sub_collection.title  }} </h2></div>
                       {%- for product in sub_collection.products -%}
                         {% assign lazy_load = false %}
                         {%- if forloop.index > 2 -%}
