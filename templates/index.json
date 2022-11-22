@@ -67,7 +67,7 @@
             "title_line_height": "1.0",
             "title_font_weight": "600",
             "title_margin_top": "8px",
-            "text": "DESIGNER PIECES",
+            "text": "CLOSED FOR THANKSGIVING HOLIDAY",
             "text_font_size": "24px",
             "text_font_size_mobile": "24px",
             "text_font_family": "'Alegreya'",
@@ -75,7 +75,7 @@
             "text_line_height": "1.",
             "text_font_weight": "400",
             "subtitle_margin_top": "8px",
-            "description": "Furniture, art, and accessories at the guaranteed lowest possible prices.",
+            "description": "Open again beginning Monday, Nov 28th at 11:00 AM. \n(If you can't wait call for an appointment.)",
             "description_font_size": "36px",
             "description_font_size_mobile": "30px",
             "description_font_family": "'Helvetica Neue'",
@@ -394,7 +394,7 @@
       "type": "apps",
       "blocks": {
         "a6e315d7-1116-4df1-b736-116e352da46d": {
-          "type": "shopify:\/\/apps\/section-feed-by-maestrooo\/blocks\/app-block\/43cd482b-515a-4e82-b170-05d391763cd2",
+          "type": "shopify:\/\/apps\/maestrooo-section-feed\/blocks\/app-block\/43cd482b-515a-4e82-b170-05d391763cd2",
           "settings": {
             "title": "SEE OUR RECENT ARRIVALS",
             "subheading": "",
