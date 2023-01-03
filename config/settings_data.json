@@ -229,7 +229,7 @@
             "type": "text",
             "settings": {
               "flwr_footer_block_header": "STORE HOURS",
-              "flwr_footer_block_description": "Mon-Fri; 10:30-4:00",
+              "flwr_footer_block_description": "Mon-Fri; 11:00-4:00",
               "flwr_footer_block_description_2": "",
               "flwr_footer_block_description_3": "",
               "flwr_footer_block_description_4": "",
