@@ -235,7 +235,7 @@
             "description_margin_top": "20px",
             "description_margin_bottom": "0px",
             "link_label": "Shop Art",
-            "link": "",
+            "link": "shopify:\/\/collections\/online-art",
             "is_hero_button": true,
             "link_label_two": "",
             "link_two": "",
