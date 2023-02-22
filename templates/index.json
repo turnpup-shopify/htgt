@@ -215,7 +215,7 @@
             "title_font_family": "'Helvetica Neue'",
             "title_font_color": "#000000",
             "title_line_height": "1.0",
-            "title_font_weight": "300",
+            "title_font_weight": "400",
             "title_margin_top": "8px",
             "text": "Shop our selection of affordable designer art that ships directly to you.",
             "text_font_size": "30px",
@@ -452,7 +452,7 @@
       "settings": {
         "subtitle": "ART, FURNITURE, AND MORE",
         "subtitle_font_size": "24px",
-        "subtitle_font_weight": "300",
+        "subtitle_font_weight": "400",
         "subtitle_font_family": "'Helvetica Neue'",
         "subtitle_font_color": "#121212",
         "background_color": "#ffffff",
