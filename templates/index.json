@@ -467,6 +467,35 @@
         "mobile_font_size": "12px"
       }
     },
+    "4b5ec4ff-e42f-4095-9b8e-e11e4b0cc0e6": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "MOST POPULAR ART",
+        "heading_size": "h1",
+        "heading_font_size": "24px",
+        "heading_font_family": "Helvetica Neue",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "online-art",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "collage": {
       "type": "collage",
       "blocks": {
@@ -616,6 +645,7 @@
     "403c9887-42c2-4cd2-97f6-b964f61f1b2d",
     "image_banner",
     "16516195897b496f4a",
+    "4b5ec4ff-e42f-4095-9b8e-e11e4b0cc0e6",
     "collage",
     "1661706548baf6888a",
     "165162882932982481",
