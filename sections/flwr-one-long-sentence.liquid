@@ -1,5 +1,5 @@
 {% assign image = section.settings.image %}
-<div class="one-long-sentence" data-section-id="{{ section.id }}" data-section-type="custom-content-section">
+<div class="one-long-sentence {% if section.settings.use_page_width %}page-width{% endif %}" data-section-id="{{ section.id }}" data-section-type="custom-content-section">
   <div>
     <div class="one_long_sentence_wrapper module">
       <div style="display:inline-block;vertical-align:middle;" class="custom__item-{{ block.type }} {% if block.settings.full_width %}custom__item-full_width{% endif %}" {{ block.shopify_attributes }}>
@@ -171,6 +171,11 @@
       "label":"Mobile: Max Width",
       "default":90
 	},
+    {
+      "type": "checkbox",
+      "id": "use_page_width",
+      "label": "Use Page Width"
+    },
     {
       "type":"range",
       "id":"margintop",
