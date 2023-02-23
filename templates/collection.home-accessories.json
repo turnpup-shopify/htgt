@@ -105,6 +105,7 @@
         "background_opacity": "0",
         "max_width": 70,
         "mobile_max_width": 90,
+        "use_page_width": false,
         "margintop": 110,
         "marginbottom": 110,
         "alignment": "left",
@@ -128,7 +129,7 @@
       "type": "main-collection-product-grid",
       "settings": {
         "products_per_page": 24,
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "image_ratio": "portrait",
         "show_secondary_image": true,
         "show_vendor": false,
