@@ -242,7 +242,7 @@
             {%- endif -%}
           {%- when 'custom_liquid' -%}
             {{ block.settings.custom_liquid }}
-          {%- when 'collapsible_tab' -%}
+          {%- when 'collapsible_tab' and {{ block.settings.content }} != "" -%}
             <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
               <details id="Details-{{ block.id }}-{{ section.id }}">
                 <summary>
