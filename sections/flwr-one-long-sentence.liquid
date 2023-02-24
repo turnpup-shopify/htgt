@@ -1,7 +1,7 @@
 {% assign image = section.settings.image %}
-<div class="one-long-sentence " data-section-id="{{ section.id }}" data-section-type="custom-content-section">
-  <div>
-    <div class="one_long_sentence_wrapper module {% if section.settings.use_page_width %}page-width{% endif %}">
+<div class="one-long-sentence" data-section-id="{{ section.id }}" data-section-type="custom-content-section">
+  <div {% if section.settings.use_page_width %}class="page-width"{% endif %}>
+    <div class="one_long_sentence_wrapper module">
       <div style="display:inline-block;vertical-align:middle;" class="custom__item-{{ block.type }} {% if block.settings.full_width %}custom__item-full_width{% endif %}" {{ block.shopify_attributes }}>
         <div class="block_container_one_sentence">
           <p class="one-long-sentence-subtitle"> {{ section.settings.subtitle }} </p>
