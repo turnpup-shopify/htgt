@@ -570,36 +570,29 @@
         "padding_bottom": 36
       }
     },
-    "165162882932982481": {
+    "bfdff81e-e559-4632-99fc-f4cd14c6b2b8": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<h2 style=\"padding: 0 5rem;font-size: 24px; font-family: 'Helvetica Neue';\"> Keep up with the latest on Instagram <\/h2>",
+        "color_scheme": "background-1",
+        "padding_top": 12,
+        "padding_bottom": 0
+      }
+    },
+    "16781327925284cc16": {
       "type": "apps",
       "blocks": {
-        "a6e315d7-1116-4df1-b736-116e352da46d": {
-          "type": "shopify:\/\/apps\/maestrooo-section-feed\/blocks\/app-block\/43cd482b-515a-4e82-b170-05d391763cd2",
+        "b517196e-8aff-4bdb-8f59-f19a1e82a503": {
+          "type": "shopify:\/\/apps\/instafeed-instagram-feed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
-            "title": "SEE OUR RECENT ARRIVALS",
-            "subheading": "",
-            "button_text": "Follow us on instagram",
-            "button_link": "https:\/\/www.instagram.com\/htgthome\/",
-            "layout": "grid",
-            "image_size": "small",
-            "add_spacing": false,
-            "rows_count": 2,
-            "show_author": false,
-            "show_caption": true,
-            "show_date": true,
-            "click_action": "open_instagram",
-            "heading_color": "#000000",
-            "subheading_color": "#000000",
-            "button_background": "#121212",
-            "button_color": "#ffffff",
-            "overlay_color": "#222222",
-            "overlay_text_color": "#ffffff",
-            "overlay_opacity": 65
+            "heading_size": 20,
+            "feed_width": 100,
+            "html_area": ""
           }
         }
       },
       "block_order": [
-        "a6e315d7-1116-4df1-b736-116e352da46d"
+        "b517196e-8aff-4bdb-8f59-f19a1e82a503"
       ],
       "settings": {
         "include_margins": true
@@ -648,7 +641,8 @@
     "4b5ec4ff-e42f-4095-9b8e-e11e4b0cc0e6",
     "collage",
     "1661706548baf6888a",
-    "165162882932982481",
+    "bfdff81e-e559-4632-99fc-f4cd14c6b2b8",
+    "16781327925284cc16",
     "1654564871fa6b94de"
   ]
 }
