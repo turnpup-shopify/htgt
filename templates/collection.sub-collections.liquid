@@ -1,8 +1,0 @@
-{{ collection.title }}
-{% assign collection_handle = "collection-" | append: collection.handle %}
-<ul>
-  {% for link in linklists[collection_handle].links %}
-    {% assign sub_collection = link.object  %}
-    <li> <a href="{{ link.url }}"> {{  link.title }} </a> </li>
-  {% endfor %}
-</ul>
